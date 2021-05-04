@@ -1,0 +1,488 @@
+
+* Chapter 2: Wiring beans
+
+скан не включен по умолчанию, включаем так:
+<context:component-scan base-package="soundsystem" />
+или так (над классом с @Configuration):
+@ComponentScan
+
+указывам используемый конфиг в тестах:
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes=CDPlayerConfig.class)
+
+если хотим, чтобы бин имел другой id, несовпадающий с именем:
+@Component("lonelyHeartsClub")
+@Named("lonelyHeartsClub")
+
+set base package for scanning:
+@ComponentScan("soundsystem")
+@ComponentScan(basePackages="soundsystem")
+@ComponentScan(basePackages={"soundsystem", "video"})
+
+set classes or interfaces for scanning:
+@ComponentScan(basePackageClasses={CDPlayer.class, DVDPlayer.class})
+
+autowire via constructor:
+@Autowired
+public CDPlayer(CompactDisc cd)
+
+autowire via setter:
+@Autowired
+public void setCompactDisc(CompactDisc cd)
+
+autowire via any method:
+@Autowired
+public void insertDisc(CompactDisc cd)
+
+using @Inject instead of @Autowired:
+@Inject
+public CDPlayer(CompactDisc cd)
+
+catch what written to console in tests (JUnit rule from the System Rules library):
+@Rule
+public final StandardOutputStreamLog log
+
+declare bean in configuration class:
+@Bean
+public CompactDisc sgtPeppers() { return new SgtPeppers(); }
+
+declare bean and give it different name:
+@Bean(name="lonelyHeartsClubBand")
+public CompactDisc sgtPeppers() { return new SgtPeppers(); }
+
+injecting with java-config:
+@Bean
+public CDPlayer cdPlayer(CompactDisc compactDisc) { return new CDPlayer(compactDisc); }
+
+declare bean in xml:
+<bean>
+
+initializing bean with constructor injectoin:
+<bean id="cdPlayer" class="soundsystem.CDPlayer">
+	<constructor-arg ref="compactDisc" />
+</bean>
+
+setting constructor argument using c-namespace:
+<bean id="cdPlayer" class="soundsystem.CDPlayer" c:cd-ref="compactDisc" />
+
+setting constructor argument using c-namespace with parameter's position:
+<bean id="cdPlayer" class="soundsystem.CDPlayer" c:_0-ref="compactDisc" />
+
+for case when constructor has one argument
+<bean id="cdPlayer" class="soundsystem.CDPlayer" c:_-ref="compactDisc" />
+
+injecting constructor with literal values:
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+	<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+	<constructor-arg value="The Beatles" />
+</bean>
+
+<bean id="compactDisc" class="soundsystem.BlankDisc"
+c:_title="Sgt. Pepper's Lonely Hearts Club Band"
+c:_artist="The Beatles"/>
+
+<bean id="compactDisc" class="soundsystem.BlankDisc"
+c:_0="Sgt. Pepper's Lonely Hearts Club Band"
+c:_1="The Beatles" />
+
+<bean id="compactDisc" class="soundsystem.BlankDisc"
+c:_="Sgt. Pepper's Lonely Hearts Club Band" />
+
+wiring collection:
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+	<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+	<constructor-arg value="The Beatles" />
+	<constructor-arg><null/></constructor-arg>
+</bean>
+
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+	<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+	<constructor-arg value="The Beatles" />
+	<constructor-arg>
+		<list>
+			<value>Sgt. Pepper's Lonely Hearts Club Band</value>
+			<value>With a Little Help from My Friends</value>
+			<value>Lucy in the Sky with Diamonds</value>
+			<value>Getting Better</value>
+			<value>Fixing a Hole</value>
+			<!-- ...other tracks omitted for brevity... -->
+		</list>
+	</constructor-arg>
+</bean>
+
+it could be set instead of list:
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+	<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+	<constructor-arg value="The Beatles" />
+	<constructor-arg>
+		<set>
+			<value>Sgt. Pepper's Lonely Hearts Club Band</value>
+			<value>With a Little Help from My Friends</value>
+			<value>Lucy in the Sky with Diamonds</value>
+			<value>Getting Better</value>
+			<value>Fixing a Hole</value>
+			<!-- ...other tracks omitted for brevity... -->
+		</set>
+	</constructor-arg>
+</bean>
+
+instead of <value> list/set could contain <ref> tags:
+<bean id="beatlesDiscography" class="soundsystem.Discography">
+	<constructor-arg value="The Beatles" />
+	<constructor-arg>
+		<list>
+			<ref bean="sgtPeppers" />
+			<ref bean="whiteAlbum" />
+			<ref bean="hardDaysNight" />
+			<ref bean="revolver" />
+			...
+		</list>
+	</constructor-arg>
+</bean>
+
+CHOOSING BETWEEN CONSTRUCTOR INJECTION AND PROPERTY INJECTION:
+As a general rule, I favor constructor injection for hard dependencies 
+and property injection for any optional dependencies.
+
+using p-namespace to inject properties:
+<bean id="cdPlayer" class="soundsystem.CDPlayer" p:compactDisc-ref="compactDisc" />
+
+<bean id="compactDisc" class="soundsystem.BlankDisc" 
+	p:title="Sgt. Pepper's Lonely Hearts Club Band" 
+	p:artist="The Beatles">
+<property name="tracks">
+	<list>
+		<value>Sgt. Pepper's Lonely Hearts Club Band</value>
+		<value>With a Little Help from My Friends</value>
+		<value>Lucy in the Sky with Diamonds</value>
+		<value>Getting Better</value>
+		<value>Fixing a Hole</value>
+		<!-- ...other tracks omitted for brevity... -->
+	</list>
+</property>
+</bean>
+
+using util-namespace to create list bean:
+<util:list id="trackList">
+	<value>Sgt. Pepper's Lonely Hearts Club Band</value>
+	<value>With a Little Help from My Friends</value>
+	<value>Lucy in the Sky with Diamonds</value>
+	<value>Getting Better</value>
+	<value>Fixing a Hole</value>
+	<!-- ...other tracks omitted for brevity... -->
+</util:list>
+
+and inject it:
+<bean id="compactDisc" class="soundsystem.BlankDisc"
+	p:title="Sgt. Pepper's Lonely Hearts Club Band"
+	p:artist="The Beatles"
+	p:tracks-ref="trackList" />
+
+Elements of util-namespace:
+<util:constant>			References a public static field on a type and exposes it as a bean
+<util:list>				Creates a bean that is a java.util.List of values or references
+<util:map>				Creates a bean that is a java.util.Map of values or references
+<util:properties>		Creates a bean that is a java.util.Properties
+<util:property-path>	References a bean property (or nested property) and exposes it as a bean
+<util:set>				Creates a bean that is a java.util.Set of values or references
+
+import one config from another:
+@Configuration
+@Import(CDConfig.class)
+public class CDPlayerConfig
+
+Or better we can create higher-level config and use @Import in it:
+@Configuration
+@Import({CDPlayerConfig.class, CDConfig.class})
+public class SoundSystemConfig
+
+if part of configuration is xml-based, it could be imported into main java-config this way:
+@Configuration
+@Import(CDPlayerConfig.class)
+@ImportResource("classpath:cd-config.xml")
+public class SoundSystemConfig
+
+import part of xml-configuration into xml:
+<import resource="cd-config.xml" />
+
+import java-config into xml:
+<bean class="soundsystem.CDConfig" />
+
+Whether of using xml or java config, I create root config that brings together two or more 
+wiring classes and/or xml files. In this root config I also usually turn on component scanning:
+<context:component-scan> or @ComponentScan
+
+author suggestion:
+- prefer autoconfiguration
+- if you need explicit configuratin - prefer java-based configuration (it's more powerful, type-safe, and refactorable—over XML configuration)
+
+
+* Chapter 3: Advanced wiring
+If you need embedded DB with preloaded data:
+@Bean(destroyMethod="shutdown")
+public DataSource dataSource() {
+return new EmbeddedDatabaseBuilder()
+	.addScript("classpath:schema.sql")
+	.addScript("classpath:test-data.sql")
+	.build();
+}
+It sets up an embedded Hypersonic database whose schema is defined in schema.sql and loaded with test data from test-data.sql
+
+If you want to retrieve DataSource using JNDI:
+@Bean
+public DataSource dataSource() {
+	JndiObjectFactoryBean jndiObjectFactoryBean = new JndiObjectFactoryBean();
+	jndiObjectFactoryBean.setJndiName("jdbc/myDS");
+	jndiObjectFactoryBean.setResourceRef(true);
+	jndiObjectFactoryBean.setProxyInterface(javax.sql.DataSource.class);
+	return (DataSource) jndiObjectFactoryBean.getObject();
+}
+
+Or you could create DataSource this way:
+@Bean(destroyMethod="close")
+public DataSource dataSource() {
+	BasicDataSource dataSource = new BasicDataSource();
+	dataSource.setUrl("jdbc:h2:tcp://dbserver/~/test");
+	dataSource.setDriverClassName("org.h2.Driver");
+	dataSource.setUsername("sa");
+	dataSource.setPassword("password");
+	dataSource.setInitialSize(20);
+	dataSource.setMaxActive(30);
+	return dataSource;
+}
+
+Specify profile that bean belongs up:
+@Configuration
+@Profile("dev")
+public class DevelopmentProfileConfig { ... }
+
+Or we can annotate separate bean with @Profile:
+@Bean(destroyMethod="shutdown")
+@Profile("dev")
+public DataSource embeddedDataSource()
+
+configuring profiles in xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+...
+profile="dev">
+
+we can declare all profiles in single xml-config:
+<beans profile="dev">
+... beans decarations
+</beans>
+<beans profile="prod">
+... beans decarations
+</beans>
+
+how to activate profiles:
+- As initialization parameters on DispatcherServlet
+- As context parameters of a web application
+- As JNDI entries
+- As environment variables
+- As JVM system properties
+- Using the @ActiveProfiles annotation on an integration test class
+
+When spring.profiles.active is set, it doesn’t matter what spring.profiles.default is set to;
+the profiles set in spring.profiles.active take precedence
+
+You can activate multiple profiles at the same time by listing the profile names, separated by commas.
+
+Use profiles for testing:
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes={PersistenceTestConfig.class})
+@ActiveProfiles("dev")
+public class PersistenceTest
+
+Using conditional beans:
+@Bean
+@Conditional(MagicExistsCondition.class)
+public MagicBean magicBean() { ... }
+
+public class MagicExistsCondition implements Condition {
+	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
+		return context.getEnvironment().containsProperty("magic");
+	}
+}
+
+useful interface ConditionContext:
+public interface ConditionContext {
+	BeanDefinitionRegistry getRegistry();	//Check for bean definitions
+	ConfigurableListableBeanFactory getBeanFactory();	//Check for the presence of beans, and even dig into bean properties
+	Environment getEnvironment();			//Check for the presence and values of environment variables
+	ResourceLoader getResourceLoader();		//Read and inspect the contents of resources loaded
+	ClassLoader getClassLoader();			//Load and check for the presence of classes
+}
+
+To avoid ambiguity for case when several beans with the same type present, you can declare primary bean:
+@Component
+@Primary
+public class IceCream implements Dessert { ... }
+
+or for declaration of bean in configuration class:
+@Bean
+@Primary
+public Dessert iceCream()
+
+in xml we could specify primary bean using appropriate attribute:
+<bean id="iceCream" class="com.desserteater.IceCream" primary="true" />
+
+@Qualifier could be applied to @Autowired or @Inject beans:
+@Autowired
+@Qualifier("iceCream")
+public void setDessert(Dessert dessert) { this.dessert = dessert; }
+
+mark bean with Qualifier to protect from class renaming:
+@Component
+@Qualifier("cold")
+public class IceCream implements Dessert { ... }
+
+Beans could have multiple qualifiers:
+@Component
+@Cold		//custom annotation, has @Qualifier("cold") sense
+@Creamy		//custom annotation, has @Qualifier("creamy") sense
+public class IceCream implements Dessert { ... }
+
+@Component
+@Cold		//custom annotation, has @Qualifier("cold") sense
+@Fruity		//custom annotation, has @Qualifier("fruity") sense
+public class Popsicle implements Dessert { ... }
+
+And one particular bean could be narrowed this way:
+@Autowired
+@Cold
+@Creamy
+public void setDessert(Dessert dessert) { this.dessert = dessert; }
+
+bean scopes:
+- Singleton—One instance of the bean is created for the entire application
+- Prototype—One instance of the bean is created every time the bean is injected into or retrieved from the Spring application context
+- Session—In a web application, one instance of the bean is created for each session
+- Request—In a web application, one instance of the bean is created for each request
+
+definig of scope:
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class Notepad { ... }
+
+or we could use less safe:
+@Scope("prototype")
+
+and for case when we declare bean in configuration class:
+@Bean
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public Notepad notepad() { return new Notepad(); }
+
+setting scope in xml:
+<bean id="notepad" class="com.myapp.Notepad" scope="prototype" />
+
+example of session scope usage:
+@Component
+@Scope(value=WebApplicationContext.SCOPE_SESSION,
+proxyMode=ScopedProxyMode.INTERFACES) - need to use scoped proxies to inject non-singleton bean into singleton bean (proxy injected instead and perform lazy-resolving of bean for particular session)
+public ShoppingCart cart() { ... }
+
+declare scoped-proxy in xml:
+<bean id="cart" class="com.myapp.ShoppingCart" scope="session">
+	<aop:scoped-proxy />
+</bean>
+
+By default, it uses CGLib to create a target class proxy. But you can ask it to generate an
+interface-based proxy by setting the proxy-target-class attribute to false:
+<bean id="cart" class="com.myapp.ShoppingCart" scope="session">
+	<aop:scoped-proxy proxy-target-class="false" />
+</bean>
+
+Runtime value injection:
+- Property placeholders
+- The Spring Expression Language (SpEL)
+
+Declare property source and retrieve values using Environment class:
+@Configuration
+@PropertySource("classpath:/com/soundsystem/app.properties")
+public class ExpressiveConfig {
+	@Autowired
+	Environment env;
+	...
+	... env.getProperty("disc.title")
+}
+
+Environment class has several useful properties:
+- String getProperty(String key)
+- String getProperty(String key, String defaultValue)
+- T getProperty(String key, Class<T> type)
+- T getProperty(String key, Class<T> type, T defaultValue)
+
+for example:
+int connectionCount = env.getProperty("db.connection.count", Integer.class, 30);
+
+If you want to require that the property be defined, you can use getRequiredProperty():
+env.getRequiredProperty("disc.title")
+
+check property existence:
+env.containsProperty("disc.title");
+
+Resolving property placeholders:
+<bean id="sgtPeppers" class="soundsystem.BlankDisc"
+	c:_title="${disc.title}" c:_artist="${disc.artist}" />
+
+Use @Value for properties in the same way as @Autowired for beans:
+public BlankDisc(@Value("${disc.title}") String title, @Value("${disc.artist}") String artist) {
+	this.title = title;
+	this.artist = artist;
+}
+
+To use placeholder values, you must configure PropertyPlaceholderConfigurer or PropertySourcesPlaceholderConfigurer. Starting with Spring 3.1, PropertySourcesPlaceholderConfigurer is preferred because it resolves placeholders against the Spring Environment and its set of property sources. Configure it this way:
+@Bean
+public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() { return new PropertySourcesPlaceholderConfigurer(); }
+
+For xml it could be done next way:
+<context:property-placeholder />
+
+SpEL examples:
+in java code:
+#{1}
+#{T(System).currentTimeMillis()} - get current time in millis
+#{sgtPeppers.artist} - get bean property
+#{systemProperties['disc.title']} - get system property
+
+same for xml:
+c:_title="#{systemProperties['disc.title']}"
+
+#{3.14159}
+#{9.87E4}
+#{'Hello'}
+#{false}
+
+call bean methods:
+#{artistSelector.selectArtist().toUpperCase()}
+
+guard against NPE:
+#{artistSelector.selectArtist()?.toUpperCase()}
+
+access to static fields/methods using T(...):
+T(java.lang.Math).PI
+T(java.lang.Math).random()
+
+use ternary operator:
+#{scoreboard.score > 1000 ? "Winner!" : "Loser"}
+#{disc.title ?: 'Rattle and Hum'} - "Elvis" operator
+
+check regexp:
+#{admin.email matches '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.com'}
+
+evaluating collection:
+#{jukebox.songs[4].title}
+
+selection operator (.?[]) could filter collection into subset of the collection:
+#{jukebox.songs.?[artist eq 'Aerosmith']}
+
+SpEL also offers two other selection operations: .^[] for selecting the first matching entry and .$[] for selecting the last matching entry
+#{jukebox.songs.^[artist eq 'Aerosmith']}
+
+projection of properties into new collection:
+#{jukebox.songs.![title]}
+
+combination of methods:
+#{jukebox.songs.?[artist eq 'Aerosmith'].![title]}
+

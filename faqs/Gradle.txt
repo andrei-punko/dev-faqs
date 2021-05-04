@@ -1,0 +1,13 @@
+
+* Остановка выполнения всех агентов Gradle
+./gradlew --stop
+
+* Build Gradle dependencies tree
+./gradlew  -q dependencies > deps.txt
+
+* Run particular test in Gradle:
+gradle test --tests HealthCheckSpec
+
+* error for case when gradlew doesn't have +x permission
+git update-index --chmod=+x gradlew
+

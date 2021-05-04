@@ -1,0 +1,4 @@
+
+* delete line in nano editor
+ctrl+K
+

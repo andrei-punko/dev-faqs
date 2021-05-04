@@ -1,0 +1,71 @@
+Build module
+mvn clean :<module name> – clean results of previous build
+mvn clean install :<module name> – clean + build
+mvn clean test :<module name> – module testing
+
+Build module with all mofules it depends on:
+mvn [clean] install -am -pl :<module name>
+
+Build all modules dependent of current module:
+mvn [clean] install -amd -pl :<module name>
+
+Skip tests (save time, but not good way):
+mvn [clean] install -am -pl :<module name> -Dmaven.test.skip=true
+mvn [clean] install -am -pl :<module name> -DskipTests
+
+Build several modules (Reactor pattern):
+mvn [clean] install -pl :<module name 1>,…,:<module name n> [other options]
+
+Testing one class:
+mvn clean test -pl :<module name> -Dtest=<TestClassName>
+
+Testing selected method(s) of test class:
+… -Dtest=TestClass#singleTestCaseMethod (for maven-surefire plugin from 2.7.3)
+… -Dtest=TestClass#singleTestCaseMethod1+singleTestCaseMethod1 (for maven-surefire plugin from 2.12.1)
+
+Debug:
+mvn clean test -pl :<module name> -Dmaven.surefire.debug
+
+Debug test:
+mvn clean test -pl :<module name> -Dtest=<TestClass Name> -Dmaven.surefire.debug=”-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 -Xnoagent -Djava.compiler=NONE”
+In IDE use remote debug with port 5005
+
+Show dependencies list:
+mvn -pl :<module name> dependency:list
+
+Guide output to selected file:
+mvn -pl :<module name> dependency:list > c:/filename-dep-list.txt
+
+Analyze maven dependencies:
+Use mvn dependency:analyze to show you whether there are dependencies in your pom that you don’t need (it may also identify some that you have missed, add -DoutputXML=true to show the missing entries):
+mvn -pl :<module name> dependency:analyze -DoutputXML=true
+
+Show dependency tree:
+Use mvn dependency:tree to show you the dependencies currently in use by your project and where Maven is finding them:
+mvn -pl :<module name> dependency:tree
+
+Add -Dverbose=true to show all the duplicates and conflicts:
+mvn -pl :<module name> dependency:tree -Dverbose=true
+
+You can guide output to selected file:
+mvn -pl :<module name> dependency:tree > c:/filename-dep-tree.txt
+
+Maven compile vs provided scope:
+compile - default scope, available in runtime, propagated to dependent project
+provided - like compile, but isn't available on runtime, and don’t propagated to dependent project
+
+Some notes:
+For artifact versions it’s better to use constants
+Use Ctrl+C to stop maven build
+Try to avoid cyclic dependencies
+
+* “бираем сообщению Mавена, что билд платформ-dependent.
+добавлЯем в корневом pom-е проекта:
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+* make release with maven-release-plugin
+mvn clean release:clean release:prepare release:perform --batch-mode
+

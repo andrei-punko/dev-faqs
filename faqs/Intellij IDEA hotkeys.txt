@@ -1,0 +1,36 @@
+Ctrl+N open class
+Ctrl+Shift+N open file
+Ctrl+Shift+F search by project
+Ctrl+Alt+L formatting
+Ctrl+E latest used files (+search by name)
+Ctrl+Shift+E latest changed files
+Ctrl+Alt+O optimize import
+
+Ctrl+/ one line comment
+Ctr+Shift+/ multi line comment
+
+Ctrl+LMB navigation to selected class/method
+Ctrl+B navigation to declaration of selected class/method
+Ctrl+Alt+Left/Right naviagation by classess
+Ctrl+Q info/help for selected object
+Shift+F6 renaming at all places of usage
+Alt+F1 popup for quick selection of element for edition
+Alt+Insert code insertion (getter, setter, other methods)
+
+Ctrl+U navigate to superclass
+
+Ctrl+Shift+[1-9] put bookmark with number
+Ctrl+F11 put bookmark with selection dialog (number/character)
+Ctrl+[1-9] navigate to bookmark with this number
+Shift+F11 show bookmark list
+
+Ctrl+Alt+T surround selected block
+Ctrl+Alt+F7 search usages of selected element
+
+Alt+1 on/off Project view
+Alt+2 on/off Favorites
+Alt+3 on/off Find
+Alt+7 on/off Structure view
+
+Ctrl+~ switch 1.color scheme 2.keymap 3.style 4.look & feel
+

@@ -1,0 +1,25 @@
+
+* Resize AWS Volume
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   30G   28G  1.4G  96% /
+
+$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+nvme0n1     259:0    0   33G  0 disk
+--nvme0n1p1 259:1    0   30G  0 part /
+
+$ sudo growpart /dev/nvme0n1 1
+CHANGED: partition=1 start=2048 old: size=62912479 end=62914527 new: size=69203935,end=69205983
+
+$ sudo resize2fs /dev/nvme0n1p1
+resize2fs 1.44.1 (24-Mar-2018)
+Filesystem at /dev/nvme0n1p1 is mounted on /; on-line resizing required
+old_desc_blocks = 4, new_desc_blocks = 5
+The filesystem on /dev/nvme0n1p1 is now 8650491 (4k) blocks long.
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   32G   28G  4.2G  88% /

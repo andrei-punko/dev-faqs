@@ -1,0 +1,42 @@
+
+* После установки Винды проблемы с русским шрифтом в путях к папках и т.п.
+Изменить кодировку для несистемной локали на русскую
+
+* Чтобы включить клавишу NUM LOCK до входа в систему
+выполните указанные ниже действия:
+    Откройте редактор реестра
+    Перейдите к разделу HKEY_USERS\.Default\Control Panel\Keyboard
+    Измените значение параметра InitialKeyboardIndicators с 0 на 2
+
+* To find which version of Windows you are running
+wmic os get caption
+wmic os get osarchitecture
+ver, winver
+
+* show installed java versions
+for %I in (java.exe) do @echo %~$PATH:I
+
+* set java version from console
+SETX JAVA_HOME "c:\Program Files (x86)\Java\java7"
+
+* local drives for CygWin
+cd /cygdrive/d
+
+* Перезагрузка/выключение компа через RDC
+Ctrl+Alt+End
+
+* Upgrading from WSL1 to WSL2 (to speed up Docker on Windows)
+https://docs.docker.com/docker-for-windows/wsl/
+https://dev.to/adityakanekar/upgrading-from-wsl1-to-wsl2-1fl9
+list existing distros: wsl -l -v
+set wsl version: wsl --set-version Ubuntu-18.04 2
+start Ubuntu shell: wsl -d Ubuntu-18.04
+
+* Fix issue when VSCode doesn't see system $PATH
+https://stackoverflow.com/questions/43983718/set-global-path-environment-variable-in-vs-code
+Press Ctrl+Shift+P, open "Preferences: Open Settings (JSON)", add next block:
+"terminal.integrated.env.windows": {
+  "PATH": "..."
+}
+Replace "..." with output of `echo "$PATH"` command
+

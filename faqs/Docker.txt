@@ -1,0 +1,268 @@
+
+* preparation to Docker installation in Windows
+enable virtualization in BIOS
+update Windows to required version
+install Hyper-V
+
+* setup docker according to https://docs.docker.com/engine/installation/linux/ubuntulinux/
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
+less /etc/apt/sources.list.d/docker.list
+sudo apt-get update
+apt-cache policy docker-engine
+sudo apt-get update
+sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+sudo apt-get update
+sudo apt-get install docker-engine
+sudo service docker start
+
+* start docker demo instance
+sudo docker run hello-world
+
+* start docker demo instance in detached mode
+sudo docker run hello-world -d
+
+* expose some ports
+docker run -d -p host_port:container_port repository:port/name:version
+
+* start a postgres instance with name=some-postgress and password=mysecretpassword
+sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+* list docker containers
+sudo docker ps -a	- все запускавшиеся
+sudo docker ps		- все активные
+
+* configure docker to start on boot (for latest Ubuntu, for old (14.10 and below) - Docker should start automatically)
+sudo systemctl enable docker
+
+* upgrade docker
+sudo apt-get update
+sudo apt-get upgrade docker-engine
+
+* connect to it via psql
+sudo docker run -it --rm --link some-postgres:postgres postgres psql -h postgres -U postgres
+
+* save changes of docker container
+sudo docker commit 0e09a6bc1bf7 my-image		# CONTAINER ID and name
+
+* stop docker container
+sudo docker stop 0e09a6bc1bf7							# CONTAINER ID
+
+* list saved docker containers
+sudo docker images
+
+* Run container from image my-image in background and print container ID
+sudo docker run -d my-image
+
+* setup --registry-mirrors
+{
+  "registry-mirrors": [],
+  "insecure-registries": [
+    "dev.eesmart.godeltech.com:18443",
+    "dev.eesmart.godeltech.com:18444",
+    "dev.eesmart.godeltech.com:18445",
+    "128.16.0.21:18443",
+    "128.16.0.21:18444",
+    "128.16.0.21:18445"
+  ]
+}
+
+* login to docker via console
+docker login -u a.punko -p a.punko dev.eesmart.godeltech.com:18443
+docker login dev.eesmart.godeltech.com:18443
+
+* push custom docker image
+docker login -u a.punko -p a.punko dev.eesmart.godeltech.com:18445
+docker images
+docker tag 03b4557ad7b9 dev.eesmart.godeltech.com:18445/somenewname:latest
+docker push dev.eesmart.godeltech.com:18445/somenewname
+
+* to support pushes from maven
+add to maven settings.xml:
+<servers>
+	<server>
+		<id>docker-hub</id>
+		<username>admin</username>
+		<password>...</password>
+		<configuration>
+			<email>andd3dfx@gmail.com</email>
+		</configuration>
+	</server>
+</servers>
+
+* Delete all docker images
+docker rmi $(docker images -q)
+
+* remove image by ID
+docker rmi IMAGE_ID
+
+* tricky filtering during remove
+docker rmi | grep ...
+
+* To make Docker available for docker-maven-plugin we need to make some preparations:
+Add DOCKER_HOST=tcp://127.0.0.1:4243
+- to Docker config file: /etc/default/docker
+- to Jenkins job
+
+* setup docker for jenkins
+All from root permissions
+                1. /etc/init.d/docker stop -- stop docker service
+                2. vim /etc/default/docker -- add config "DOCKER_OPTS" for docker to open custom port
+                                DOCKER_OPTS="-H tcp://192.168.8.222:2375"
+                3. vim /lib/systemd/system/docker.service -- add config to docker.service read custom config (/etc/default/docker)
+                                ExecStart=/usr/bin/dockerd -H fd:// $DOCKER_OPTS
+                                EnvironmentFile=-/etc/default/docker
+                4. systemctl daemon-reload -- reload
+                5. /etc/init.d/docker start -- start docker service
+
+* start image
+docker run -p 5552:5432 dev.eesmart.godeltech.com:18444/smart/smart-data-image:1.11
+
+* list all images that running now and stopped
+docker ps -a
+
+* To remove all unused Docker containers, images, networks and volumes:
+docker system prune
+
+or individually:
+docker container prune
+docker image prune
+docker network prune
+docker volume prune
+
+* For work of fabric8 docker-maven-plugin Docker config file ~/.docker/config.json should contain next item:
+{"credsStore":"wincred"}
+
+* docker images clean up (?)
+docker kill $(docker ps -q)
+docker rm $(docker ps -q)
+
+* entering into docker container logs
+$ docker container ps
+[get container name from NAMES column]
+$ docker exec -it <container-name> /bin/bash
+
+* stop all Docker containers:
+docker container stop $(docker container ls –aq)
+
+* remove all stopped containers:
+docker container rm $(docker container ls –aq)
+
+* check installed docker:
+docker run hello-world
+
+* check started containers:
+docker ps
+
+* check logs of some container:
+docker logs <container-name>
+
+* Get IP of Docker image:
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" <container_name>
+
+* Enter into container by SSH
+docker exec -it <container_name> sh
+
+* Dockerfile manual
+https://habr.com/ru/company/ruvds/blog/439980/
+https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
+= FROM — задаёт базовый (родительский) образ.
+	FROM <image>
+	FROM <image>:<tag>
+FROM can appear multiple times within a single Dockerfile in order to create multiple images.
+
+= MAINTAINER - allows you to set the Author field of the generated images.
+	MAINTAINER <name>
+
+= LABEL — описывает метаданные. Например — сведения о том, кто создал и поддерживает образ.
+	LABEL <key>=<value> [<key>=<value> ...]
+
+= ENV — устанавливает постоянные переменные среды.
+    ENV <key> <value>
+    ENV <key>=<value> [<key>=<value> ...]
+
+= RUN — выполняет команду и создаёт слой образа. Используется для установки в контейнер пакетов.
+    RUN <command> (shell form, the command is run in a shell, which by default is /bin/sh -c on Linux or cmd /S /C on Windows)
+    RUN ["<executable>", "<param1>", "<param2>"] (exec form)
+
+= COPY — копирует в контейнер файлы и папки.
+    COPY <src> [<src> ...] <dest>
+    COPY ["<src>", ... "<dest>"] (this form is required for paths containing whitespace)
+
+= ADD — копирует файлы и папки в контейнер, может распаковывать локальные .tar-файлы.
+    ADD <src> [<src> ...] <dest>
+    ADD ["<src>", ... "<dest>"] (this form is required for paths containing whitespace)
+
+= CMD — описывает команду с аргументами, которую нужно выполнить когда контейнер будет запущен. Аргументы могут быть переопределены при запуске контейнера. В файле может присутствовать лишь одна инструкция CMD (если больше одной - выполняется последня).
+    CMD ["<executable>","<param1>","<param2>"] (exec form, this is the preferred form)
+    CMD ["<param1>","<param2>"] (as default parameters to ENTRYPOINT)
+    CMD <command> <param1> <param2> (shell form)
+
+= WORKDIR — задаёт рабочую директорию для следующей инструкции.
+	WORKDIR </path/to/workdir>
+
+= ARG — задаёт переменные для передачи Docker во время сборки образа.
+	ARG <name>[=<default value>]
+
+= ENTRYPOINT — предоставляет команду с аргументами для вызова во время выполнения контейнера. Аргументы не переопределяются.
+    ENTRYPOINT ["<executable>", "<param1>", "<param2>"] (exec form, preferred)
+    ENTRYPOINT <command> <param1> <param2> (shell form)
+
+В документации к Docker есть несколько рекомендаций, касающихся того, какую инструкцию, CMD или ENTRYPOINT, стоит выбрать в качестве инструмента для выполнения команд при запуске контейнера:
+    Если при каждом запуске контейнера нужно выполнять одну и ту же команду — используйте ENTRYPOINT.
+    Если контейнер будет использоваться в роли приложения — используйте ENTRYPOINT.
+    Если вы знаете, что при запуске контейнера вам понадобится передавать ему аргументы, которые могут перезаписывать аргументы, указанные в Dockerfile, используйте CMD.
+
+= EXPOSE — указывает на необходимость открыть порт. EXPOSE does not make the ports of the container accessible to the host.
+	EXPOSE <port> [<port> ...]
+	
+= VOLUME — создаёт точку монтирования для работы с постоянным хранилищем.
+    VOLUME ["<path>", ...]
+    VOLUME <path> [<path> ...]
+
+= HEALTHCHECK - Tells Docker how to test a container to check that it is still working.
+    HEALTHCHECK [<options>] CMD <command> (check container health by running a command inside the container)
+    HEALTHCHECK NONE (disable any healthcheck inherited from the base image)
+	The <options> that can appear are...
+		--interval=<duration> (default: 30s)
+		--timeout=<duration> (default: 30s)
+		--retries=<number> (default: 3)
+
+
+= Docker применяется для управления отдельными контейнерами (сервисами), из которых состоит приложение.
+= Docker Compose используется для одновременного управления несколькими контейнерами, входящими в состав приложения. Этот инструмент предлагает те же возможности, что и Docker, но позволяет работать с более сложными приложениями.
+
+* Docker Сompose manual
+Статья https://docs.docker.com/compose/gettingstarted/ и это видимо ее перевод: https://dker.ru/docs/docker-compose/getting-started/
+https://dker.ru/docs/docker-compose/compose-file-reference/
+https://habr.com/ru/company/ruvds/blog/450312/
+Справочник: https://docs.docker.com/compose/compose-file/compose-file-v3/
+
+version: '3'
+services:
+  web:
+    build: .			# Build an image using Dockerfile from current directory
+	network_mode: bridge	# Network mode (bridge/host/none/service:[service name]/container:[container name/id]). On a user-defined bridge network, containers can resolve each other by name or alias.
+    ports:
+     - "5000:5000"		# Ports binding [host port]:[container port]
+    volumes:
+     - .:/code			# Mount paths or named volumes, optionally specifying a path on the host machine (HOST:CONTAINER), or an access mode (HOST:CONTAINER:ro)
+    depends_on:			# Express dependency between services
+     - redis
+  redis:
+    image: redis		# Used existing redis:latest Docker image
+	network_mode: bridge
+
+If you want to run your services in the background, you can pass the -d flag (for “detached” mode) to 'docker-compose up'
+
+If you started Compose with 'docker-compose up -d', stop your services once you’ve finished with them: 'docker-compose stop'
+You can bring everything down, removing the containers entirely, with the 'down' command. Pass '--volumes' to also remove the data volume: 'docker-compose down --volumes'
+
+* Вывести список контейнеров:
+$ docker-compose ps
+
+* Выполнить команду в выполняющемся контейнере:
+$ docker-compose exec [service name] [command]
+

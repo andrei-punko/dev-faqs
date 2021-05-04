@@ -1,0 +1,520 @@
+
+* Linux books
+Колисниченко - Linux. Полное руководство
+Уэлш - Запускаем Linux
+Федорчук, ruslinux.net
+
+* apt-cache search <packet_name>
+поиск пакета для инсталляции
+
+* install maven: http://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
+sudo apt-get install maven2
+mvn -version
+
+* install git
+sudo apt-get install git-core
+git --version
+
+* install jenkins: https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+* upgrade jenkins
+sudo apt-get update
+sudo apt-get install jenkins
+
+http://10.6.131.215:8080/ - access to Jenkins web ui
+10.6.132.6
+
+* install drive tools
+sudo apt-get install udisks
+
+* инфа о диске
+udisks --show-info /dev/sda1
+
+* инфа о системе (не ставил):
+sudo apt-get install sysinfo
+
+* список устр-в, подключенных сейчас
+sudo fdisk -l
+
+* список примонтированных устр-в
+sudo mount
+
+* монтирование устр-ва, примеры:
+sudo mount /dev/sdb1 /home/user/Видео
+sudo mount -t ext3 /dev/sdb1 /home/user/Видео
+после -t указывается тип файловой системы: ntfs ntfs-3g vfat iso9660 - соответственно для NTFS, FAT и CD-дисков файловых систем. Последний нужен только для подключения CD/DVD-ROM устройств и образа диска .iso.
+права доступа: -o rw или -o ro (чтение+записть или только чтение)
+
+sudo mount -t ext3 -o rw,iocharset=utf8,codepage=866 /dev/sdb1 /home/user/Видео
+(указана кодировка системной локали, добавлена подержка русского языка)
+
+-o force - принудительное монтирование при проблемах
+посмотреть инфу о диске и свободное место на нем: df -h
+отмонтирование устр-ва: sudo umount /dev/sdb1 или sudo umount /home/user/Видео
+
+* монтирование cd-rom-а:
+sudo mount -t iso9660 -o ro /dev/cdrom /cd
+
+* монтирование образа диска:
+sudo mount -t iso9660 -o loop /home/file.iso /home/iso
+(параметр -o loop указывает, что используется файл iso)
+
+* монтирование сетевого диска:
+sudo mount -t smbfs -o username=<name>,password=<password> //pupkin_v/oracle10g-binary /home/user/oracle-binaries
+
+* Samba File System installation
+sudo apt-get install smbfs
+или для более новых fs:
+sudo apt-get install cifs-utils
+
+* создать директорию (ключ -p создает все нужные директории "по дороге")
+mkdir -p /home/user/dev
+
+* Create git repository
+cd /home/user/dev
+git init
+
+ls - список файлов
+ls -l - детальный список файлов
+ls -R - список файлов для свех подпапок
+ls -l -R - все вместе
+find / -name '<dir_name>' -type d - поиск директории
+
+* логин as root:
+sudo -s или sudo bash
+
+* Install Oracle 10g on Ubuntu
+Step 1: Add the following lines to the /etc/apt/sources.list:
+# Oracle Repository
+deb http://oss.oracle.com/debian unstable main non-free
+
+Step 2: import the key
+wget http://oss.oracle.com/el4/RPM-GPG-KEY-oracle -O- | sudo apt-key add -
+
+Step 3: Update the package repository database by using the following command:
+sudo apt-get update
+
+Step 4: Install the Oracle Express packages:
+sudo aptitude install oracle-xe oracle-xe-client
+или sudo apt-get install oracle-xe
+
+Step 5: Configure the oracle as per you need
+sudo /etc/init.d/oracle-xe configure
+
+Step 6: Access the nice Oracle web interface by:
+http://127.0.0.1:8080/apex
+
+* Swap file creation
+If you have less than 1GB memory run the following commands to create swap space:
+sudo dd if=/dev/zero of=/swpfs1 bs=1M count=1000
+sudo mkswap /swpfs1
+sudo swapon /swpfs1
+
+* инсталл пакета
+cd <directory>
+sudo dpkg -i package_name.deb
+
+Скачал оракл на локальный диск, расшарил папку, прикрепил сетевой диск, установил:
+sudo dpkg -i oracle-xe_10.2.0.1-1.1_i386.deb
+
+Конфигурируем оракл:
+/etc/init.d/oracle-xe configure
+set pass for sys & system users
+
+http://10.6.132.6:8080/apex
+
+* рестарт дженкинса:
+service jenkins restart
+
+* редактирование конфига дженкинса для использования порта 8180:
+/etc/default/jenkins
+
+* редактирование переменной PATH:
+vim ~/.profile
+добавлены строки:
+export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
+export $PATH=$PATH:$ORACLE_HOME/bin
+
+Залогиниться под рутом:
+su
+после этого вводим рутовский пароль
+
+К какому типу относится ОС: cat /proc/version
+Версия ОС: cat /etc/issue
+
+-verbose:class
+nohup java $args -cp $CLASSPATH $SERVICE_CONTAINER_MAIN >nohup.out 2>&1 &
+
+* Настройка сети для Raspberry Pi
+Открыл файл /etc/network/interfaces с правами админа: sudo vi /etc/network/interfaces
+Удалил то, что в нем было и добавил следующие строки:
+iface eth0 inet static
+address 192.168.1.100
+netmask 255.255.255.0
+gateway 192.168.1.1
+auto eth0
+
+* Посмотреть свой ip:
+hostname -I
+
+* Сгенерировать свой ssh ключ:
+ssh-keygen -t rsa
+
+* printer server creation
+sudo apt-get update
+sudo apt-get install vim mc cups samba samba-common-bin
+sudo usermod -aG lpadmin pi
+sudo /etc/init.d/cups start
+sudo /etc/init.d/samba restart
+
+sudo vim /etc/cups/cupsd.conf
+Внес изменения:
+<Location />
+  # Allow shared printing...
+  Order allow,deny
+  Allow @LOCAL
+</Location>
+<Location /admin>
+  Order allow,deny
+  Allow @local
+</Location>
+<Location /admin/conf>
+  AuthType Default
+  Require user @SYSTEM
+  Order allow,deny
+  Allow @local
+</Location>
+
+sudo vim /etc/samba/smb.conf
+изменил [printers]:
+browseable = yes
+
+зашел на http://192.168.1.100:631
+добавил принтер Samsung ML-2010
+
+в Windows установить, если не установлен, "Клиент интернет-печати"
+добавить принтер в пункте "Выбрать общий принтер по имени", ввести http://192.168.1.100:631/printers/Samsung_ML_2010
+(использовать имя принтера, ввведенное при настройке через браузер)
+
+* Тест звука:
+speaker-test
+
+* Посылка мейла:
+mail -s "Script for web server" andd3dfx@gmail.com < ~/app.py
+/var/log/exim4/mainlog
+
+* Настройка сервера резолвающего имена
+/etc/resolv.conf
+
+* Настройка факса
+https://wiki.debian.org/HylaFax
+http://www.aboutdebian.com/fax.htm
+
+apt-get install hylafax-server
+faxsetup
+faxaddmodem
+
+less /var/log/dmesg - последние сообщения о подкл. устр-вах
+ttyACM0
+
+sendfax -n -d 80164340425 ~/testfax.txt
+sendfax -n -d +375298618628 ~/testfax.txt
+
+/var/spool/hylafax/etc/config.ttyACM0
+/var/spool/hylafax/log
+/var/spool/mail
+/var/spool/hylafax/log/xferfaxlog
+/var/spool/hylafax/docq
+
+* изменить владельца каталога /home/pi и всех вложенных в него на pi:
+chown -R pi /home/pi
+
+* просмотр, в каких группах состоит пользователь:
+id -a
+
+* list of storage devices:
+lsblk
+
+* find UUID and filesystem type:
+blkid
+
+* добавить пользователя root в группу pi:
+usermod -a -G pi root
+
+* copy file by net to current folder:
+scp username@host:/<path_to_file> .
+
+* show mounted drives, folders
+df -h
+
+* move directory
+mv source_path target_path
+
+* connect to Ubuntu instance hosted on Amazon VM
+run puttygen.exe
+click 'load', select existing public key
+click 'save private key' and save key to file, 'saved' for example
+ssh -i "saved" ubuntu@54.200.254.139
+
+* file opened by less
+enter to edit mode:		v
+delete line: 			ctrl+k
+save file: 				ctrl+o
+exit from edit mode: 	ctrl+x
+
+show terminal window: ctrl+alt+t
+
+* setup display properties
+xrandr
+xdiagnose
+
+* update used java if several installed:
+sudo update-alternatives --config javac
+sudo update-alternatives --config java
+
+update crons: crontab -e
+time in linux console: date
+
+** Troubleshooting WiFi problems:
+* The following logs will contain details about hardware as it was seen by various system services (kernel, udev, etc) at boot time:
+/var/log/udev
+/var/log/dmesg
+
+* These might be helpful (depending on the type of hardware):
+dmesg
+lspci
+lsusb
+
+* Create tunnels
+plink.exe 
+-l username - connect to server account username
+-L localport:servername:remoteport - forward local port localport to host servername with port remoteport 
+-P 22 - connect to port 22 on server
+-ssh - force use of SSH protocol
+-2 - use SSH version 2 only
+-C - enable compression
+-i keyfilename - use private keyfile keyfilename (with path)
+ip_address - ip address of the server
+-T – don't open interactive shell on remote server (disable pty allocation)
+-D dyn_port – make "Dynamic SOCKS-based port forwarding". Dynamic Socks-based port forwarding will make your ssh client a simple socks server which listen to port dyn_port for incoming connections
+
+* wifi setup
+iwconfig -a
+
+* samba test
+smbclient -L 192.168.0.100 -U%
+
+* determine your ip:
+ip addr
+
+* добавить чего-нить в автозагрузку
+/etc/rc.local
+- добавлять до строки exit 0
+
+* Получить список процессов (со словом java в строке результата):
+ps aux | grep java
+
+* Просмотр архивированных логов:
+zless rules.2.log.zip
+
+* Получение списка файлов в директории:
+ll
+
+* Вызов текстового редактора для файла filename:
+less <filename>
+
+* Быстрое перемещение к началу/концу файла:
+< или >
+
+* Поиск в редакторе:
+/<SearchStringCaseSensitive>
+
+* Повторный поиск:
+Shift+/ (?)
+
+* Выход из текстового редактора:
+q
+
+* Показать текущий путь:
+pwd
+
+* Показать имя бокса и ip:
+uname -a
+
+* Вход на host по ssh:
+start putty.exe -pw username password@host
+
+* jmxsh is command-line interface to JMX servers: https://code.google.com/p/jmxsh/
+Example of usage: java -jar jmxsh.jar br_fix_quartz_jobs.jmxsh
+
+* check availability of soap service from console
+wget http://adcosgiq3:9009/BookerDomainService?wsdl --quiet -O -
+
+* check availability of resource by definite port
+nc -z host port
+
+* put your ssh key on server: ssh-copy-id
+ssh-copy-id -i ~/.ssh/id_rsa.pub andrei@192.168.1.181
+
+* determine process id:
+ps -ef | grep java
+
+* determine process uptime:
+ps -eo pid,etime | grep PUT_PID_HERE | awk '{print $2}'
+
+* show list of used ports
+netstat -a -n
+
+* If you need to delete files by mask recursively (first command - to check is it that you expected)
+find . -name "*.versionsBackup" -type f
+find . -name "*.versionsBackup" -type f -delete
+
+* delete files
+find . -name 'build.gradle' -delete
+
+* how to find which app holds port:
+https://veerasundar.com/blog/2009/10/how-to-check-which-application-is-using-which-port/
+$ netstat -aon | findstr '[port_number]'
+- determine process PID in result, determine app name using this PID:
+$ tasklist | findstr '[PID]'
+
+* how to check is alias <name> already used
+type <name>
+$ type ls
+ls is aliased to `ls -F --color=auto --show-control-chars'
+
+* show last logged in users:
+last
+
+* find file
+https://losst.ru/komanda-find-v-linux
+find [folder] [parameters] criteria template [action]
+-type f - files
+-type d - folders
+-print - print full name
+
+
+* Check server certificate:
+https://www.shellhacks.com/ru/openssl-check-ssl-certificate-expiration-date/
+= For Google:
+echo | openssl s_client -servername https://www.google.com/ -connect www.google.com:443 2>/dev/null
+
+= For custom service:
+echo | openssl s_client -servername int-paymentauthapi-qvc-de-v1.qvcdev.qvc.net -connect localhost:8989 2>/dev/null
+
+https://habr.com/ru/post/481398/
+
+
+* Add share to Samba server:
+https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21
+sudo nano /etc/samba/smb.conf
+
+Once "smb.conf" has loaded, add this to the very end of the file:
+[<folder_name>]
+path = /home/<user_name>/<folder_name>
+valid users = <user_name>
+read only = no
+guest ok = yes
+
+And restart the Samba:
+sudo service smbd restart
+
+Show current configuration:
+testparm
+
+* Memory test in Linux
+$ sudo apt-get install memtester
+$ memtester 100 5
+Replace "100" with the size, in megabytes, of the RAM installed on the computer.
+Replace "5" with the number of times you want to run the test.
+
+* test network speed
+https://www.addictivetips.com/ubuntu-linux-tips/run-speedtest-from-linux-terminal/
+speedtest-cli
+
+* get motherboard info
+sudo dmidecode -t 2
+
+* When no permissions to run docker in Linux
+`sudo usermod -aG docker "${USER}"`
+(after that - check using `grep docker /etc/group` and should see something like this: `docker:x::998:<username>` in one of lines)
+logout+login or run `newgrp docker`
+after that - restart your docker daemon: `sudo service docker restart`
+(may be linux restart could be required)
+
+* Ubuntu - switch keyboard
+sudo apt-get install gnome-tweaks
+
+* Usb flash drive formatting
+https://losst.ru/formatirovanie-fleshki-v-linux
+использовал Gparted
+
+* Install JDK 8
+sudo apt install openjdk-8-jdk
+
+* switch between JDKs
+https://askubuntu.com/questions/740757/switch-between-multiple-java-versions
+sudo update-alternatives --config java
+
+* Install NVIDIA driver on Linux
+https://gist.github.com/wangruohui/df039f0dc434d6486f5d4d098aa52d07
+
+* Videocard graphic test on Linux
+https://losst.ru/testirovanie-videokarty-v-linux
+= Simple test:
+sudo apt install mesa-utils
+glxgears
+
+= Complex test:
+sudo apt install glmark2
+glmark2
+
+* Fix error: gitk crashes when viewing commit containing emoji: X Error of failed request: BadLength (poly request too large or internal Xlib length error)
+https://unix.stackexchange.com/questions/629281/gitk-crashes-when-viewing-commit-containing-emoji-x-error-of-failed-request-ba
+apt remove --purge fonts-noto-color-emoji
+
+* Linux command line quick help
+https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+
+* For further study:
+Book: "The Linux Command Line" by William Shotts
+
+* Basic UNIX commands
+http://mally.stanford.edu/~sr/computing/basic-unix.html
+
+* Restore deleted partition
+1.Boot any live CD, e.g. Ubuntu
+2.Install testdisk utility:
+$ sudo apt-get install testdisk
+If testdisk unavailable - add universe repository before that:
+$ sudo add-apt-repository universe
+$ sudo apt update
+3.Run testdisk as root:
+$ sudo testdisk
+4.Choose to create new log file
+5.Select your disk, choose Proceed
+6.Choose partition table type (likely Intel if deleted partition was under Windows OS)
+7.Choose Analyze
+8.Choose Quick Search
+9.Select deleted partition. You can use left/right arrows to change its type (primary, logical, extended). You can use T to change partition type if needed.
+10.Hit Enter then choose Write
+11.Reboot
+
+* How to solve "unable to install snap has install-snap change in progress" problem
+https://ask-ubuntu.ru/questions/103349/ubuntu-ne-mozhet-zavershit-ustanovku-spotify-s-pomoschyu-snap
+
+Найдите идентификатор изменения для неудачной установки с помощью команды:
+$ snap changes
+
+В следующем списке вы найдете одну строку, начинающуюся с цифры и заканчивающуюся "Install ... snap"
+
+Остановите неудачную установку с найденным номером (давайте представим, что это 123):
+$ sudo snap abort 123
+
+После прерывания установите оснастку из терминала:
+$ sudo snap install <snap_name>
+
