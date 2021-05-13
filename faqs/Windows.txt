@@ -40,3 +40,7 @@ Press Ctrl+Shift+P, open "Preferences: Open Settings (JSON)", add next block:
 }
 Replace "..." with output of `echo "$PATH"` command
 
+* How to use unicode characters in Windows command line?
+https://stackoverflow.com/questions/388490/how-to-use-unicode-characters-in-windows-command-line
+chcp 65001
+(использовал, чтобы обеспечить поддержку русских символов в респонсах curl-а в Windows cmd)
