@@ -870,6 +870,7 @@ knapsack				ранец
 knowingly 			сознательно
 landlord				хозяин
 lash out					набрасываться
+lashes				ресницы
 latter					последний
 laundering				отмывание
 laundromat			прачечная-автомат
@@ -938,7 +939,7 @@ merits					достоинства
 mess						беспорядок
 mess up					испортить
 messy					беспорядочный
-meticulous 			дотошный
+meticulous 			дотошный, тщательный, скурпулезный
 meticulously			тщательно
 might (v)				мог бы, можно
 mimic				имитировать, подражать
