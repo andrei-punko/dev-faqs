@@ -11,3 +11,19 @@ gradle test --tests HealthCheckSpec
 * error for case when gradlew doesn't have +x permission
 git update-index --chmod=+x gradlew
 
+* Publishing
+plugins {
+    `maven-publish`
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = groupId
+            artifactId = artifactId
+            version = version
+
+            from(components["java"])
+        }
+    }
+}
