@@ -230,11 +230,11 @@ caveat					предостережение
 caviar					икра
 cease					прекращение
 certain				определенный, уверенный, верный
-chasing				погоня, преследование
 chambermaid				горничная
 charge smb the rack rate		выставить кому-то счет с полной стоимостью
 charm				очарование, шарм, обаяние
 chase					погоня
+chasing				погоня, преследование
 check-in				регистрироваться
 check-in deck			стойка регистрации
 cheep					дешево
@@ -397,7 +397,7 @@ dealership			дилерский
 decent					приличный/порядочный
 deception				обман, жульничество
 decimation				истребление
-deconsecrate		секуляризовать
+deconsecrate			декантировать, секуляризировать
 dedicate				посвящать, предназначать
 dedication				преданность
 deem					считать, полагать
@@ -541,6 +541,7 @@ environmentally friendly		экологический
 envision				представлять себе, воображать
 equity					капитал
 eradicate				искоренять, ликвидировать
+erected			воздвигнут
 erroneous				ошибочный, ложный
 erroneously			ошибочно
 eschew				сторониться
@@ -1322,6 +1323,7 @@ snatch					схватить
 snazzy					броский
 sneak               ябеда, доносить, стащить, делать украдкой
 sneaking around		ошиваться
+sneaky			подлый
 snippet					отрывок
 soak					впитывать
 soil					почва
