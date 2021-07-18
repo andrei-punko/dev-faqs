@@ -54,6 +54,16 @@ git fetch
 * В VIM: переход в режим текстового редактора/консоли: "i"/":"
 dd - удалить строку в буфер
 p - вставить строку после курсора
+:m 12 	move current line to after line 12
+:m 0 	move current line to before first line
+:m $ 	move current line to after last line
+:5,7m 21 	move lines 5, 6 and 7 to after line 21
+:5,7m 0 	move lines 5, 6 and 7 to before first line
+:5,7m $ 	move lines 5, 6 and 7 to after last line
+:.,.+4m 21 	move 5 lines starting at current line to after line 21
+:,+4m14 	same (. for current line is assumed)
+:m .+1 (which can be abbreviated to :m+) moves the current line to after line number .+1 (current line number + 1). In short - current line moved down one line
+:m .-2 (which can be abbreviated to :m-2) moves the current line to after line number .-2 (current line number − 2). In short - current line moved up one line
 
 * Накатить коммиты [со следующего за sha1 до последнего] на master:
 git rebase -i sha1 --onto origin/master
