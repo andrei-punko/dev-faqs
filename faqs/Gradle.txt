@@ -27,3 +27,7 @@ publishing {
         }
     }
 }
+
+* Set JVM memory params for Gradle project
+Add to the project root - file gradle.properties with next content:
+org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m
