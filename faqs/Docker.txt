@@ -266,3 +266,8 @@ $ docker-compose ps
 * Выполнить команду в выполняющемся контейнере:
 $ docker-compose exec [service name] [command]
 
+* Docker on windows fails with //./pipe/docker_engine: The system cannot find the file specified
+https://forums.docker.com/t/docker-on-windows-fails-with-pipe-docker-engine-the-system-cannot-find-the-file-specified/28479/4
+"I fixed the issue by switch docker to windows containers, then switch docker to linux container again. I used docker desktop tool."
+We can switch docker container by command line, go to path of docker and run command:
+./DockerCli.exe -SwitchDaemon

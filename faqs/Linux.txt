@@ -357,8 +357,8 @@ wget http://adcosgiq3:9009/BookerDomainService?wsdl --quiet -O -
 * check availability of resource by definite port
 nc -z host port
 
-* put your ssh key on server: ssh-copy-id
-ssh-copy-id -i ~/.ssh/id_rsa.pub andrei@192.168.1.181
+* put your ssh key on server
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
 
 * determine process id:
 ps -ef | grep java
