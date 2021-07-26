@@ -271,3 +271,7 @@ https://forums.docker.com/t/docker-on-windows-fails-with-pipe-docker-engine-the-
 "I fixed the issue by switch docker to windows containers, then switch docker to linux container again. I used docker desktop tool."
 We can switch docker container by command line, go to path of docker and run command:
 ./DockerCli.exe -SwitchDaemon
+
+* Ошибка Docker: “no matching manifest for windows/amd64 in the manifest list entries”
+https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries
+You are in Windows container mode. So if you're not sure that the image you want to pull is built for the Windows architecture, you need to switch to Linux containers.

@@ -885,6 +885,7 @@ legitimately		законно
 leisure hours/time		free time
 lender 				кредитор
 lending				кредитование, ссуживание
+lenient				снисходительный, мягкий, терпимый
 lest				чтобы не
 leverage				рычаг, система рычагов, ср-во достижения цели
 liability				ответственность

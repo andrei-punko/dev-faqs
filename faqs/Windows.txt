@@ -48,3 +48,5 @@ chcp 65001
 * Как переименовать папку пользователя в Windows 10
 https://remontka.pro/rename-user-folder-windows-10/
 
+* Hosts location
+c:\windows\system32\drivers\etc\hosts
