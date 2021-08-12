@@ -394,6 +394,7 @@ daunting				пугающий, устрашающий, making you feel slightly f
 deadlock				тупик
 deafened			оглушенный
 dealership			дилерский
+deceived 			обманутый
 decent					приличный/порядочный
 deception				обман, жульничество
 decimation				истребление
@@ -956,6 +957,7 @@ mitigation			смягчение
 modestly				умеренно
 moisture				влажность
 mole				моль, крот
+morbid 				болезненный, отвратительный, ужасный
 more common				чаще
 more reserved			скрытный, более защищенный
 moreover				более того
@@ -1232,6 +1234,7 @@ resilience				эластичность, упругость
 resilient				упругий, эластичный, жизнерадостный
 respectful				behaving in a socially correct way that shows you are thinking about other people's feelings
 rest assured			будьте уверены
+restrained			сдержанный, ограниченный, умеренный
 restrains				сдерживает
 retain					сохранить, удерживать
 retaliation				воздаяние, возмездие
