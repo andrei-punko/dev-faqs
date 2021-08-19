@@ -275,3 +275,7 @@ We can switch docker container by command line, go to path of docker and run com
 * Ошибка Docker: “no matching manifest for windows/amd64 in the manifest list entries”
 https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries
 You are in Windows container mode. So if you're not sure that the image you want to pull is built for the Windows architecture, you need to switch to Linux containers.
+
+* How to get the IP address of the docker host from inside a docker container
+https://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container
+host.docker.internal
