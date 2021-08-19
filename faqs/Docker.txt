@@ -277,5 +277,6 @@ https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-win
 You are in Windows container mode. So if you're not sure that the image you want to pull is built for the Windows architecture, you need to switch to Linux containers.
 
 * How to get the IP address of the docker host from inside a docker container
+https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach?page=1&tab=votes#tab-top
 https://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container
-host.docker.internal
+host.docker.internal (instead of the 127.0.0.1 in your connection string)
