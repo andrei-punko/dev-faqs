@@ -518,3 +518,18 @@ $ sudo snap abort 123
 После прерывания установите оснастку из терминала:
 $ sudo snap install <snap_name>
 
+* Закодировать пароль в base64:
+echo -n "admin123456" | base64
+
+* Закодировать файл в base64:
+base64 -w 0 kafka.client.keystore.jks
+base64 -w 0 kafka.client.truststore.jks
+
+* Как долго запущен процесс c id=PID
+https://unix.stackexchange.com/questions/7870/how-to-check-how-long-a-process-has-been-running
+ps -o etime= -p "PID"
+Output format: [[dd-]hh:]mm:ss
+Example: 21-04:59:47
+
+* Ansible encode/decode
+https://ansible-vault-tool.com
