@@ -530,6 +530,8 @@ https://unix.stackexchange.com/questions/7870/how-to-check-how-long-a-process-ha
 ps -o etime= -p "PID"
 Output format: [[dd-]hh:]mm:ss
 Example: 21-04:59:47
+Чтобы определить PID процесса, можно использовать pidof <имя>
+ps -o etime= -p `pidof tarantool`
 
 * Ansible encode/decode
 https://ansible-vault-tool.com
