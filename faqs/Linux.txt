@@ -535,3 +535,6 @@ ps -o etime= -p `pidof tarantool`
 
 * Ansible encode/decode
 https://ansible-vault-tool.com
+
+* Inspect SSH key
+https://keystore-explorer.org/downloads.html
