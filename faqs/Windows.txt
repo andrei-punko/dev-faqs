@@ -50,3 +50,12 @@ https://remontka.pro/rename-user-folder-windows-10/
 
 * Hosts location
 c:\windows\system32\drivers\etc\hosts
+
+* how to delete disk partiton on Win 10
+run cmd with admin permission
+diskpart
+list disk
+select disk N
+list partition
+select partition M
+delete partition override
