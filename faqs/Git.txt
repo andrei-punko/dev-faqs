@@ -248,3 +248,7 @@ git commit -m "Add code coverage check into pipeline"
 git config user.name "Andrei Punko"
 git config user.email "andd3dfx@gmail.com"
 cat .git/config
+
+* How to resolve problem with self-signed certificate
+https://stackoverflow.com/questions/11621768/how-can-i-make-git-accept-a-self-signed-certificate
+GIT_SSL_NO_VERIFY=true git clone <url>

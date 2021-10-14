@@ -538,3 +538,7 @@ https://ansible-vault-tool.com
 
 * Inspect SSH key
 https://keystore-explorer.org/downloads.html
+
+* Определить ID процесса и остановить его
+kill -9 $(ps -ef | grep [t]arantool | awk '{print $2}')\n
+(квадратные скобки вокруг первой буквы оставляют в выдаче - только процессы)
