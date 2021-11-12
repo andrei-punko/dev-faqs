@@ -280,3 +280,9 @@ You are in Windows container mode. So if you're not sure that the image you want
 https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach?page=1&tab=votes#tab-top
 https://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container
 host.docker.internal (instead of the 127.0.0.1 in your connection string)
+
+* Add support of russian characters in Docker container
+Set env variables inside container:
+LANG=C.UTF-8
+LC_ALL=C.UTF-8
+
