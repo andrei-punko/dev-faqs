@@ -63,3 +63,6 @@ delete partition override
 * Fix an issue when Ubuntu in Windows could not get update: "Temporary failure resolving 'security.ubuntu.com'"
 https://askubuntu.com/questions/91543/apt-get-update-fails-to-fetch-files-temporary-failure-resolving-error
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+
+* Import Nexus cert into JDK store
+keytool -importcert -file nexus-cert.cer -keystore cacerts -alias "nexus-cert-alias"
