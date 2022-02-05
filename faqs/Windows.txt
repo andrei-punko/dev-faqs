@@ -66,3 +66,5 @@ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 
 * Import Nexus cert into JDK store
 keytool -importcert -file nexus-cert.cer -keystore cacerts -alias "nexus-cert-alias"
+use password 'changeit' (default jdk store password)
+reply 'yes' on question about trusting to new certificate
