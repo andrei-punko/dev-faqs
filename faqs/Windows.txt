@@ -68,3 +68,8 @@ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 keytool -importcert -file nexus-cert.cer -keystore cacerts -alias "nexus-cert-alias"
 use password 'changeit' (default jdk store password)
 reply 'yes' on question about trusting to new certificate
+
+* Remove association between file extension and program which should open these files
+- In Registry Editor find node:
+Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts
+- Under FileExts key, find the file exstension you want to remove file association for. Right-click and choose Delete
