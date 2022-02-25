@@ -147,3 +147,7 @@ https://habr.com/ru/company/avito/blog/465315/
 
 * Dump dependencies into file
 mvn org.apache.maven.plugins:maven-dependency-plugin:2.10:tree -Dverbose=true > deps.txt
+
+* Switch on debug of SSL in Java
+http://itech-notes.blogspot.com/2013/02/javaxnetdebug-ssl-java.html
+java -Djavax.net.debug=SSL,handshake,data,keymanager,trustmanager -jar ...
