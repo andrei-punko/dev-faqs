@@ -525,6 +525,9 @@ echo -n "admin123456" | base64
 base64 -w 0 kafka.client.keystore.jks
 base64 -w 0 kafka.client.truststore.jks
 
+* Раскодировать строку из base64:
+echo YWRtaW4xMjM0NTY= | base64 --decode
+
 * Как долго запущен процесс c id=PID
 https://unix.stackexchange.com/questions/7870/how-to-check-how-long-a-process-has-been-running
 ps -o etime= -p "PID"

@@ -42,7 +42,7 @@ Replace "..." with output of `echo "$PATH"` command
 
 * How to use unicode characters in Windows command line?
 https://stackoverflow.com/questions/388490/how-to-use-unicode-characters-in-windows-command-line
-chcp 65001
+chcp 65001 (was 866, change codepage)
 (использовал, чтобы обеспечить поддержку русских символов в респонсах curl-а в Windows cmd)
 
 * Как переименовать папку пользователя в Windows 10
