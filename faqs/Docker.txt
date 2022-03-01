@@ -286,3 +286,15 @@ Set env variables inside container:
 LANG=C.UTF-8
 LC_ALL=C.UTF-8
 
+
+* Login into Docker images artifactory
+docker login <host> -u <username> -p <password>
+
+* Pull image
+docker pull tarantool/tarantool:2.7.2
+
+* Tag image
+docker tag tarantool/tarantool:2.7.2 atmc-docker-lib.nexus-ci.corp.dev.vtb/tarantool/tarantool:2.7.2
+
+* Push image
+docker push atmc-docker-lib.nexus-ci.corp.dev.vtb/tarantool/tarantool:2.7.2

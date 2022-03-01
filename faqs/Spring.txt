@@ -486,3 +486,20 @@ projection of properties into new collection:
 combination of methods:
 #{jukebox.songs.?[artist eq 'Aerosmith'].![title]}
 
+
+* Валидация в Spring-Boot сервисе:
+https://blog.upagge.ru/posts/guide/2020/spring/validation/
+
+= Слой контроллеров
+- Валидация тела запроса (@RequestBody)
+	Добавить нужные валидационные аннотации к DTO-объекту
+	Добавить @Valid к параметру
+	Бросается MethodArgumentNotValidException (400)
+- Валидация переменных пути и параметров запроса (@PathVariable, @RequestParam)
+	Добавить нужные валидационные аннотации к переменным
+	Добавить @Validated на класс
+	Бросается ConstraintViolationException (500)
+
+= Слой сервисов
+	Используется комбинация аннотаций @Validated на классе и @Valid на параметре метода
+Бросается ConstraintViolationException (500)

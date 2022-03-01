@@ -151,3 +151,14 @@ mvn org.apache.maven.plugins:maven-dependency-plugin:2.10:tree -Dverbose=true > 
 * Switch on debug of SSL in Java
 http://itech-notes.blogspot.com/2013/02/javaxnetdebug-ssl-java.html
 java -Djavax.net.debug=SSL,handshake,data,keymanager,trustmanager -jar ...
+
+* banner: starwars style
+https://devops.datenkollektiv.de/banner.txt/index.html
+
+* Include one xml into another
+<include resource="ru/vtb/msa/mdclogging/mdc-pattern.xml"/>
+
+* UI для Кафки
+Offset Explorer		https://www.kafkatool.com/
+IDEA: kafkalytic
+

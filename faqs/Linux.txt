@@ -622,3 +622,6 @@ default via 192.168.1.1 dev wlx34e894f55a1c proto dhcp metric 600
 8. ping external ip address to test connectivity:
 $ ping 8.8.8.8
 -----------------------------
+
+* Kill process by name
+kill -9 $(ps -ef | grep tarantool | awk '{print $2}')\n
