@@ -355,7 +355,7 @@ Example of usage: java -jar jmxsh.jar br_fix_quartz_jobs.jmxsh
 wget http://adcosgiq3:9009/BookerDomainService?wsdl --quiet -O -
 
 * check availability of resource by definite port
-nc -z host port
+nc -zv host port
 
 * put your ssh key on server
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
@@ -625,3 +625,9 @@ $ ping 8.8.8.8
 
 * Kill process by name
 kill -9 $(ps -ef | grep tarantool | awk '{print $2}')\n
+
+* Start tunnel to reach one host via another
+ssh -L port1:unreachable_host:port2 user@reachable_host
+We want to get access to 'unreachable_host:port2' via 'reachable_host' using 'user' credentials.
+After that we could interact with 'unreachable_host' using 'localhost:port1' address.
+

@@ -50,3 +50,15 @@ to build a new example application in Ruby. Or use kubectl to deploy a simple Ku
      An example Rails application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/rails-ex/blob/master/README.md.
 -------
 - run 'crc stop'
+
+
+-------------------
+
+* Ansible encode/decode
+https://ansible-vault-tool.com
+https://ansible-vault-tool-v2.dso-core.apps.d0-oscp.corp.dev.vtb
+qwerty
+
+Плагин для IDEA для распаковки/упаковки значений в Secret-ах:
+https://plugins.jetbrains.com/plugin/14278-ansible-vault-editor
+
