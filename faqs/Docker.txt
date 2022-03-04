@@ -298,3 +298,7 @@ docker tag tarantool/tarantool:2.7.2 atmc-docker-lib.nexus-ci.corp.dev.vtb/taran
 
 * Push image
 docker push atmc-docker-lib.nexus-ci.corp.dev.vtb/tarantool/tarantool:2.7.2
+
+* Get address of Docker host
+https://ab57.ru/cmdlist/nslookup.html
+nslookup host.docker.internal
