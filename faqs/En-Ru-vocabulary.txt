@@ -711,6 +711,7 @@ handicapped				инвалид
 handy					удобный
 handy-dandy				very simple and easy to use
 hangover			похмелье
+haphazard			наудачу, случайно
 hard to grasp			трудно понять
 hard-wearing			прочный, износостойкий
 harness					упряжь, сбруя, доспехи
@@ -888,7 +889,7 @@ lender 				кредитор
 lending				кредитование, ссуживание
 lenient				снисходительный, мягкий, терпимый
 lest				чтобы не
-leverage				рычаг, система рычагов, ср-во достижения цели
+leverage			использовть, рычаг, система рычагов, ср-во достижения цели
 liability				ответственность
 liaise					поддерживать связь
 liberate			освобождать
@@ -938,7 +939,7 @@ menacing				угрожающий
 mending				починка
 mention					упомянуть
 merely			просто, только
-merits					достоинства
+merit				заслуга, достоинство
 mess						беспорядок
 mess up					испортить
 messy					беспорядочный
@@ -1319,6 +1320,7 @@ sleuthing				выслеживание
 slightly				немного
 slip					скольжение
 sloppy					неряшливый, небрежный
+slugging through	пробивание через
 sluice					водовод
 slurp					чавкать, хлебать
 smitten with			сражен
