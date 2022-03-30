@@ -19,20 +19,20 @@ sudo apt-get install docker-engine
 sudo service docker start
 
 * start docker demo instance
-sudo docker run hello-world
+docker run hello-world
 
 * start docker demo instance in detached mode
-sudo docker run hello-world -d
+docker run hello-world -d
 
 * expose some ports
 docker run -d -p host_port:container_port repository:port/name:version
 
 * start a postgres instance with name=some-postgress and password=mysecretpassword
-sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
 * list docker containers
-sudo docker ps -a	- все запускавшиеся
-sudo docker ps		- все активные
+docker ps -a	- all containers
+docker ps		- running containers
 
 * configure docker to start on boot (for latest Ubuntu, for old (14.10 and below) - Docker should start automatically)
 sudo systemctl enable docker
@@ -42,19 +42,19 @@ sudo apt-get update
 sudo apt-get upgrade docker-engine
 
 * connect to it via psql
-sudo docker run -it --rm --link some-postgres:postgres postgres psql -h postgres -U postgres
+docker run -it --rm --link some-postgres:postgres postgres psql -h postgres -U postgres
 
 * save changes of docker container
-sudo docker commit 0e09a6bc1bf7 my-image		# CONTAINER ID and name
+docker commit 0e09a6bc1bf7 my-image		# CONTAINER ID and name
 
 * stop docker container
-sudo docker stop 0e09a6bc1bf7							# CONTAINER ID
+docker stop 0e09a6bc1bf7							# CONTAINER ID
 
-* list saved docker containers
-sudo docker images
+* list all docker containers
+docker images -a
 
 * Run container from image my-image in background and print container ID
-sudo docker run -d my-image
+docker run -d my-image
 
 * setup --registry-mirrors
 {
@@ -135,9 +135,27 @@ docker volume prune
 * For work of fabric8 docker-maven-plugin Docker config file ~/.docker/config.json should contain next item:
 {"credsStore":"wincred"}
 
-* docker images clean up (?)
+* Kill All Running Containers
 docker kill $(docker ps -q)
-docker rm $(docker ps -q)
+
+* Delete All Stopped Docker Containers
+Use -f option to nuke the running containers too.
+docker rm $(docker ps -a -q)
+
+* Remove a Docker Image
+docker rmi <image name>
+
+* Delete All Docker Images
+docker rmi $(docker images -q)
+
+* Delete All Untagged (dangling) Docker Images
+docker rmi $(docker images -q -f dangling=true)
+
+* Delete All Images
+docker rmi $(docker images -q)
+
+* Remove Dangling Volumes
+docker volume rm -f $(docker volume ls -f dangling=true -q)
 
 * entering into docker container logs
 $ docker container ps
@@ -164,6 +182,7 @@ docker inspect -f "{{ .NetworkSettings.IPAddress }}" <container_name>
 
 * Enter into container by SSH
 docker exec -it <container_name> sh
+docker exec -it <container_name> bash
 
 * Dockerfile manual
 https://habr.com/ru/company/ruvds/blog/439980/
@@ -261,10 +280,16 @@ If you started Compose with 'docker-compose up -d', stop your services once you�
 You can bring everything down, removing the containers entirely, with the 'down' command. Pass '--volumes' to also remove the data volume: 'docker-compose down --volumes'
 
 * Вывести список контейнеров:
-$ docker-compose ps
+docker-compose ps
 
 * Выполнить команду в выполняющемся контейнере:
-$ docker-compose exec [service name] [command]
+docker-compose exec [service name] [command]
+
+* Follow the Logs of Running Docker Containers With Docker Compose
+docker-compose logs -f
+
+* Follow the logs of one container running under Docker Compose
+docker-compose logs pump <name>
 
 * Docker on windows fails with //./pipe/docker_engine: The system cannot find the file specified
 https://forums.docker.com/t/docker-on-windows-fails-with-pipe-docker-engine-the-system-cannot-find-the-file-specified/28479/4
@@ -302,3 +327,14 @@ docker push atmc-docker-lib.nexus-ci.corp.dev.vtb/tarantool/tarantool:2.7.2
 * Get address of Docker host
 https://ab57.ru/cmdlist/nslookup.html
 nslookup host.docker.internal
+
+* Start RabbitMQ Docker container
+docker run -d --hostname guru-rabbit --name some-rabbit -p 8080:15672 -p 5671:5671 -p 5672:5672 rabbitmq:3-management
+Use login/password: guest/guest
+
+* Stub Dockerfile for Java application
+FROM openjdk:17-jdk-alpine
+VOLUME /tmp
+EXPOSE 8080
+ADD target/articles-backend-app-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=container", "-jar", "/app.jar"]
