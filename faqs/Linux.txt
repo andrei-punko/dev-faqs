@@ -631,3 +631,6 @@ ssh -L port1:unreachable_host:port2 user@reachable_host
 We want to get access to 'unreachable_host:port2' via 'reachable_host' using 'user' credentials.
 After that we could interact with 'unreachable_host' using 'localhost:port1' address.
 
+* Run definite command from history
+Using 'history' command - display list of prev commands
+After that - run one of prev commands using '!LINE-NUMBER', for example: '!575'
