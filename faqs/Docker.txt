@@ -338,3 +338,30 @@ VOLUME /tmp
 EXPOSE 8080
 ADD target/articles-backend-app-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=container", "-jar", "/app.jar"]
+
+* Как добиться того, чтобы один Docker-контейнер ждал полного старта другого контейнера?
+https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y
+Использовать healthcheck:
+https://docs.docker.com/compose/compose-file/#healthcheck
+```
+version: "3"
+
+services:
+  rabbitmq: # login guest:guest
+    image: rabbitmq:management
+    ports:
+      - "15672:15672"
+	...
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:15672"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  app:
+    build: ./app/
+    depends_on:
+      - rabbitmq
+	...
+```
+(для версий более ранних, чем 3 - см. ссылку выше)
