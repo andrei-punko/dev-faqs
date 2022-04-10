@@ -300,7 +300,7 @@ conceive			задумывать, представлять себе
 concern					беспокойство, отношение
 concerning				относительно
 concierge				консьерж
-concise					краткий, сокращенный, сжатый
+concise					краткий, лаконичный, сокращенный, сжатый
 concisely				кратко
 conciseness				краткость, сжатость
 condescension			снисхождение
