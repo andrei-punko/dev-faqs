@@ -1,0 +1,25 @@
+
+* AWS course on Udemy
+https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/
+
+* Spring AWS documentation
+https://docs.awspring.io/spring-cloud-aws/docs/current/reference/html/index.html
+
+* Setap AIM for CodeDeploy:
+Created 2 roles: CodeDeployServiceRole, EC2InstanceRoleForCodeDeploy
+
+* Setup EC2 instance for CodeDeploy:
+ssh -i /c/Users/Andrei/OneDrive/Configs/aws/aws-admin-key-pair.pem ubuntu@ec2-18-212-3-183.compute-1.amazonaws.com
+    3  sudo apt-get update
+    4  sudo apt-get install ruby
+    5  wget https://aws-codedeploy-eu-west-3.s3.eu-west-3.amazonaws.com/latest/install
+    6  chmod +x ./install
+    7  sudo ./install auto
+    8  sudo service codedeploy-agent status
+
+* Link to result Pipeline
+https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/ArticlesAppPipeline/view?region=us-east-1
+
+* Link to service Swagger
+http://ec2-18-212-3-183.compute-1.amazonaws.com:8099/swagger-ui.html
+
