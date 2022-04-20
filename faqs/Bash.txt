@@ -174,3 +174,6 @@ tar - производит архивирование (из нескольких
 * подсчет кол-ва слов в pdf-файлах
 ( for pdf in *.pdf ; do echo -n "$pdf,"; qpdf --show-npages "$pdf"; done ) > temp.txt
 
+* Replace one host with another during curl call
+https://curl.se/docs/manpage.html#--connect-to
+curl -v --connect-to articles-service:9082:localhost:9082 https://articles-service:9082/api/v1/articles
