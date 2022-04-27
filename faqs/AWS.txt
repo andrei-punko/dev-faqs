@@ -23,3 +23,11 @@ https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/Articl
 * Link to service Swagger
 http://ec2-18-212-3-183.compute-1.amazonaws.com:8099/swagger-ui.html
 
+* How to find all Your AWS resources
+https://binarybelle.medium.com/how-to-find-all-your-amazon-web-services-resources-5fd818d6503
+To see all resources in your AWS Account, not just the ones for the region you’re currently in, go to the AWS Console, and then choose:
+- Choose Services, Resource Groups & Tag Editor, Tag Editor.
+- From the dropdowns, choose All Regions and All resource types.
+- Search Resources.
+- To reduce the results to more relevant resources, I filtered on VPC, Instance, Volume, Bucket, RouteTable and Domain.
+- Success.
