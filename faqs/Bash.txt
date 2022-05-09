@@ -177,3 +177,7 @@ tar - производит архивирование (из нескольких
 * Replace one host with another during curl call
 https://curl.se/docs/manpage.html#--connect-to
 curl -v --connect-to articles-service:9082:localhost:9082 https://articles-service:9082/api/v1/articles
+
+* Group file renaming (.txt->.md)
+https://superuser.com/questions/8716/rename-a-group-of-files-with-one-command
+for file in *.txt; do mv "$file" "${file%.txt}.md"; done

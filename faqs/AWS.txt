@@ -17,12 +17,6 @@ ssh -i /c/Users/Andrei/OneDrive/Configs/aws/aws-admin-key-pair.pem ubuntu@ec2-18
     7  sudo ./install auto
     8  sudo service codedeploy-agent status
 
-* Link to result Pipeline
-https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/ArticlesAppPipeline/view?region=us-east-1
-
-* Link to service Swagger
-http://ec2-18-212-3-183.compute-1.amazonaws.com:8099/swagger-ui.html
-
 * How to find all Your AWS resources
 https://binarybelle.medium.com/how-to-find-all-your-amazon-web-services-resources-5fd818d6503
 To see all resources in your AWS Account, not just the ones for the region youâ€™re currently in, go to the AWS Console, and then choose:
@@ -31,3 +25,28 @@ To see all resources in your AWS Account, not just the ones for the region youâ€
 - Search Resources.
 - To reduce the results to more relevant resources, I filtered on VPC, Instance, Volume, Bucket, RouteTable and Domain.
 - Success.
+
+* Resize AWS Volume
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   30G   28G  1.4G  96% /
+
+$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+nvme0n1     259:0    0   33G  0 disk
+--nvme0n1p1 259:1    0   30G  0 part /
+
+$ sudo growpart /dev/nvme0n1 1
+CHANGED: partition=1 start=2048 old: size=62912479 end=62914527 new: size=69203935,end=69205983
+
+$ sudo resize2fs /dev/nvme0n1p1
+resize2fs 1.44.1 (24-Mar-2018)
+Filesystem at /dev/nvme0n1p1 is mounted on /; on-line resizing required
+old_desc_blocks = 4, new_desc_blocks = 5
+The filesystem on /dev/nvme0n1p1 is now 8650491 (4k) blocks long.
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   32G   28G  4.2G  88% /
