@@ -634,3 +634,9 @@ After that we could interact with 'unreachable_host' using 'localhost:port1' add
 * Run definite command from history
 Using 'history' command - display list of prev commands
 After that - run one of prev commands using '!LINE-NUMBER', for example: '!575'
+
+* Синтаксис команды scp для копирования файлов по сети
+https://losst.ru/kopirovanie-fajlov-scp
+$ scp опции пользователь1@хост1:файл пользователь2@хост2:файл
+Пример:
+$ scp -r /home/sergiy/photos root@losst.ru:/root/
