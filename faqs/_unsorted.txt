@@ -161,3 +161,7 @@ https://devops.datenkollektiv.de/banner.txt/index.html
 Offset Explorer		https://www.kafkatool.com/
 IDEA: kafkalytic
 
+* проблема распознавания символов церковнославянских текстов
+http://slavtype.ru/
+https://sci.ponomar.net/ru/fonts.html
+Нужные символы в таблицы Unicode добавлены, преобразователи текстов (в виде приложения или онлайн) из старых форматов в Unicode существуют; все уже сделано, в общем
