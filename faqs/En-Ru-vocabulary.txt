@@ -468,7 +468,7 @@ dodgy					хитроумный, изворотливый
 dole					пособие
 domestic flight			внутренний рейс
 door knobs				дверные ручки
-dormant					бездействующий
+dormant					бездействующий, спящий
 dormitory				общежитие
 double room				двухкомнатный
 doubt					сомнение
