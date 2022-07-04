@@ -1209,6 +1209,7 @@ redeem				погашать, выкупать, избавлять, освобож
 redemption				выкуп, искупление
 reevaluate				переоценивать
 refrain					воздерживаться
+refuge				убежище, прибежище
 refusal					отказ
 rehearsals 				репетиция
 reimbursement			возмещение
@@ -1270,6 +1271,7 @@ scaffolding				строительные леса, подмостки
 scar					шрам
 scarce				дефицитный, скудный, недостаточный
 scenery 			декорации, пейзаж
+scoundrel			негодяй, мерзавец
 scrutinize			тщательно исследовать
 scrutiny			исследование, изучение
 seamless			бесшовный
