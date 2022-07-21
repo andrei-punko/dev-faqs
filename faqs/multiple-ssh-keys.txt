@@ -1,0 +1,48 @@
+
+* Use multiple SSH keys with Github
+Based on article: https://gist.github.com/oanhnn/80a89405ab9023894df7
+
+1. Generate SSH keys
+ssh-keygen -t ed25519 -C "andd3dfx@gmail.com" (use default key name `id_ed25519`)
+ssh-keygen -t ed25519 -C "Andrei.Punko@another-group.com" (use key name `id_ed25519_another`)
+
+2. Create ~/.ssh/config with next content:
+----------
+# Default github account: andrei-punko
+Host github.com
+   HostName github.com
+   IdentityFile ~/.ssh/id_ed25519
+   IdentitiesOnly yes
+
+# Other github account: another
+Host github-another
+   HostName github.com
+   IdentityFile ~/.ssh/id_ed25519_another
+   IdentitiesOnly yes
+----------
+
+3. Add ssh private keys to your agent
+$ ssh-add ~/.ssh/id_ed25519
+$ ssh-add ~/.ssh/id_ed25519_another
+
+To make ssh-add work you may be need to run
+$ eval `ssh-agent -s`
+before that according to:
+https://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent
+
+4. Test connection
+$ ssh -T git@github.com
+$ ssh -T git@github-another
+
+In case of success you will get message:
+Hi andrei-punko! You've successfully authenticated, but GitHub does not provide shell access.
+Hi apunko-another! You've successfully authenticated, but GitHub does not provide shell access.
+
+5. Clone your repo
+But in clone link need to use `github-another` instead of `github.com`:
+Got from GH:				git@github.com:another/sf-original.git
+Right link to make clone:	git@github-another:another/sf-original.git
+
+6. Adjust default name & email
+git config user.name "Andrei Punko"
+git config user.email "Andrei.Punko@another-group.com"
