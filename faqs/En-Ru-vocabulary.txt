@@ -499,6 +499,7 @@ eigenvector             собственный вектор
 either				или/любой
 elaborate			сложный, усовершенствованный
 elaboration			уточнение
+elevation		поднятие, возвышение
 elevator/lift			лифт
 elicit					выявлять, вызывать, извлекать
 eliminate				устранить, to remove, take away
@@ -1168,6 +1169,7 @@ provenance			происхождение, источник
 provision				предоставление, обеспечение
 prudent				предусмотрительный
 pruned 				подрезать, обрезать
+punny			смешной
 puny				ничтожный, тщедушный
 purpose					цель
 purposely				намеренно

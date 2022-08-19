@@ -471,3 +471,7 @@ print calcsize(format)
 Длина строки: s.__len__()
 Increment: not ++, but +=1
 --------------------------------------------------------------------------------------------
+
+* Installation of pip
+https://stackoverflow.com/questions/32639074/why-am-i-getting-importerror-no-module-named-pip-right-after-installing-pip
+"After running get_pip.py with python embed you have to modify your pythonXX._pth file. Add Lib\site-packages"

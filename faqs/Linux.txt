@@ -644,3 +644,6 @@ $ scp -r /home/sergiy/photos root@losst.ru:/root/
 * Add some folder /folder_name to PATH
 $ echo "export PATH=$PATH:/folder_name/" >> /etc/bash.bashrc
 restart terminal after that
+
+* Clear terminal (hotkey for `clear` command)
+ctrl+l
