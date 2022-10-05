@@ -227,7 +227,7 @@ sudo yum install -y gitk
 sudo yum install -y git-gui
 
 * Key generation
-ssh-keygen
+ssh-keygen -t ed25519 -C "Andrei.Punko@best-company.com"
 
 * Show history in terminal
 git log

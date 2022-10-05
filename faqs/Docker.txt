@@ -60,9 +60,9 @@ docker run -d my-image
 {
   "registry-mirrors": [],
   "insecure-registries": [
-    "dev.eesmart.godeltech.com:18443",
-    "dev.eesmart.godeltech.com:18444",
-    "dev.eesmart.godeltech.com:18445",
+    "<host>:<port>:18443",
+    "<host>:<port>:18444",
+    "<host>:<port>:18445",
     "128.16.0.21:18443",
     "128.16.0.21:18444",
     "128.16.0.21:18445"
@@ -70,14 +70,14 @@ docker run -d my-image
 }
 
 * login to docker via console
-docker login -u a.punko -p a.punko dev.eesmart.godeltech.com:18443
-docker login dev.eesmart.godeltech.com:18443
+docker login -u <username> -p <pass> <host>:<port>
+docker login <host>:<port>
 
 * push custom docker image
-docker login -u a.punko -p a.punko dev.eesmart.godeltech.com:18445
+docker login -u <username> -p <pass> <host>:<port>
 docker images
-docker tag 03b4557ad7b9 dev.eesmart.godeltech.com:18445/somenewname:latest
-docker push dev.eesmart.godeltech.com:18445/somenewname
+docker tag 03b4557ad7b9 <host>:<port>/somenewname:latest
+docker push <host>:<port>/somenewname
 
 * to support pushes from maven
 add to maven settings.xml:
@@ -118,7 +118,7 @@ All from root permissions
                 5. /etc/init.d/docker start -- start docker service
 
 * start image
-docker run -p 5552:5432 dev.eesmart.godeltech.com:18444/smart/smart-data-image:1.11
+docker run -p 5552:5432 <host>:<port>/smart/smart-data-image:1.11
 
 * list all images that running now and stopped
 docker ps -a
@@ -365,3 +365,13 @@ services:
 	...
 ```
 (для версий более ранних, чем 3 - см. ссылку выше)
+
+* Copy files from container's folder to host machine's folder
+$ docker cp <container_name>:<path_inside_container> <path_on_host_machine>
+For example:
+$ docker cp django:/usr/local/lib/python3.9/site-packages D://Work//temp
+
+* Problems with getting docker image during testcontainers run
+like next: "Status 500: {"message":"Head \"https://registry-1.docker.io/v2/testcontainers/ryuk/manifests/0.3.1\": unauthorized: incorrect username or password"}"
+https://stackoverflow.com/questions/72205231/test-ignored-and-failing-when-running-it-test-in-spring-boot-mongodb-test-conta
+$ docker login index.docker.io
