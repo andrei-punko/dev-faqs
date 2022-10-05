@@ -1651,6 +1651,7 @@ unmitigated				абсолютный, явный
 unrelenting				безжалостный, неослабевающий
 unsettling				тревожный, тревожащий
 unsociable				нелюдимый
+unsolicited		    непрошенный
 unveil 					открывать
 unviable				нежизнеспособный
 unwieldy				громоздкий
