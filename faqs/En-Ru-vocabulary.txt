@@ -373,6 +373,7 @@ cramped					ограниченный
 create a friendly atmosphere		building a rapport
 crew 					экипаж, команда
 cripple					калека, калечить
+crippling			калечащий
 crippling			критический
 crucial					ключевой
 crude				сырой, грубый
@@ -447,6 +448,7 @@ disavowed				дезавуировать
 discerning			проницательный, умеющий различать
 discretion				усмотрение
 disintermediation	освобождение от посредников
+dismay				тревога
 dispense				раздавать, измельчать
 disposable				одноразовый
 disposal				удаление, утилизация
@@ -506,7 +508,7 @@ eliminate				устранить, to remove, take away
 elongate				удлинять, продлевать
 eloquent			красноречивый
 embellishment		приукрашивание, украшательство
-embrace					охватывать
+embrace					объятие, охватывать
 embracing				охватывающий, включающий в себя
 emerged				возникший, появившийся, всплывший
 emergence			появление, возникновение
@@ -1249,6 +1251,7 @@ rife					изобилующий, распостраненный
 rigorous				тщательный, строгий
 rigors					строгие меры
 rippling effect		волновой эффект (одно зависит от другого)
+roam				бродить, скитаться
 robust					крепкий, сильный, надежный
 robustness				надежность, прочность
 rolling					повторяющийся
@@ -1265,6 +1268,7 @@ sacked					уволен
 sage					мудрец
 sake of					ради (чего-то)
 salvage, salvation		спасение
+sanity				здравомыслие
 saucer					блюдце
 save face				избежать позора
 savvy					здравый смысл
@@ -1389,6 +1393,7 @@ stipulate				оговаривать, ставить условием
 stitching				сшивание
 strain					напряжение
 strap					ремень, завязка
+stray					бродяга
 stray					заблудиться, бездомный
 strike (to go on a strike)		забастовка
 stringent			строгий
