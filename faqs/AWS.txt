@@ -50,3 +50,6 @@ The filesystem on /dev/nvme0n1p1 is now 8650491 (4k) blocks long.
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/nvme0n1p1   32G   28G  4.2G  88% /
+
+* Get Docker image from ECR
+aws ecr get-login-password --region [your region] | docker login --username AWS --password-stdin [your aws_account_id].dkr.ecr.[your region].amazonaws.com

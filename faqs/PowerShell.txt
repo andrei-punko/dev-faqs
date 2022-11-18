@@ -1,0 +1,5 @@
+
+* Set execution policy for PowerShell
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies
+Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
+где <PolicyName> - одно из Unrestricted, RemoteSigned, AllSigned
