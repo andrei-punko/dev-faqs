@@ -1080,6 +1080,7 @@ pastry					что-то из муки
 patience 				терпение
 patterned data			структурированные данные
 pave					вымостить, устилать
+pave new pathways		прокладывать новые пути
 payload					полезная нагрузка
 peculiar				своеобразный
 peculiarities			особенности

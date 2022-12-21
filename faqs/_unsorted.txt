@@ -165,3 +165,15 @@ IDEA: kafkalytic
 http://slavtype.ru/
 https://sci.ponomar.net/ru/fonts.html
 Нужные символы в таблицы Unicode добавлены, преобразователи текстов (в виде приложения или онлайн) из старых форматов в Unicode существуют; все уже сделано, в общем
+
+* JVisualVM error: jvisualvm can not locate Java installation
+https://stackoverflow.com/questions/59538974/jvisualvm-can-not-locate-java-installation
+You have 2 options:
+- Launch bin/visualvm.exe at the command line with the --jdkhome parameter and your JDK location
+$ visualvm.exe --jdkhome "c:\\Program Files\\Java\\jdk-11.0.13"
+- Update the visualvm_jdkhome variable in the file etc/visualvm.conf of your VisualVM directory.
+
+* JVisualVM error: Redefinition failed with error 62 while trying to profile an application
+https://stackoverflow.com/questions/26834651/redefinition-failed-with-error-62-while-trying-to-profile-an-application
+In VM arguments, add -Xverify:none
+
