@@ -1,37 +1,37 @@
 
-Ctrl+N - open class
-Ctrl+Shift+N - open file
-Ctrl+Shift+F - search by project
-Ctrl+Alt+L = formatting
-Ctrl+E - latest used files (+search by name)
-Ctrl+Shift+E - latest changed files
-Ctrl+Alt+O - optimize import
+Ctrl + N - open class
+Ctrl + Shift + N - open file
+Ctrl + Shift + F - search by project
+Ctrl + Alt + L = formatting
+Ctrl + E - latest used files (+search by name)
+Ctrl + Shift + E - latest changed files
+Ctrl + Alt + O - optimize import
 
-Ctrl+/ - one line comment
-Ctr+Shift+/ - multi line comment
+Ctrl + / - one line comment
+Ctr + Shift + / - multi line comment
 
-Ctrl+LMB - navigation to selected class/method
-Ctrl+B - navigation to declaration of selected class/method
-Ctrl+Alt+Left/Right - naviagation by classess
-Ctrl+Q - info/help for selected object
-Shift+F6 - renaming at all places of usage
-Alt+F1 - popup for quick selection of element for edition
-Alt+Insert - code insertion (getter, setter, other methods)
+Ctrl + LMB - navigation to selected class/method
+Ctrl + B - navigation to declaration of selected class/method
+Ctrl + Alt + Left/Right - naviagation by classess
+Ctrl + Q - info/help for selected object
+Shift + F6 - renaming at all places of usage
+Alt + F1 - popup for quick selection of element for edition
+Alt + Insert - code insertion (getter, setter, other methods)
 
-Ctrl+U - navigate to superclass
+Ctrl + U - navigate to superclass
 
-Ctrl+Shift+[1-9] - put bookmark with number
-Ctrl+F11 - put bookmark with selection dialog (number/character)
-Ctrl+[1-9] - navigate to bookmark with this number
-Shift+F11 - show bookmark list
+Ctrl + Shift + [1-9] - put bookmark with number
+Ctrl + F11 - put bookmark with selection dialog (number/character)
+Ctrl + [1-9] - navigate to bookmark with this number
+Shift + F11 - show bookmark list
 
-Ctrl+Alt+T - surround selected block
-Ctrl+Alt+F7 - search usages of selected element
+Ctrl + Alt + T - surround selected block
+Ctrl + Alt + F7 - search usages of selected element
 
-Alt+1 - on/off Project view
-Alt+2 - on/off Favorites
-Alt+3 - on/off Find
-Alt+7 - on/off Structure view
+Alt + 1 - on/off Project view
+Alt + 2 - on/off Favorites
+Alt + 3 - on/off Find
+Alt + 7 - on/off Structure view
 
 Ctrl+~ switch 1.color scheme 2.keymap 3.style 4.look & feel
 
@@ -39,6 +39,7 @@ Ctrl+~ switch 1.color scheme 2.keymap 3.style 4.look & feel
 
 https://habr.com/ru/company/jugru/blog/568124/
 
+Alt + J - Select next occurrence (to edit them later simultaneously)
 Alt + J - выделение по коду ниже выделенного фрагмента кода
 Ctrl + P - показывает, какой параметр вы должны поставить на позицию
 
@@ -48,7 +49,7 @@ Ctrl + Shift + дважды пробел - chain completion (?)
 
 когда вы выбираете новую опцию, нажмите Tab вместо Enter! (заменяет имеющийся код на новый)
 
-Ctrl + Alt + T - завернуть оператор в готовый кусок кода
+Ctrl + Alt + T - Surround with... (завернуть оператор в готовый кусок кода)
 
 postfix expansion:
 - добавить .for в конце строки, нажимаем Enter и она развернётся целиком
@@ -67,7 +68,7 @@ Ctrl + Shift + V - история буфера обмена
 - cj (collect joining)
 
 Ctrl + W - выделяет синтаксический блок, окружаюший курсор. Чем больше нажимаем сочетание, тем сильнее расширяется выделение
-Ctrl+Shift+W - уменьшает зону выделения
+Ctrl + Shift + W - уменьшает зону выделения
 
 Из коммента к статье:
 - Ctrl + Shift + стрелки вверх/вниз - перемещение блока кода вверх/вниз с учетом областей видимости. Блок кода можно не выделять. Отступы корректируются автоматически.
@@ -76,8 +77,10 @@ Ctrl+Shift+W - уменьшает зону выделения
 - двойной щелчок на номере строки с которой начинается метод - выделяет весь метод
 - щелчок на номере строки в режиме отладки после того как вы встали на breakpoint - переход исполнения (типа move to cursor) к строке с этим номером
 - Ctrl + Shift + j - объединение строк
-- Ctrl + Shift + ЛКМ - переход к классу сущности на которой щелкнули
+- Ctrl + Shift + LMB - переход к классу сущности на которой щелкнули
 - Ctrl + MHover - краткое описание сущности над которой завис курсор
 - Ctrl + F12 - список методов класса. Если начать вводить текст - список начнет фильтроваться. Символы не обязательно по порядку: для saveAndFlush можно ввести saf
 - Ctrl + Alt + z - быстро отменить локальные изменения (вообще это rollback)
 - Ctrl + u - цикличное изменение регистра слова. Слово можно не выделять.
+
+Tab - Select line in popup (and replace code without errors)
