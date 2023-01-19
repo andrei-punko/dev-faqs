@@ -34,3 +34,9 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m
 
 * Switch off incremental build and rerun tasks
 ./gradlew clean build --rerun-tasks
+
+* Run tests in parallel using Gradle
+https://stackoverflow.com/questions/23805915/run-parallel-test-task-using-gradle
+test {
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+}

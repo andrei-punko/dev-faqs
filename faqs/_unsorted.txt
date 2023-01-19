@@ -177,3 +177,10 @@ $ visualvm.exe --jdkhome "c:\\Program Files\\Java\\jdk-11.0.13"
 https://stackoverflow.com/questions/26834651/redefinition-failed-with-error-62-while-trying-to-profile-an-application
 In VM arguments, add -Xverify:none
 
+* Fix the issue when liquibase checksum validation failed while migration file was not modified
+https://forum.liquibase.org/t/how-to-fix-validationfailedexception-in-liquibase-checksum/6780/5
+"Update the databasechangelog table, setting the md5sum to NULL for the particular row"
+$ update databasechangelog set md5sum=null where filename='<put your file name here>';
+
+* To add breakpoint for exception by condition - put next text into Condition field:
+this instanceof java.lang.ClassCastException

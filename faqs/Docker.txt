@@ -375,3 +375,37 @@ $ docker cp django:/usr/local/lib/python3.9/site-packages D://Work//temp
 like next: "Status 500: {"message":"Head \"https://registry-1.docker.io/v2/testcontainers/ryuk/manifests/0.3.1\": unauthorized: incorrect username or password"}"
 https://stackoverflow.com/questions/72205231/test-ignored-and-failing-when-running-it-test-in-spring-boot-mongodb-test-conta
 $ docker login index.docker.io
+
+* How to increase max connections for PostgreSQL container
+https://stackoverflow.com/questions/47252026/how-to-increase-max-connection-in-the-official-postgresql-docker-image
+First approach: add into docker-compose.yml:
+command: postgres -c 'max_connections=200'
+
+Full config example:
+----------------------------------
+version: '2'
+services:
+  postgres:
+    image: postgres:10.3-alpine
+    command: postgres -c 'max_connections=200'
+    environment:
+      POSTGRES_DB: pgdb
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    stdin_open: true
+    tty: true
+    ports:
+    - 5432:5432/tcp
+----------------------------------
+
+Second approach: add next command into sql script:
+ALTER SYSTEM SET max_connections = 500;
+and put script into /docker-entrypoint-initdb.d/ directory of container, using volume mounting or using docker-compose:
+----------------------------------
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - ./max_conns.sql:/docker-entrypoint-initdb.d/max_conns.sql
+----------------------------------
