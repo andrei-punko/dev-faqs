@@ -184,3 +184,24 @@ $ update databasechangelog set md5sum=null where filename='<put your file name h
 
 * To add breakpoint for exception by condition - put next text into Condition field:
 this instanceof java.lang.ClassCastException
+
+* To build some Java project without JDK inside Docker container - put 2 files into root project folder and run `docker compose up`.
+1.File Dockerfile:
+```
+FROM maven:3-jdk-8-alpine as builder
+
+WORKDIR /usr/local/
+
+ENTRYPOINT ["mvn", "install"]
+```
+
+2.File docker-compose.yml:
+```
+version: "3"
+
+services:
+  builder:
+    build: ./
+    volumes:
+      - ./:/usr/local
+```
