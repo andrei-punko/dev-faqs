@@ -40,3 +40,7 @@ https://stackoverflow.com/questions/23805915/run-parallel-test-task-using-gradle
 test {
     maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
 }
+
+* Upgrade gradle wrapper version
+./gradlew wrapper --gradle-version 8.0.2
+gradle wrapper --gradle-version 8.0.2
