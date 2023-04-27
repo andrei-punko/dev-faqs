@@ -1,0 +1,7 @@
+
+* UI для Кафки
+Offset Explorer		https://www.kafkatool.com/
+IDEA: kafkalytic
+
+* Kafka
+https://habr.com/ru/company/avito/blog/465315/

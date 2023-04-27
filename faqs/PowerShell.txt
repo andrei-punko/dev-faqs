@@ -3,3 +3,7 @@
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies
 Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
 где <PolicyName> - одно из Unrestricted, RemoteSigned, AllSigned
+
+* запуск tail консоли с логом выбранного контейнера, чтобы не писать каждый раз команду в консоли
+Установить 3й PowerShell (просмотр версии PowerShell: $PSVersionTable)
+Get-Content order.log -Wait -Tail 5

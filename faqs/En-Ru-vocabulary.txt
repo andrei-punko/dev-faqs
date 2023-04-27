@@ -546,7 +546,7 @@ environmentally friendly		экологический
 envision				представлять себе, воображать
 equity					капитал
 eradicate				искоренять, ликвидировать
-erected			воздвигнут
+erected				воздвигнут
 erroneous				ошибочный, ложный
 erroneously			ошибочно
 eschew				сторониться
@@ -609,7 +609,7 @@ filthy					грязный
 finality			окончательность, законченность
 finer-grained			мелкозернистый
 first things first	обо всем по порядку
-firsthand		из первых рук
+firsthand			из первых рук
 flattery				лесть
 flavour					мука
 flaw					недостаток, изъян
@@ -641,7 +641,7 @@ foundation				фонд, фундамент
 fraction					доля, часть
 fragrance			аромат
 frankly					откровенно
-fraught			чреватый
+fraught				чреватый
 freight				груз, фрахт, стоимость перевозки
 frightened				напуган
 frown					хмуриться, насупиться
@@ -749,7 +749,7 @@ hostel					общежитие
 housekeeper				экономка
 housekeeping 			домашнее хоз-во
 humble					скромный
-hunch 			предчуствие, подозрение
+hunch 				предчуствие, подозрение
 hurricane				ураган
 hyphen					дефис
 hypocritical			лицемерный
@@ -827,7 +827,7 @@ instantaneously			мгновенно
 insulting				оскорбительный
 intact					неповрежденный
 intangible			нематериальный
-intend			намереваться, предназначать, подразумевать
+intend				намереваться, предназначать, подразумевать
 intended			предназначен
 intension				интенсивность, напряжение
 intent				намерение
@@ -909,7 +909,7 @@ longevity			долговечность
 look up				уважать
 lookups					поиски
 lopsided				кривобокий
-lowly			непритязательный
+lowly				непритязательный
 lullaby				колыбельная
 lunacy				безумие
 lure					завлекать, соблазнять
@@ -1094,7 +1094,7 @@ persecuted			преследуемый
 persistence				настойчивость, постоЯнство, живучесть
 personnel				персонал
 persuade				уговаривать, убеждать
-persuasive				убедительный, talking in a special way to make somebody want to do something or believe in something you want them to believe in
+persuasive				убедительный
 persuasiveness		убедительность
 pertaining 	    	относящийся к
 pertains				относится
@@ -1170,7 +1170,7 @@ provenance			происхождение, источник
 provision				предоставление, обеспечение
 prudent				предусмотрительный
 pruned 				подрезать, обрезать
-punny			смешной
+punny				смешной
 puny				ничтожный, тщедушный
 purpose					цель
 purposely				намеренно
@@ -1337,7 +1337,7 @@ snatch					схватить
 snazzy					броский
 sneak               ябеда, доносить, стащить, делать украдкой
 sneaking around		ошиваться
-sneaky			подлый
+sneaky				подлый
 snippet					отрывок
 soak					впитывать
 soil					почва
@@ -1394,7 +1394,6 @@ strain					напряжение
 strap					ремень, завязка
 stray					бродяга(n) / заблудиться, бездомный (v)
 strike (to go on a strike)		забастовка
-stringent			строгий
 stringent (condition, requirement)	строгий, обязательный
 strive for smth			стремиться к чему-то
 stubborn					упертый
@@ -1441,9 +1440,9 @@ surveillance			наблюдение, надзор
 susceptible				восприимчивый
 suspect					подозревать
 suspicion				подозрение
-sustainability		устойчивость
+sustainability			устойчивость
 sustainable, sustained 	устойчивый, поддерживаемый
-sustaining			поддерживающий
+sustaining				поддерживающий
 swath				прокос, ряд
 sweatshop labor		потогонной
 swing					колебание, ход, размах

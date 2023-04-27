@@ -31,11 +31,6 @@ DECIMAL(19, 4), т.е. 15 цифр в целой части и 4 - в дробн
 Java 8: Stream Style
 http://w.on24.com/r.htm?e=807818&s=1&k=467E0D659F4695078A17A3F17A73C441
 
-* запуск tail консоли с логом выбранного контейнера. не хочется каждый раз писать руками команду в консоли
-Установить 3й PowerShell
-просмотр версии PowerShell: $PSVersionTable
-Get-Content order.log -Wait -Tail 5
-
 * если видим, что не хватает ресурсов БД:
 select resource_name, current_utilization, max_utilization, limit_value 
     from v$resource_limit 
@@ -141,9 +136,6 @@ iperf3
 scp -r <REMOTE_USERNAME>@<REMOTE_HOSTNAME>:<REMOTE_DIRECTORY> <LOCAL_DIRECTORY>
 scp -r punkoa@bla-bla.andd3dfx.com:~/inportant-folder/buff.txt .
 
-* Kafka
-https://habr.com/ru/company/avito/blog/465315/
-
 * Dump dependencies into file
 mvn org.apache.maven.plugins:maven-dependency-plugin:2.10:tree -Dverbose=true > deps.txt
 
@@ -156,15 +148,6 @@ https://devops.datenkollektiv.de/banner.txt/index.html
 
 * Include one xml into another
 <include resource="ru/vtb/msa/mdclogging/mdc-pattern.xml"/>
-
-* UI для Кафки
-Offset Explorer		https://www.kafkatool.com/
-IDEA: kafkalytic
-
-* проблема распознавания символов церковнославянских текстов
-http://slavtype.ru/
-https://sci.ponomar.net/ru/fonts.html
-Нужные символы в таблицы Unicode добавлены, преобразователи текстов (в виде приложения или онлайн) из старых форматов в Unicode существуют; все уже сделано, в общем
 
 * JVisualVM error: jvisualvm can not locate Java installation
 https://stackoverflow.com/questions/59538974/jvisualvm-can-not-locate-java-installation

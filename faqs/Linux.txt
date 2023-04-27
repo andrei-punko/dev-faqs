@@ -522,8 +522,8 @@ $ sudo snap install <snap_name>
 echo -n "admin123456" | base64
 
 * Закодировать файл в base64:
-base64 -w 0 kafka.client.keystore.jks
-base64 -w 0 kafka.client.truststore.jks
+base64 -w 0 client.keystore.jks
+base64 -w 0 client.truststore.jks
 
 * Раскодировать строку из base64:
 echo YWRtaW4xMjM0NTY= | base64 --decode
