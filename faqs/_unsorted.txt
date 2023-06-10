@@ -1,73 +1,20 @@
 
-* How to ping Redis:
-https://stackoverflow.com/questions/33243121/abuse-curl-to-communicate-with-redis
-exec 3<>/dev/tcp/127.0.0.1/6379 && echo -e "PING\r\n" >&3 && head -c 7 <&3
-
 * Java profiling
 https://www.youtube.com/watch?v=4TTgrRPnvno
 
-полный интеграционный тест: создать инфраструктуру, выполнить действия, проверить результат
-
-* Увеличение кол-ва сессий и подключений БД:
-alter system set PROCESSES=200 scope=SPFILE;
-alter system set SESSIONS=115 scope=SPFILE;
-
-* Запись в файл лога выполнения скрипта в sqlplus:
-sqlplus -s system/root@XE	--зашел в sqlplus, -s включает silent logging
---set linesize 100	--устанавливаем длину строки результата
---set heading off	--отключаем заголовки столбцов в результате
-spool <имя файла>
---@имя_скрипта		--или
---<скрипт>
-spool off
-
-* Для хранения значения суммы денег оптимальный выбор:
-DECIMAL(19, 4), т.е. 15 цифр в целой части и 4 - в дробной
-
-* Конвертирование G2M видео
-Необходимо скачать и установить кодек, это можно сделать на странице разработчика этого кодека www.gotomeeting.com/codec
-Запустить конвертацию: g2mtranscoder.exe source=d:\test\video.wmv
+полный интеграционный тест:
+- создать инфраструктуру
+- выполнить действия
+- проверить результат
 
 Java 8: Stream Style
 http://w.on24.com/r.htm?e=807818&s=1&k=467E0D659F4695078A17A3F17A73C441
 
-* если видим, что не хватает ресурсов БД:
-select resource_name, current_utilization, max_utilization, limit_value 
-    from v$resource_limit 
-    where resource_name in ('sessions', 'processes');
-	
-* add default directory which used after login by ssh:
-add at the end of .bashrc file: cd <required directory>
-
-* Open psql command line: psql -h localhost database_name [postgres by default] username [postgres by default]
-* Apply script to DB: psql -U username -d myDataBase -a -f myInsertFile
-
-* setting and unsetting env variables
-echo $SOME_NAME
-set SOME_NAME=some_value
-unset SOME_NAME
-
-* determine type of file
-file <filename>
-
 JSR (Java Specification Request) - documents describing proposed additions to the Java platform
-
-операция INNER JOIN (или просто JOIN, иногда также THETA JOIN)
-
-* Nohup
-nohup command &
-или:
-nohup command > /dev/null &
-где command - твоя команда
-в первом случае будет создаваться файл nohup, куда будет переть вывод приложения. в втором случае - файла не будет
 
 https://askubuntu.com/questions/15433/unable-to-lock-the-administration-directory-var-lib-dpkg-is-another-process
 sudo deluser <username>
 ssh-keygen -t rsa -C "your_email@example.com"
-
-* Нахождение местоположения java на компьютере
-whereis java
-readlink -f $(which java)
 
 * PM2 tool: https://pm2.keymetrics.io/docs/usage/quick-start/
 	- The simplest way to start, daemonize and monitor your application is by using this command line:
@@ -86,7 +33,7 @@ java -agentlib:hprof=cpu=samples,depth=100,interval=20,lineno=y,thread=y,file=yo
 * How to read JVM parameter in Spring application
 @Autowired
 private Environment env;
-   
+
 @PostConstruct
 public void bla() {
       me = env.getProperty("fabric.org.name");
@@ -112,9 +59,6 @@ jstack
 * Heap dump in case of OOM error
 java -XX:+HeapDumpOnOutOfMemoryError MainClass
 
-* Replace one string with another in all *.java files recursively
-find . -type f -name "*.java" -exec sed -i 's/string1/string2/g' {} +
-
 * To encrypt a string:
 - convert public key to PEM format
 ssh-keygen -f ~/.ssh/id_rsa.pub -e -m PKCS8  > ~/.ssh/id_rsa.pub.pem
@@ -128,16 +72,6 @@ echo "String to Encrypt" \
 * To decrypt a string (from file):
 openssl enc -base64 -d -in string.txt \
     | openssl rsautl -inkey ~/.ssh/id_rsa -decrypt
-
-* чем протестировать сеть между двумя машинами
-iperf3
-
-* Copy file from remote machine to this machine
-scp -r <REMOTE_USERNAME>@<REMOTE_HOSTNAME>:<REMOTE_DIRECTORY> <LOCAL_DIRECTORY>
-scp -r punkoa@bla-bla.andd3dfx.com:~/inportant-folder/buff.txt .
-
-* Dump dependencies into file
-mvn org.apache.maven.plugins:maven-dependency-plugin:2.10:tree -Dverbose=true > deps.txt
 
 * Switch on debug of SSL in Java
 http://itech-notes.blogspot.com/2013/02/javaxnetdebug-ssl-java.html

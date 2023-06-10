@@ -69,3 +69,5 @@ Try to avoid cyclic dependencies
 * make release with maven-release-plugin
 mvn clean release:clean release:prepare release:perform --batch-mode
 
+* Dump dependencies into file
+mvn org.apache.maven.plugins:maven-dependency-plugin:2.10:tree -Dverbose=true > deps.txt

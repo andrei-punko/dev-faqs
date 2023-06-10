@@ -680,3 +680,35 @@ sudo dpkg -r <короткое_имя_пакета>
 
 sudoo rpm -i <имя_установочного_пакета_с_расширением>
 sudo rpm -e <короткое_имя_пакета>
+
+* determine type of file
+file <filename>
+
+* Нахождение местоположения java на компьютере
+whereis java
+readlink -f $(which java)
+
+* add default directory which used after login by ssh:
+add at the end of .bashrc file: cd <required directory>
+
+* setting and unsetting env variables
+echo $SOME_NAME
+set SOME_NAME=some_value
+unset SOME_NAME
+
+* Work with nohup
+nohup command &
+или:
+nohup command > /dev/null &
+где command - твоя команда
+в первом случае будет создаваться файл nohup, куда будет переть вывод приложения. в втором случае - файла не будет
+
+* чем протестировать сеть между двумя машинами
+iperf3
+
+* Copy file from remote machine to this machine
+scp -r <REMOTE_USERNAME>@<REMOTE_HOSTNAME>:<REMOTE_DIRECTORY> <LOCAL_DIRECTORY>
+scp -r punkoa@bla-bla.andd3dfx.com:~/inportant-folder/buff.txt .
+
+* Replace one string with another in all *.java files recursively
+find . -type f -name "*.java" -exec sed -i 's/string1/string2/g' {} +

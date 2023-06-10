@@ -1,4 +1,6 @@
 
+-- операция INNER JOIN (он же просто JOIN, он же THETA JOIN)
+
 drop schema test_schema cascade;
 create schema test_schema;
 

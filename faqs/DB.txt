@@ -1,0 +1,31 @@
+
+* Увеличение кол-ва сессий и подключений БД:
+alter system set PROCESSES=200 scope=SPFILE;
+alter system set SESSIONS=115 scope=SPFILE;
+
+* Для хранения значения суммы денег оптимальный выбор:
+DECIMAL(19, 4), т.е. 15 цифр в целой части и 4 - в дробной
+
+* Запись в файл лога выполнения скрипта в sqlplus:
+sqlplus -s system/root@XE	--зашел в sqlplus, -s включает silent logging
+--set linesize 100	--устанавливаем длину строки результата
+--set heading off	--отключаем заголовки столбцов в результате
+spool <имя файла>
+--@имя_скрипта		--или
+--<скрипт>
+spool off
+
+* Если видим, что не хватает ресурсов БД:
+select resource_name, current_utilization, max_utilization, limit_value 
+    from v$resource_limit 
+    where resource_name in ('sessions', 'processes');
+
+* Open psql command line:
+psql -h localhost database_name [postgres by default] username [postgres by default]
+
+* Apply script to DB:
+psql -U username -d myDataBase -a -f myInsertFile
+
+* How to ping Redis:
+https://stackoverflow.com/questions/33243121/abuse-curl-to-communicate-with-redis
+exec 3<>/dev/tcp/127.0.0.1/6379 && echo -e "PING\r\n" >&3 && head -c 7 <&3
