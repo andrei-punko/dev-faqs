@@ -3,10 +3,8 @@
 
 It's just my notes about some useful features, it's not documentation!
 
-## Uncategorized
-- [En-Ru vocabulary](faqs/En-Ru-vocabulary.txt)
-- [Цитаты, выписки](faqs/цитаты,%20выписки.txt)
-- [Unsorted stuff](faqs/_unsorted.txt)
+## Vocabulary
+- [En-Ru vocabulary](faqs/En-Ru-vocabulary.md)
 
 ## Build tools
 - [Maven](faqs/Maven.txt)
@@ -46,3 +44,7 @@ It's just my notes about some useful features, it's not documentation!
 ## Spring
 - [Spring](faqs/Spring.txt)
 - [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.txt)
+
+## Uncategorized
+- [Цитаты, выписки](faqs/цитаты,%20выписки.txt)
+- [Unsorted stuff](faqs/_unsorted.txt)

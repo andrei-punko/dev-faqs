@@ -1,4 +1,5 @@
 
+* Steps of development
 - Make it work
 - Make it right (the code is readable, and every idea is expressed)
 - Make everything work
