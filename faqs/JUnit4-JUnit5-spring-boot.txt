@@ -67,4 +67,4 @@ public class AppTest {
 
 ---
 
-And use next article if needed: https://www.baeldung.com/junit-5-migration
+And use the next article if needed: https://www.baeldung.com/junit-5-migration

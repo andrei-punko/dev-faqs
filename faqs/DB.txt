@@ -23,7 +23,7 @@ select resource_name, current_utilization, max_utilization, limit_value
 * Open psql command line:
 psql -h localhost database_name [postgres by default] username [postgres by default]
 
-* Apply script to DB:
+* Apply a script to DB:
 psql -U username -d myDataBase -a -f myInsertFile
 
 * How to ping Redis:

@@ -5,7 +5,7 @@ https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/
 * Spring AWS documentation
 https://docs.awspring.io/spring-cloud-aws/docs/current/reference/html/index.html
 
-* Setap AIM for CodeDeploy:
+* Setup AIM for CodeDeploy:
 Created 2 roles: CodeDeployServiceRole, EC2InstanceRoleForCodeDeploy
 
 * Setup EC2 instance for CodeDeploy:

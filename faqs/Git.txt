@@ -24,7 +24,7 @@ gitk& - запуск GUI для просмотра истории коммито
 	Чтобы объединить несколько коммитов вместе:
 ---------------------------------------------------------------------------------------------------------------------------------
 git rebase -i sha1
-где sha1 - id-шник предыдущего коммита (который стоит перед коммитом, в который планируем "складывать" изменения)
+где sha1 - id-шник предыдущего коммита (стоящего перед коммитом, в который планируем "складывать" изменения)
 
 В новом окне VIM-a переставляем коммиты в нужном нам порядке, в строке с коммитом (куда складываем) - ничего не меняем
 в следующих за ней (которые в этот коммит складываем) меняем pick на s (это, в отличие от f, позволит потом отредактировать название итогового коммита)
@@ -108,7 +108,7 @@ git fetch <name>
 * Конфиг Git-а расположен в трех местах
 ---------------------------------------------------------------------------------------------------------------------------------
 Git ищет параметры в таком порядке:
-1. /etc/gitconfig - папка с установленым Git-ом
+1. /etc/gitconfig - папка с установленным Git-ом
 git config --system <param.name> <param.value>
 
 2. ~/.gitconfig - папка текущего юзера
@@ -198,7 +198,7 @@ git remote -v
 * Set new origin url
 git remote set-url origin <new_url>
 
-* found commits that not belong to any branch
+* found commits that don't belong to any branch
 git fsck --lost-found
 
 * change author of last commit
@@ -232,7 +232,7 @@ ssh-keygen -t ed25519 -C "Andrei.Punko@best-company.com"
 * Show history in terminal
 git log
 
-* Check current state (branch, changes etc)
+* Check current state (branch, changes etc.)
 git status
 
 * Exit from VIM
@@ -253,14 +253,14 @@ cat .git/config
 https://stackoverflow.com/questions/11621768/how-can-i-make-git-accept-a-self-signed-certificate
 GIT_SSL_NO_VERIFY=true git clone <url>
 
-* Add ability to run Github actions job manually
+* Add the ability to run GitHub actions job manually
 https://build5nines.com/configuring-manual-triggers-in-github-actions-with-workflow_dispatch/
 Add next code to .yml config:
 # configure manual trigger
 on:
   workflow_dispatch:
 
-* Add condition in Github actions to avoid some step in case of pull request:
+* Add condition in GitHub actions to avoid some step in case of pull request:
   - name: Commit the badge (if it changed)
     if: ${{ github.event_name != 'pull_request' }}
     run: |

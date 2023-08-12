@@ -1,5 +1,5 @@
 
-* После установки Винды проблемы с русским шрифтом в путях к папках и т.п.
+* После установки Винды проблемы с русским шрифтом в путях к папкам и т.п.
 Изменить кодировку для несистемной локали на русскую
 
 * Чтобы включить клавишу NUM LOCK до входа в систему
@@ -52,7 +52,7 @@ https://remontka.pro/rename-user-folder-windows-10/
 c:\windows\system32\drivers\etc\hosts
 
 * how to delete disk partiton on Win 10
-run cmd with admin permission
+run `cmd` with admin permission
 diskpart
 list disk
 select disk N
@@ -69,7 +69,7 @@ keytool -importcert -file nexus-cert.cer -keystore cacerts -alias "nexus-cert-al
 use password 'changeit' (default jdk store password)
 reply 'yes' on question about trusting to new certificate
 
-* Remove association between file extension and program which should open these files
+* Remove association between a file extension and program which should open these files
 - In Registry Editor find node:
 Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts
 - Under FileExts key, find the file exstension you want to remove file association for. Right-click and choose Delete

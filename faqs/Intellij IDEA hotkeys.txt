@@ -12,7 +12,7 @@ Ctr + Shift + / - multi line comment
 
 Ctrl + LMB - navigation to selected class/method
 Ctrl + B - navigation to declaration of selected class/method
-Ctrl + Alt + Left/Right - naviagation by classess
+Ctrl + Alt + Left/Right - navigation by classes
 Ctrl + Q - info/help for selected object
 Shift + F6 - renaming at all places of usage
 Alt + F1 - popup for quick selection of element for edition
@@ -26,7 +26,7 @@ Ctrl + [1-9] - navigate to bookmark with this number
 Shift + F11 - show bookmark list
 
 Ctrl + Alt + T - surround selected block
-Ctrl + Alt + F7 - search usages of selected element
+Ctrl + Alt + F7 - search usages of a selected element
 
 Alt + 1 - on/off Project view
 Alt + 2 - on/off Favorites
@@ -49,7 +49,7 @@ Ctrl + Shift + дважды пробел - chain completion (предложит 
 
 Ctrl+Shift+Enter после например if или while - допишет скобки и переставит курсор между ними куда надо
 
-когда вы выбираете новую опцию, нажмите Tab вместо Enter! (заменяет имеющийся код на новый)
+Когда вы выбираете новую опцию, нажмите Tab вместо Enter! (заменяет имеющийся код на новый)
 
 Ctrl + Alt + T - Surround with... (завернуть оператор в готовый кусок кода)
 
@@ -69,7 +69,7 @@ Ctrl + Shift + V - история буфера обмена
 - cts (collect to set)
 - cj (collect joining)
 
-Ctrl + W - выделяет синтаксический блок, окружаюший курсор. Чем больше нажимаем сочетание, тем сильнее расширяется выделение
+Ctrl + W - выделяет синтаксический блок, окружающий курсор. Чем больше нажимаем сочетание, тем сильнее расширяется выделение
 Ctrl + Shift + W - уменьшает зону выделения
 
 Из коммента к статье:
@@ -77,9 +77,9 @@ Ctrl + Shift + W - уменьшает зону выделения
 - Alt + Shift + стрелки вверх/вниз - перемещение строки вверх/вниз. Строку можно не выделять.
 - двойной рядом и внутри фигурных скобок например метода - выделяет тело метода
 - двойной щелчок на номере строки с которой начинается метод - выделяет весь метод
-- щелчок на номере строки в режиме отладки после того как вы встали на breakpoint - переход исполнения (типа move to cursor) к строке с этим номером
+- щелчок на номере строки в режиме отладки после того, как вы встали на breakpoint - переход исполнения (типа move to cursor) к строке с этим номером
 - Ctrl + Shift + j - объединение строк
-- Ctrl + Shift + LMB - переход к классу сущности на которой щелкнули
+- Ctrl + Shift + LMB - переход к классу сущности, на которой щелкнули
 - Ctrl + MHover - краткое описание сущности над которой завис курсор
 - Ctrl + F12 - список методов класса. Если начать вводить текст - список начнет фильтроваться. Символы не обязательно по порядку: для saveAndFlush можно ввести saf
 - Ctrl + Alt + z - быстро отменить локальные изменения (вообще это rollback)
