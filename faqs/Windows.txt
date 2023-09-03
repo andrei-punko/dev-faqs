@@ -80,3 +80,5 @@ Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Fi
 keytool -list -keystore ..\lib\security\cacerts
 keytool -alias MY_CERT_FOR_BLA -import -keystore ..\lib\security\cacerts -file "C:\Users\<USERNAME>\Documents\certs\1.cer"
 
+* Show BIOS version in Win 11
+Win+R, msinfo32
