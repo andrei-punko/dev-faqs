@@ -122,3 +122,9 @@ services:
     volumes:
       - ./:/usr/local
 ```
+
+* Change extension of group of files from `txt` to `md` by .bat script on Win OS
+@ECHO OFF
+for %%f in (*.txt) do (
+  ren "%%~nf.txt" "%%~nf.md"
+)
