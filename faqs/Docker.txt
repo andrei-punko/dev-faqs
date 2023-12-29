@@ -417,3 +417,11 @@ Add next lines into configuration file:
     "max-concurrent-uploads": 1,
     "max-concurrent-downloads": 1
 }
+
+* How to fix an error "Status 500: ... unauthorized: incorrect username or password"
+```
+Status 500: {"message":"Head \"https://registry-1.docker.io/v2/testcontainers/ryuk/manifests/0.3.1\": unauthorized: incorrect username or password"}
+```
+https://stackoverflow.com/questions/72205231/test-ignored-and-failing-when-running-it-test-in-spring-boot-mongodb-test-conta
+As a workaround, login to Docker Hub using this URL (from usual cmd console):
+$ docker login index.docker.io
