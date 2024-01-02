@@ -503,3 +503,13 @@ https://blog.upagge.ru/posts/guide/2020/spring/validation/
 = Слой сервисов
 	Используется комбинация аннотаций @Validated на классе и @Valid на параметре метода
 Бросается ConstraintViolationException (500)
+
+* How to check String in response body with mockMvc:
+https://stackoverflow.com/questions/18336277/how-to-check-string-in-response-body-with-mockmvc
+MvcResult result = mockMvc.perform(post("/api/users")
+			.header("Authorization", base64ForTestUser).contentType(MediaType.APPLICATION_JSON)
+            .content("{\"userName\":\"testUserDetails\",\"firstName\":\"xxx\",\"lastName\":\"xxx\",\"password\":\"xxx\"}"))
+            .andDo(MockMvcResultHandlers.print())
+            .andExpect(status().isBadRequest())
+            .andReturn();
+String content = result.getResponse().getContentAsString();
