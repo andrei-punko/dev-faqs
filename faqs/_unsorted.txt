@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=4TTgrRPnvno
 - выполнить действия
 - проверить результат
 
-Java 8: Stream Style
+* Java 8: Stream Style
 http://w.on24.com/r.htm?e=807818&s=1&k=467E0D659F4695078A17A3F17A73C441
 
 JSR (Java Specification Request) - documents describing proposed additions to the Java platform
@@ -128,3 +128,7 @@ services:
 for %%f in (*.txt) do (
   ren "%%~nf.txt" "%%~nf.md"
 )
+
+* H2 error "h2 database: Unsupported database file version or invalid file header in file":
+https://stackoverflow.com/questions/40729216/h2-database-unsupported-database-file-version-or-invalid-file-header-in-file
+To check H2 version use query: `SELECT H2VERSION() FROM DUAL`

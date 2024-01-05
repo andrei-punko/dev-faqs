@@ -1,7 +1,7 @@
 
-Тарантул - это application server со встроенной БД с возможностью персистентного хранения
+Tarantool - это application server со встроенной БД с возможностью персистентного хранения
 
-* Tarantol CLI
+* Tarantool CLI
 tarantoolctl connect sisb_user:U8Twu2JcnnnWwdG@127.0.0.1:3301
 
 box.space			    			-- список спейсов
