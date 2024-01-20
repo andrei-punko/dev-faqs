@@ -29,3 +29,7 @@ psql -U username -d myDataBase -a -f myInsertFile
 * How to ping Redis:
 https://stackoverflow.com/questions/33243121/abuse-curl-to-communicate-with-redis
 exec 3<>/dev/tcp/127.0.0.1/6379 && echo -e "PING\r\n" >&3 && head -c 7 <&3
+
+* Show info about existing tables in DB (for MySQL DB):
+https://stackoverflow.com/questions/1498777/how-do-i-show-the-schema-of-a-table-in-a-mysql-database
+select TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE, ROW_COUNT_ESTIMATE from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA='PUBLIC';
