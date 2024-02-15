@@ -34,6 +34,7 @@
 | admiration                                       | восхищение                                                                                                                   |
 | admired                                          | почитаемый                                                                                                                   |
 | admit                                            | признавать                                                                                                                   |
+| adolescence                                      | юность                                                                                                                       |
 | adore                                            | обожать                                                                                                                      |
 | advance                                          | продвижение, прогресс, достижение                                                                                            |
 | advent                                           | приход, пришествие                                                                                                           |
@@ -64,6 +65,7 @@
 | and so on and so forth                           | и т.д. и т.п.                                                                                                                |
 | annualize                                        | пересчитывать на год                                                                                                         |
 | annually                                         | ежегодно                                                                                                                     |
+| anthem                                           | гимн                                                                                                                         |
 | anticipate                                       | предвидеть, ожидать                                                                                                          |
 | anxiety                                          | беспокойство                                                                                                                 |
 | anxious                                          | тревожный                                                                                                                    |
