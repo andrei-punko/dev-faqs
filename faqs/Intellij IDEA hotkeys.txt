@@ -35,6 +35,9 @@ Alt + 7 - on/off Structure view
 
 Ctrl+~ switch 1.color scheme 2.keymap 3.style 4.look & feel
 
+Alt + Shift + '+'/'-' - zoom font scale to +/-
+Alt + Shift + 0 - font scale zoom to 100%
+
 ---
 
 https://habr.com/ru/company/jugru/blog/568124/
