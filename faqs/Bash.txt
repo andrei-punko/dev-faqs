@@ -181,3 +181,16 @@ curl -v --connect-to articles-service:9082:localhost:9082 https://articles-servi
 * Group file renaming (.txt->.md)
 https://superuser.com/questions/8716/rename-a-group-of-files-with-one-command
 for file in *.txt; do mv "$file" "${file%.txt}.md"; done
+
+* Show info about alias
+https://askubuntu.com/questions/102093/how-to-see-the-command-attached-to-a-bash-alias
+$ type -a <alias>
+Example:
+$ type -a gf
+gf is aliased to `git fetch'
+
+Or:
+$ alias | grep gf
+
+Or:
+just type your alias and press Ctrl+Alt+E to show info (and press again if this alias used another alias)
