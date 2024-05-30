@@ -194,3 +194,12 @@ $ alias | grep gf
 
 Or:
 just type your alias and press Ctrl+Alt+E to show info (and press again if this alias used another alias)
+
+* Run definite command from history:
+$ history		# to show commands history
+$ !340			# run command with number 340
+
+* Interactive search in history
+ctrl+R			# Search for commands in your bash history
+ctrl+O			# Run a command you found using a ctrl+R search
+ctrl+G			# Exit a crtl+R search
