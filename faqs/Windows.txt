@@ -90,3 +90,7 @@ Win+Shift+S
 https://stackoverflow.com/questions/988403/how-to-prevent-auto-closing-of-console-after-the-execution-of-batch-file
 - add `call` before your command in .bat-file
 - put `pause` at the end of .bat-file
+
+* Recovery file in Win 11
+`Windows File Recovery` works on Windows 11, but it doesn't come preinstalled. You can download it for free from the Microsoft Store and install it
+$ winfr C: D:\RecoveryDestination /regular /n "Users\<username>\My pictures\"
