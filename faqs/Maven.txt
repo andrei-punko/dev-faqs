@@ -67,3 +67,7 @@ Try to avoid cyclic dependencies
 
 * Make release with maven-release-plugin
 mvn clean release:clean release:prepare release:perform --batch-mode
+
+* Init Maven wrapper
+https://www.baeldung.com/maven-wrapper
+$ mvn -N wrapper:wrapper
