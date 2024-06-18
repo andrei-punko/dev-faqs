@@ -132,3 +132,6 @@ for %%f in (*.txt) do (
 * H2 error "h2 database: Unsupported database file version or invalid file header in file":
 https://stackoverflow.com/questions/40729216/h2-database-unsupported-database-file-version-or-invalid-file-header-in-file
 To check H2 version use query: `SELECT H2VERSION() FROM DUAL`
+
+* OpenJDK General-Availability Releases
+https://jdk.java.net/archive/

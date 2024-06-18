@@ -44,3 +44,6 @@ test {
 * Upgrade gradle wrapper version
 ./gradlew wrapper --gradle-version 8.5
 gradle wrapper --gradle-version 8.5
+
+* Gradle compatibility matrix
+https://docs.gradle.org/8.8/userguide/compatibility.html
