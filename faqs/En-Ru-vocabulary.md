@@ -844,6 +844,7 @@
 | intervene                                        | вмешиваться                                                                                                                  |
 | intimated                                        | намекнул                                                                                                                     |
 | intimidate                                       | запугивать                                                                                                                   |
+| intimidating                                     | пугающий                                                                                                                     |
 | intraday                                         | внутридневные                                                                                                                |
 | intricacies                                      | сложности, хитросплетения                                                                                                    |
 | intricate step                                   | сложный шаг                                                                                                                  |
