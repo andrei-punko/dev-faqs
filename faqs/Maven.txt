@@ -1,10 +1,14 @@
 
-* Build module
-mvn clean :<module name> – clean results of previous build
-mvn clean install :<module name> – clean + build
-mvn clean test :<module name> – module testing
+* Clean results of previous build:
+mvn clean :<module name>
 
-*Build module with all mofules it depends on:
+* Clean & build:
+mvn clean install :<module name>
+
+* Clean & test:
+mvn clean test :<module name>
+
+* Build module with all modules it depends on:
 mvn [clean] install -am -pl :<module name>
 
 * Build all modules dependent of current module:
@@ -58,8 +62,7 @@ For artifact versions it’s better to use constants
 Use Ctrl+C to stop maven build
 Try to avoid cyclic dependencies
 
-* Убираем сообщение Mавена, что билд платформ-dependent:
-добавлЯем в корневом pom-е проекта:
+* Чтобы убрать сообщение Maven, о том, что билд платформ-dependent - добавляем в корневой pom проекта:
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

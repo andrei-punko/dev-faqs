@@ -35,7 +35,6 @@ It's just my notes about some useful features, it's not documentation!
 ## Hotkeys
 - [Intellij IDEA hotkeys](faqs/Intellij%20IDEA%20hotkeys.txt)
 - [Intellij IDEA Reference Card](faqs/IntelliJIDEA_ReferenceCard.pdf)
-- [hotkeys](faqs/hotkeys.txt)
 
 ## OS
 - [Linux](faqs/Linux.txt)

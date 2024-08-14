@@ -513,3 +513,19 @@ MvcResult result = mockMvc.perform(post("/api/users")
             .andExpect(status().isBadRequest())
             .andReturn();
 String content = result.getResponse().getContentAsString();
+
+* Spring banner: starwars style
+https://devops.datenkollektiv.de/banner.txt/index.html
+
+* Create File instance from file located in Spring /resources folder
+new ClassPathResource("ccp-" + name.toLowerCase() + ".yaml").getFile()
+
+* How to read JVM parameter in Spring application
+@Autowired
+private Environment env;
+
+@PostConstruct
+public void bla() {
+      me = env.getProperty("fabric.org.name");
+...
+}

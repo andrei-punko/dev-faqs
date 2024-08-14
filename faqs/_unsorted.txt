@@ -2,7 +2,7 @@
 * Java profiling
 https://www.youtube.com/watch?v=4TTgrRPnvno
 
-полный интеграционный тест:
+Полный интеграционный тест:
 - создать инфраструктуру
 - выполнить действия
 - проверить результат
@@ -30,22 +30,9 @@ ssh-keygen -t rsa -C "your_email@example.com"
 * Start application and make thread dump:
 java -agentlib:hprof=cpu=samples,depth=100,interval=20,lineno=y,thread=y,file=your_dump_name.hprof -jar your_jar_name.jar
 
-* How to read JVM parameter in Spring application
-@Autowired
-private Environment env;
-
-@PostConstruct
-public void bla() {
-      me = env.getProperty("fabric.org.name");
-...    
-}
-
 * Formatter for Java 8 LocalDateTime
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
 LocalDateTime.parse(searchCriteria.getTimestamp(), request.getTimestamp());
-
-* Create File instance from file from Spring /resources folder
-new ClassPathResource("ccp-" + name.toLowerCase() + ".yaml").getFile()
 
 * Server performance monitoring dashboard
 https://github.com/netdata/netdata
@@ -76,9 +63,6 @@ openssl enc -base64 -d -in string.txt \
 * Switch on debug of SSL in Java
 http://itech-notes.blogspot.com/2013/02/javaxnetdebug-ssl-java.html
 java -Djavax.net.debug=SSL,handshake,data,keymanager,trustmanager -jar ...
-
-* banner: starwars style
-https://devops.datenkollektiv.de/banner.txt/index.html
 
 * Include one xml into another
 <include resource="ru/vtb/msa/mdclogging/mdc-pattern.xml"/>

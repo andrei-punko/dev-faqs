@@ -716,3 +716,6 @@ find . -type f -name "*.java" -exec sed -i 's/string1/string2/g' {} +
 * Посмотреть что запущено на каком порту
 $ netstat -tulpn
 $ ss -lntu
+
+* delete line in nano editor
+ctrl+K
