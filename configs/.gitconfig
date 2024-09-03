@@ -1,0 +1,8 @@
+[user]
+	name = Andrei Punko
+	email = andd3dfx@gmail.com
+[gui]
+	encoding = utf-8
+	tabsize = 2
+[core]
+	autocrlf = false
