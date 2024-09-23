@@ -119,3 +119,6 @@ To check H2 version use query: `SELECT H2VERSION() FROM DUAL`
 
 * OpenJDK General-Availability Releases
 https://jdk.java.net/archive/
+
+* HTML tags documentation (by Vladilen Minin)
+use `mdn` text in search query, for example: `hr html mdn`
