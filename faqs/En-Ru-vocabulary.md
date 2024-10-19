@@ -56,9 +56,9 @@
 | amazing                                          | удивительный                                                                                                                 |
 | ambiguity                                        | неоднозначность, двусмысленность                                                                                             |
 | ambiguous                                        | неоднозначный, двусмысленный                                                                                                 |
+| amenities                                        | услуги                                                                                                                       |
 | amenities of a hotel                             | удобства отеля                                                                                                               |
 | amid, among                                      | среди                                                                                                                        |
-| amenities                                        | услуги                                                                                                                       |
 | amusement (park)                                 | развлечений (парк)                                                                                                           |
 | an aisle seat                                    | место около прохода                                                                                                          |
 | an attitude to smb (treat smb well/badly)        | отношение к кому-либо (относиться к кому-либо хорошо/плохо)                                                                  |
@@ -703,8 +703,8 @@
 | grumble                                          | ворчать                                                                                                                      |
 | grumpy                                           | сердитый                                                                                                                     |
 | grunt work                                       | грубая работа                                                                                                                |
-| guessing                                         | угадывание                                                                                                                   |
 | guess                                            | догадываться, угадать, предположение, догадка                                                                                |
+| guessing                                         | угадывание                                                                                                                   |
 | guts                                             | кишки                                                                                                                        |
 | gutter                                           | желоб, канавка, выемка                                                                                                       |
 | habits                                           | привычки                                                                                                                     |
@@ -965,6 +965,7 @@
 | modestly                                         | умеренно                                                                                                                     |
 | moisture                                         | влажность                                                                                                                    |
 | mole                                             | моль, крот                                                                                                                   |
+| moonlit                                          | залитый лунным светом                                                                                                        |
 | morbid                                           | болезненный, отвратительный, ужасный                                                                                         |
 | more common                                      | чаще                                                                                                                         |
 | more reserved                                    | скрытный, более защищенный                                                                                                   |
@@ -1315,7 +1316,6 @@
 | sieve                                            | сито                                                                                                                         |
 | significance                                     | значение, значимость, важность                                                                                               |
 | siloed                                           | разрозненный                                                                                                                 |
-| siloed                                           | разрозненные                                                                                                                 |
 | simplicity sake                                  | ради простоты                                                                                                                |
 | sincere                                          | искренний                                                                                                                    |
 | single out                                       | выделить                                                                                                                     |
