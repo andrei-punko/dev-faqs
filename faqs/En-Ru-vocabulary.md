@@ -253,7 +253,6 @@
 | cleave                                           | раскалывать, рассекать                                                                                                       |
 | cling                                            | цепляться                                                                                                                    |
 | clue                                             | ключ к разгадке                                                                                                              |
-| clue                                             | ключ к разгадке                                                                                                              |
 | clunky                                           | неуклюжий                                                                                                                    |
 | coarse                                           | грубый                                                                                                                       |
 | coarse-grained                                   | крупнозернистый                                                                                                              |
@@ -312,12 +311,11 @@
 | confide                                          | доверять                                                                                                                     |
 | confidence                                       | уверенность                                                                                                                  |
 | confident                                        | уверенный                                                                                                                    |
-| confidently                                      | уверенно                                                                                                                     |
 | confirm details                                  | подтвердить детали                                                                                                           |
 | congestion                                       | перегруженность                                                                                                              |
 | conjugate                                        | сопряженный, парный                                                                                                          |
 | conscientiousness                                | добросовестность                                                                                                             |
-| conscientous                                     | добросовестный                                                                                                               |
+| conscientious                                    | добросовестный                                                                                                               |
 | consciousness                                    | сознание                                                                                                                     |
 | consecrate                                       | освящать                                                                                                                     |
 | consider                                         | рассматривать, считать                                                                                                       |
@@ -343,7 +341,6 @@
 | control tower                                    | диспетчерская вышка                                                                                                          |
 | convenience                                      | удобство                                                                                                                     |
 | convenient                                       | удобный                                                                                                                      |
-| conveniently                                     | удобно                                                                                                                       |
 | conventional                                     | обычный, традиционный                                                                                                        |
 | converge                                         | сходиться, приближаться                                                                                                      |
 | convergence                                      | сходимость                                                                                                                   |
@@ -357,7 +354,7 @@
 | corollary                                        | следствие, вывод, заключение                                                                                                 |
 | corpus                                           | свод, собрание                                                                                                               |
 | correlation                                      | соотношение, взаимосвязь, корреляция                                                                                         |
-| costly=expensive                                 | дорогой                                                                                                                      |
+| costly                                           | дорогой                                                                                                                      |
 | cot/rollaway bed                                 | детская/раскладная кровать                                                                                                   |
 | cottage                                          | коттедж, хижина, дача                                                                                                        |
 | could you help me?                               | could you do me a favour?                                                                                                    |
@@ -377,8 +374,7 @@
 | create a friendly atmosphere                     | building a rapport                                                                                                           |
 | crew                                             | экипаж, команда                                                                                                              |
 | cripple                                          | калека, калечить                                                                                                             |
-| crippling                                        | калечащий                                                                                                                    |
-| crippling                                        | критический                                                                                                                  |
+| crippling                                        | калечащий, критический                                                                                                       |
 | crucial                                          | ключевой                                                                                                                     |
 | crude                                            | сырой, грубый                                                                                                                |
 | crunch                                           | хруст, грызть                                                                                                                |
@@ -574,7 +570,6 @@
 | expedient                                        | целесообразный                                                                                                               |
 | expenditures                                     | расходы                                                                                                                      |
 | explicit                                         | явный, недвусмысленный                                                                                                       |
-| explicitly                                       | недвусмысленно, ясно                                                                                                         |
 | exploit                                          | эксплуатировать                                                                                                              |
 | exploratory                                      | разведочный, исследовательский                                                                                               |
 | expressive                                       | выразительный                                                                                                                |
@@ -606,7 +601,6 @@
 | fiddling with                                    | возиться с                                                                                                                   |
 | fidelity                                         | верность, точность                                                                                                           |
 | fierce                                           | жестокий, свирепый                                                                                                           |
-| fiercely                                         | свирепо                                                                                                                      |
 | fiery                                            | огненный                                                                                                                     |
 | filthy                                           | грязный                                                                                                                      |
 | finality                                         | окончательность, законченность                                                                                               |
@@ -655,7 +649,7 @@
 | fulfilled                                        | выполнены                                                                                                                    |
 | fulfillment                                      | выполнение, осуществление                                                                                                    |
 | full blown                                       | полномасштабный                                                                                                              |
-| full-board/half-board/B&B                        | полный пансион/полупансион/ночлег и завтрак                                                                                  |
+| full-board / half-board / B&B                    | полный пансион / полупансион / ночлег и завтрак                                                                              |
 | full-fledged                                     | развившийся, созревший                                                                                                       |
 | fungible                                         | заменяемый                                                                                                                   |
 | funnel                                           | воронка                                                                                                                      |
