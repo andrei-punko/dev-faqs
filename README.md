@@ -18,7 +18,9 @@ It's just my notes about some useful features, it's not documentation!
 - [Multiple SSH keys](faqs/multiple-ssh-keys.txt)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.txt)
 - [PowerShell](faqs/PowerShell.txt)
-- [Kafka](faqs/Kafka.txt)
+
+## Brokers
+- [Kafka](faqs/Kafka.md)
 
 ## Cloud
 - [OpenShift](faqs/OpenShift.txt)
@@ -26,7 +28,6 @@ It's just my notes about some useful features, it's not documentation!
 
 ## Databases
 - [Relational DB](faqs/DB.txt)
-- [Tarantool](faqs/Tarantool.txt)
 
 ## Languages
 - [Go](faqs/Go.txt)
