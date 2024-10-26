@@ -8,6 +8,7 @@
 | absentee                                         | заочное, отсутствующий                                                                                                       |
 | abstruse                                         | трудный для понимания                                                                                                        |
 | abusive                                          | оскорбительный, бранный                                                                                                      |
+| abysmal                                          | ужасный                                                                                                                      |
 | accommodate                                      | вмещать, приспосабливать                                                                                                     |
 | accommodation                                    | приспособление                                                                                                               |
 | accomplish                                       | выполнять, совершать                                                                                                         |
@@ -314,8 +315,8 @@
 | confirm details                                  | подтвердить детали                                                                                                           |
 | congestion                                       | перегруженность                                                                                                              |
 | conjugate                                        | сопряженный, парный                                                                                                          |
-| conscientiousness                                | добросовестность                                                                                                             |
 | conscientious                                    | добросовестный                                                                                                               |
+| conscientiousness                                | добросовестность                                                                                                             |
 | consciousness                                    | сознание                                                                                                                     |
 | consecrate                                       | освящать                                                                                                                     |
 | consider                                         | рассматривать, считать                                                                                                       |
@@ -1324,6 +1325,7 @@
 | sleuthing                                        | выслеживание                                                                                                                 |
 | slightly                                         | немного                                                                                                                      |
 | slip                                             | скольжение                                                                                                                   |
+| slop shovel                                      | лопата для мусора                                                                                                            |
 | sloppy                                           | неряшливый, небрежный                                                                                                        |
 | slugging through                                 | пробивание через                                                                                                             |
 | sluice                                           | водовод                                                                                                                      |
