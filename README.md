@@ -48,3 +48,6 @@ It's just my notes about some useful features, it's not documentation!
 ## Uncategorized
 - [Цитаты, выписки](faqs/цитаты,%20выписки.txt)
 - [Unsorted stuff](faqs/_unsorted.txt)
+
+## Scripts for switching JDK version
+Placed into [scripts](scripts) folder
