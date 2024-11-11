@@ -18,6 +18,8 @@ alias mt="mvn test"
 alias mtp="mt -pl"
 alias qb="mci -DskipTests -Dnomodel"
 
+alias mvndeps="mvn dependency:tree > deps.txt"
+
 # git
 alias gf="git fetch"
 alias gfo="gf origin"
@@ -74,6 +76,8 @@ alias gwt="gw test"
 alias gwct="gwc test"
 alias gws="gw --stop"
 alias gwup="gw wrapper --gradle-version"
+
+alias gradledeps="gradle dependencies > deps.txt"
 
 # SSH
 alias ntop="ssh andd3dfx@192.168.1.215"
