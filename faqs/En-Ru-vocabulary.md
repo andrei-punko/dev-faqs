@@ -284,6 +284,7 @@
 | competition                                      | соревнование                                                                                                                 |
 | competitiveness                                  | конкурентноспособность                                                                                                       |
 | competitor/rival                                 | соперник                                                                                                                     |
+| complacent                                       | самодовольный                                                                                                                |
 | complain about                                   | пожаловаться                                                                                                                 |
 | complaint                                        | жалоба                                                                                                                       |
 | complement                                       | дополнение                                                                                                                   |
