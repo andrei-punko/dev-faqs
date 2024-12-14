@@ -213,6 +213,7 @@ FROM can appear multiple times within a single Dockerfile in order to create mul
 = ADD — копирует файлы и папки в контейнер, может распаковывать локальные .tar-файлы.
     ADD <src> [<src> ...] <dest>
     ADD ["<src>", ... "<dest>"] (this form is required for paths containing whitespace)
+COPY vs ADD: In the part where their use cases overlap, ADD and COPY work similarly. Both commands copy the contents of the locally available file or directory to the filesystem inside a Docker image. However, while COPY has no other functionalities, ADD can extract compressed files and copy files from a remote location via a URL.
 
 = CMD — описывает команду с аргументами, которую нужно выполнить когда контейнер будет запущен. Аргументы могут быть переопределены при запуске контейнера. В файле может присутствовать лишь одна инструкция CMD (если больше одной - выполняется последня).
     CMD ["<executable>","<param1>","<param2>"] (exec form, this is the preferred form)
