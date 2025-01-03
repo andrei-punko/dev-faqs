@@ -91,3 +91,6 @@ Ctrl + Shift + W - уменьшает зону выделения
 Tab - Select line in popup (and replace code without errors)
 
 Если в диалоге открытия класса (по Ctrl+N) дописать после имени класса :456 - класс откроется на строке 456
+
+* YT videos about hotkeys
+https://www.youtube.com/watch?v=lArM1o0SoMw
