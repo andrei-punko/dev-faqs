@@ -122,3 +122,6 @@ https://jdk.java.net/archive/
 
 * HTML tags documentation (by Vladilen Minin)
 use `mdn` text in search query, for example: `hr html mdn`
+
+* Инструменты для отображения клавиш при нажатии
+KeyPose, Carnac
