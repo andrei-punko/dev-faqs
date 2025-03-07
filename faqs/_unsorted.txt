@@ -125,3 +125,7 @@ use `mdn` text in search query, for example: `hr html mdn`
 
 * Инструменты для отображения клавиш при нажатии
 KeyPose, Carnac
+
+* Change extension for group of files:
+https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-folder-with-one-command-on-windows
+ren *.txt *.md
