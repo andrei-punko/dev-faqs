@@ -129,3 +129,7 @@ KeyPose, Carnac
 * Change extension for group of files:
 https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-folder-with-one-command-on-windows
 ren *.txt *.md
+
+* Удаление сертификатов пользователя с телефона Android
+В поиске по настройкам набрать "Шифрование и учетные данные".
+Там - "Надежные сертификаты" и "Учетные данные пользователя"
