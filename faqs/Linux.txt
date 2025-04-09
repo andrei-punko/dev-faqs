@@ -2,12 +2,15 @@
 * Linux books
 Колисниченко - Linux. Полное руководство
 Уэлш - Запускаем Linux
+William Shotts - The Linux Command Line
 Федорчук, ruslinux.net
 
-* apt-cache search <packet_name>
-поиск пакета для инсталляции
 
-* install maven: http://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
+* поиск пакета для инсталляции
+apt-cache search <packet_name>
+
+* install maven
+http://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
 sudo apt-get install maven2
 mvn -version
 
@@ -37,20 +40,20 @@ udisks --show-info /dev/sda1
 * инфа о системе (не ставил):
 sudo apt-get install sysinfo
 
-* список устр-в, подключенных сейчас
+* список устройств, подключенных сейчас
 sudo fdisk -l
 
-* список примонтированных устр-в
+* список примонтированных устройств
 sudo mount
 
-* монтирование устр-ва, примеры:
+* монтирование устройства, примеры:
 sudo mount /dev/sdb1 /home/user/Видео
 sudo mount -t ext3 /dev/sdb1 /home/user/Видео
 после -t указывается тип файловой системы: ntfs ntfs-3g vfat iso9660 - соответственно для NTFS, FAT и CD-дисков файловых систем. Последний нужен только для подключения CD/DVD-ROM устройств и образа диска .iso.
-права доступа: -o rw или -o ro (чтение+записть или только чтение)
+права доступа: -o rw или -o ro (чтение+запись или только чтение)
 
 sudo mount -t ext3 -o rw,iocharset=utf8,codepage=866 /dev/sdb1 /home/user/Видео
-(указана кодировка системной локали, добавлена подержка русского языка)
+(указана кодировка системной локали, добавлена поддержка русского языка)
 
 -o force - принудительное монтирование при проблемах
 посмотреть инфу о диске и свободное место на нем: df -h
@@ -80,7 +83,7 @@ git init
 
 ls - список файлов
 ls -l - детальный список файлов
-ls -R - список файлов для свех подпапок
+ls -R - список файлов для всех подпапок
 ls -l -R - все вместе
 find / -name '<dir_name>' -type d - поиск директории
 
@@ -102,7 +105,7 @@ Step 4: Install the Oracle Express packages:
 sudo aptitude install oracle-xe oracle-xe-client
 или sudo apt-get install oracle-xe
 
-Step 5: Configure the oracle as per you need
+Step 5: Configure the Oracle as per you need
 sudo /etc/init.d/oracle-xe configure
 
 Step 6: Access the nice Oracle web interface by:
@@ -114,23 +117,23 @@ sudo dd if=/dev/zero of=/swpfs1 bs=1M count=1000
 sudo mkswap /swpfs1
 sudo swapon /swpfs1
 
-* инсталл пакета
+* установка пакета
 cd <directory>
 sudo dpkg -i package_name.deb
 
-Скачал оракл на локальный диск, расшарил папку, прикрепил сетевой диск, установил:
+Скачал Oracle на локальный диск, расшарил папку, прикрепил сетевой диск, установил:
 sudo dpkg -i oracle-xe_10.2.0.1-1.1_i386.deb
 
-Конфигурируем оракл:
+Конфигурируем Oracle:
 /etc/init.d/oracle-xe configure
 set pass for sys & system users
 
 http://10.6.132.6:8080/apex
 
-* рестарт дженкинса:
+* рестарт Jenkins-а:
 service jenkins restart
 
-* редактирование конфига дженкинса для использования порта 8180:
+* редактирование конфига Jenkins-а для использования порта 8180:
 /etc/default/jenkins
 
 * редактирование переменной PATH:
@@ -139,12 +142,15 @@ vim ~/.profile
 export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
 export $PATH=$PATH:$ORACLE_HOME/bin
 
-Залогиниться под рутом:
+Залогиниться под root-ом:
 su
-после этого вводим рутовский пароль
+после этого вводим пароль root-а
 
-К какому типу относится ОС: cat /proc/version
-Версия ОС: cat /etc/issue
+* К какому типу относится ОС:
+cat /proc/version
+
+* Версия ОС:
+cat /etc/issue
 
 -verbose:class
 nohup java $args -cp $CLASSPATH $SERVICE_CONTAINER_MAIN >nohup.out 2>&1 &
@@ -198,37 +204,17 @@ browseable = yes
 
 в Windows установить, если не установлен, "Клиент интернет-печати"
 добавить принтер в пункте "Выбрать общий принтер по имени", ввести http://192.168.1.100:631/printers/Samsung_ML_2010
-(использовать имя принтера, ввведенное при настройке через браузер)
+(использовать имя принтера, введенное при настройке через браузер)
 
 * Тест звука:
 speaker-test
 
-* Посылка мейла:
+* Посылка email:
 mail -s "Script for web server" andd3dfx@gmail.com < ~/app.py
 /var/log/exim4/mainlog
 
-* Настройка сервера резолвающего имена
+* Настройка сервера, резолвающего имена
 /etc/resolv.conf
-
-* Настройка факса
-https://wiki.debian.org/HylaFax
-http://www.aboutdebian.com/fax.htm
-
-apt-get install hylafax-server
-faxsetup
-faxaddmodem
-
-less /var/log/dmesg - последние сообщения о подкл. устр-вах
-ttyACM0
-
-sendfax -n -d 80164340425 ~/testfax.txt
-sendfax -n -d +375298618628 ~/testfax.txt
-
-/var/spool/hylafax/etc/config.ttyACM0
-/var/spool/hylafax/log
-/var/spool/mail
-/var/spool/hylafax/log/xferfaxlog
-/var/spool/hylafax/docq
 
 * изменить владельца каталога /home/pi и всех вложенных в него на pi:
 chown -R pi /home/pi
@@ -266,13 +252,14 @@ delete line: 			ctrl+k
 save file: 				ctrl+o
 exit from edit mode: 	ctrl+x
 
-show terminal window: ctrl+alt+t
+* show terminal window:
+ctrl+alt+t
 
 * setup display properties
 xrandr
 xdiagnose
 
-* update used java if several installed:
+* update used Java if several installed:
 sudo update-alternatives --config javac
 sudo update-alternatives --config java
 
@@ -302,7 +289,7 @@ ip_address - ip address of the server
 -T – don't open interactive shell on remote server (disable pty allocation)
 -D dyn_port – make "Dynamic SOCKS-based port forwarding". Dynamic Socks-based port forwarding will make your ssh client a simple socks server which listen to port dyn_port for incoming connections
 
-* wifi setup
+* WiFi setup
 iwconfig -a
 
 * samba test
@@ -315,7 +302,7 @@ ip addr
 /etc/rc.local
 - добавлять до строки exit 0
 
-* Получить список процессов (со словом java в строке результата):
+* Получить список Java-процессов:
 ps aux | grep java
 
 * Просмотр архивированных логов:
@@ -348,8 +335,11 @@ uname -a
 * Вход на host по ssh:
 start putty.exe -pw username password@host
 
-* jmxsh is command-line interface to JMX servers: https://code.google.com/p/jmxsh/
-Example of usage: java -jar jmxsh.jar br_fix_quartz_jobs.jmxsh
+* jmxsh is command-line interface to JMX servers
+https://code.google.com/p/jmxsh/
+
+Example of usage:
+java -jar jmxsh.jar br_fix_quartz_jobs.jmxsh
 
 * check availability of soap service from console
 wget http://adcosgiq3:9009/BookerDomainService?wsdl --quiet -O -
@@ -463,7 +453,7 @@ sudo update-alternatives --config java
 * Install NVIDIA driver on Linux
 https://gist.github.com/wangruohui/df039f0dc434d6486f5d4d098aa52d07
 
-* Videocard graphic test on Linux
+* Video card graphic test on Linux
 https://losst.ru/testirovanie-videokarty-v-linux
 = Simple test:
 sudo apt install mesa-utils
@@ -479,9 +469,6 @@ apt remove --purge fonts-noto-color-emoji
 
 * Linux command line quick help
 https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
-
-* For further study:
-Book: "The Linux Command Line" by William Shotts
 
 * Basic UNIX commands
 http://mally.stanford.edu/~sr/computing/basic-unix.html
@@ -658,7 +645,7 @@ dmesg
 * Показать к каким группам принадлежит пользователь
 id <username>
 
-* Показать кто сейчас залогинен в системе
+* Показать, кто сейчас залогинен в системе
 who
 
 * Показать кто сейчас залогинен в системе и что делает
@@ -684,7 +671,7 @@ sudo rpm -e <короткое_имя_пакета>
 * determine type of file
 file <filename>
 
-* Нахождение местоположения java на компьютере
+* Нахождение местоположения Java на компьютере
 whereis java
 readlink -f $(which java)
 
@@ -710,8 +697,8 @@ iperf3
 scp -r <REMOTE_USERNAME>@<REMOTE_HOSTNAME>:<REMOTE_DIRECTORY> <LOCAL_DIRECTORY>
 scp -r punkoa@bla-bla.andd3dfx.com:~/inportant-folder/buff.txt .
 
-* Replace one string with another in all *.java files recursively
-find . -type f -name "*.java" -exec sed -i 's/string1/string2/g' {} +
+* Replace one string with another in all *.txt files recursively
+find . -type f -name "*.txt" -exec sed -i 's/string1/string2/g' {} +
 
 * Посмотреть что запущено на каком порту
 $ netstat -tulpn

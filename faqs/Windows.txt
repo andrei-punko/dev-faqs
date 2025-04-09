@@ -1,5 +1,5 @@
 
-* После установки Винды проблемы с русским шрифтом в путях к папкам и т.п.
+* После установки Windows проблемы с русским шрифтом в путях к папкам и т.п.
 Изменить кодировку для несистемной локали на русскую
 
 * Чтобы включить клавишу NUM LOCK до входа в систему
@@ -16,7 +16,7 @@ ver, winver
 * show installed java versions
 for %I in (java.exe) do @echo %~$PATH:I
 
-* set java version from console
+* set Java version from console
 SETX JAVA_HOME "c:\Program Files (x86)\Java\java7"
 
 * local drives for CygWin

@@ -79,7 +79,4 @@ alias gwup="gw wrapper --gradle-version"
 
 alias gradledeps="gradle dependencies > deps.txt"
 
-# SSH
-alias ntop="ssh andd3dfx@192.168.1.215"
-
 jver

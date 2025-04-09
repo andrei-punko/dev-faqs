@@ -6,10 +6,10 @@ which bash
 #!/bin/bash
 
 * Сделать файл исполняемым (gives everyone execute permission):
-chmod +x scriptname
+chmod +x script-name
 
 * Сделать файл исполняемым (gives everyone read/execute permission):
-chmod +rx scriptname
+chmod +rx script-name
 
 * Рекомендация:
 Don't use all-uppercase, use at least one lowercase character in your names
