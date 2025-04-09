@@ -47,3 +47,7 @@ gradle wrapper --gradle-version 8.5
 
 * Gradle compatibility matrix
 https://docs.gradle.org/8.8/userguide/compatibility.html
+
+* Fix "Gradlew: Permission denied"
+https://github.com/actions/starter-workflows/issues/171
+git update-index --chmod=+x gradlew
