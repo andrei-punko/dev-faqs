@@ -1,0 +1,64 @@
+
+# Convert audio input into text
+
+According to https://github.com/etalab-ia/faster-whisper-server
+
+## Start Docker container with whisper server
+
+docker run --gpus=all --publish 8000:8000 --volume ~/.cache/huggingface:/root/.cache/huggingface fedirz/faster-whisper-server:latest-cuda
+# or
+docker run --publish 8000:8000 --volume ~/.cache/huggingface:/root/.cache/huggingface fedirz/faster-whisper-server:latest-cpu
+
+
+## Make call to API
+
+curl http://localhost:8000/v1/audio/transcriptions -F "file=@123.webm"
+
+curl http://localhost:8000/v1/audio/transcriptions -F "file=@123.webm" -F "language=ru"
+
+---------------------------------------------------------------------
+
+* Ollama model choosing
+
+According to https://www.reddit.com/r/ollama/comments/1hakl9q/comment/m19czb9
+
+if you're running on purely RAM on a low CPU machine, run `ollama pull llama3.2`
+
+if your GPU has 6-8 gigs of vram, run `ollama pull qwen2.5`
+
+if your GPU has 9-16, run `ollama pull qwen2.5:14b`
+
+if you're running a gpu with over 24 gigs, do `ollama pull qwen2.5:32b`
+
+if you're on a VERY high VRAM or RAM (>50GB total) machine, do `ollama pull llama3.3`
+
+Then, install OpenWebUI with `pip install open-webui` and `open-webui serve` or use docker with `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main` 
+
+---------------------------------------------------------------------
+
+Setup local AI coding helper:
+
+1. https://habr.com/ru/articles/879038/#comment_27884318
+
+Использую Continue + ollama c локальными моделями. Абсолютно бесплатно и без подписок. 
+Встроенной GPU в Ryzen хватает для qwen2.5-coder:7b вполне + уже можно deepseek-qwen:7b подключить для сравнения
+
+
+2. https://habr.com/ru/articles/879038/#comment_27887896
+
+Из моделей - Claude конечно топ. Но я использую несколько для разных целей:
+- Gemini 2.0 flash thinking для создания плана на тасках средней сложности (справляется неплохо, если данных достаточно)
+- Codestral на реализацию таких планов
+- Для мелочей подходит и Codestral и qwen2.5:7b (который можно и локально поднять).
+Получается полностью бесплатно.
+
+Но если есть желание внести куда-нибудь денежку малую, то вариантов становится больше и можно посмотреть на какую-нибудь qwen2.5-coder:32b, которая по бенчам очень неплохо выглядит (но с cline я её не пробовал).
+Но на это надо тратить время, само собой. В этом смысле коробочные решения, конечно, лучше. Но моя сборка на моих тасках лучше работает, чем Cursor.
+
+
+3. https://habr.com/ru/articles/879038/#comment_27884340
+
+Да, связка VSCode + Cline/RooCode + Continue закрывает большую часть функционала Cursor и предоставляет пару полезных фич, которые в Cursor не известно когда появятся. По качеству агента разницы тоже особо не заметил. Стоимость при этом: 0.
+
+Autocomplete model:		qwen2.5-coder:1.5b-base
+Embeddings model:		nomic-embed-text:latest
