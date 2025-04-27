@@ -924,6 +924,7 @@
 | make an enquiry                                  | делать запрос                                                                                                                |
 | make an opposing offer                           | counter proposal                                                                                                             |
 | make some waves                                  | предложить что-то новое                                                                                                      |
+| malaise                                          | недомогание                                                                                                                  |
 | malfunction                                      | неисправность                                                                                                                |
 | malicious                                        | злонамеренный, злобный                                                                                                       |
 | malignant                                        | злокачественный                                                                                                              |
