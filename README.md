@@ -28,7 +28,7 @@ It's just my notes about some useful features, it isn't documentation!
 ## Databases
 - [Relational DB](faqs/DB.txt)
 
-## Languages
+## Programming languages
 - [Go](faqs/Go.txt)
 - [Python](faqs/Python.txt)
 
@@ -43,6 +43,9 @@ It's just my notes about some useful features, it isn't documentation!
 ## Spring
 - [Spring](faqs/Spring.txt)
 - [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.txt)
+
+## AI
+- [AI](faqs/AI.txt)
 
 ## Uncategorized
 - [Цитаты, выписки](faqs/цитаты,%20выписки.txt)

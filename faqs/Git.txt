@@ -218,7 +218,7 @@ git filter-branch --env-filter 'if [ "$GIT_AUTHOR_EMAIL" = "Andrei_Punko@another
      GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL;
      GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"; fi' -- --all
 	 
-* Восстановление данных Git в случае хард ресета или удаления ветки:
+* Восстановление данных Git в случае hard reset или удаления ветки:
 git reflog
 - позволяет посмотреть последние коммиты
 для последних - открыть gitk, и найти нужное, после чего создать ветку для этого sha1

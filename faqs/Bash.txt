@@ -83,7 +83,7 @@ until [ <условное выражение> ]; do <actions> done
 $((<expression>))
 let VARIABLE_NAME=$a+$b
 
-* Вывод вещественных чисел С-шным printf:
+* Вывод вещественных чисел с помощью printf:
 echo $(printf %2.3f $VARIABLE_NAME)
 
 * Переназначение потока вывода/потока ошибок:

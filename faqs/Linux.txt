@@ -3,7 +3,7 @@
 Колисниченко - Linux. Полное руководство
 Уэлш - Запускаем Linux
 William Shotts - The Linux Command Line
-Федорчук, ruslinux.net
+Федорчук, http://ruslinux.net
 
 
 * поиск пакета для инсталляции
@@ -34,10 +34,10 @@ http://10.6.131.215:8080/ - access to Jenkins web ui
 * install drive tools
 sudo apt-get install udisks
 
-* инфа о диске
+* информация о диске
 udisks --show-info /dev/sda1
 
-* инфа о системе (не ставил):
+* информация о системе (не ставил):
 sudo apt-get install sysinfo
 
 * список устройств, подключенных сейчас
@@ -56,8 +56,8 @@ sudo mount -t ext3 -o rw,iocharset=utf8,codepage=866 /dev/sdb1 /home/user/Вид
 (указана кодировка системной локали, добавлена поддержка русского языка)
 
 -o force - принудительное монтирование при проблемах
-посмотреть инфу о диске и свободное место на нем: df -h
-отмонтирование устр-ва: sudo umount /dev/sdb1 или sudo umount /home/user/Видео
+посмотреть информацию о диске и свободное место на нем: df -h
+отмонтирование устройства: sudo umount /dev/sdb1 или sudo umount /home/user/Видео
 
 * монтирование cd-rom-а:
 sudo mount -t iso9660 -o ro /dev/cdrom /cd
@@ -410,7 +410,7 @@ valid users = <user_name>
 read only = no
 guest ok = yes
 
-And restart the Samba:
+Restart the Samba server:
 sudo service smbd restart
 
 Show current configuration:
@@ -665,7 +665,7 @@ sudo yum remove <имя_установочного_пакета>
 sudo dpkg -i <имя_установочного_пакета_с_расширением>
 sudo dpkg -r <короткое_имя_пакета>
 
-sudoo rpm -i <имя_установочного_пакета_с_расширением>
+sudo rpm -i <имя_установочного_пакета_с_расширением>
 sudo rpm -e <короткое_имя_пакета>
 
 * determine type of file

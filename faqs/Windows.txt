@@ -51,7 +51,7 @@ https://remontka.pro/rename-user-folder-windows-10/
 * Hosts location
 c:\windows\system32\drivers\etc\hosts
 
-* how to delete disk partiton on Win 10
+* how to delete disk partition on Win 10
 run `cmd` with admin permission
 diskpart
 list disk
@@ -72,7 +72,7 @@ reply 'yes' on question about trusting to new certificate
 * Remove association between a file extension and program which should open these files
 - In Registry Editor find node:
 Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts
-- Under FileExts key, find the file exstension you want to remove file association for. Right-click and choose Delete
+- Under FileExts key, find the file extension you want to remove file association for. Right-click and choose Delete
 
 * Add certificates to make call of secured service endpoint
 - from Swagger page - export certificate to .cer file (choose Base64 encoding)

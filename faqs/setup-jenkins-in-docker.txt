@@ -38,7 +38,7 @@ docker container restart <container name>
 docker logs <container_name>
 
 # So credentials are next:
-admin/<passwod from logs>
+admin/<password from logs>
 
 # Check Jenkins home page at: http://localhost:49001
 # Input admin password (in browser), install suggested plugins

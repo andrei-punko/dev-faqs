@@ -62,7 +62,7 @@ For artifact versions it’s better to use constants
 Use Ctrl+C to stop maven build
 Try to avoid cyclic dependencies
 
-* Чтобы убрать сообщение Maven, о том, что билд платформ-dependent - добавляем в корневой pom проекта:
+* Чтобы убрать сообщение Maven о том, что build platform-dependent - добавляем в корневой pom проекта:
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

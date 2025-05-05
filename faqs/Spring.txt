@@ -6,7 +6,7 @@
 или так (над классом с @Configuration):
 @ComponentScan
 
-указывам используемый конфиг в тестах:
+указываем используемый конфиг в тестах:
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=CDPlayerConfig.class)
 
@@ -57,7 +57,7 @@ public CDPlayer cdPlayer(CompactDisc compactDisc) { return new CDPlayer(compactD
 declare bean in xml:
 <bean>
 
-initializing bean with constructor injectoin:
+initializing bean with constructor injection:
 <bean id="cdPlayer" class="soundsystem.CDPlayer">
 	<constructor-arg ref="compactDisc" />
 </bean>
@@ -214,7 +214,7 @@ wiring classes and/or xml files. In this root config I also usually turn on comp
 
 author suggestion:
 - prefer autoconfiguration
-- if you need explicit configuratin - prefer java-based configuration (it's more powerful, type-safe, and refactorable—over XML configuration)
+- if you need explicit configuration - prefer java-based configuration (it's more powerful, type-safe, and refactorable—over XML configuration)
 
 
 * Chapter 3: Advanced wiring
@@ -269,10 +269,10 @@ profile="dev">
 
 we can declare all profiles in single xml-config:
 <beans profile="dev">
-... beans decarations
+... beans declarations
 </beans>
 <beans profile="prod">
-... beans decarations
+... beans declarations
 </beans>
 
 how to activate profiles:
