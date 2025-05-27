@@ -138,23 +138,23 @@ docker volume prune
 * Kill All Running Containers
 docker kill $(docker ps -q)
 
-* Delete All Stopped Docker Containers
+* Delete all stopped Docker containers
 Use -f option to nuke the running containers too.
 docker rm $(docker ps -a -q)
 
 * Remove a Docker Image
 docker rmi <image name>
 
-* Delete All Docker Images
+* Delete all Docker images
 docker rmi $(docker images -q)
 
-* Delete All Untagged (dangling) Docker Images
+* Delete all untagged (dangling) Docker images
 docker rmi $(docker images -q -f dangling=true)
 
-* Delete All Images
+* Delete all images
 docker rmi $(docker images -q)
 
-* Remove Dangling Volumes
+* Remove dangling volumes
 docker volume rm -f $(docker volume ls -f dangling=true -q)
 
 * entering into docker container logs
@@ -426,3 +426,41 @@ Status 500: {"message":"Head \"https://registry-1.docker.io/v2/testcontainers/ry
 https://stackoverflow.com/questions/72205231/test-ignored-and-failing-when-running-it-test-in-spring-boot-mongodb-test-conta
 As a workaround, login to Docker Hub using this URL (from usual cmd console):
 $ docker login index.docker.io
+
+* ENTRYPOINT vs CMD
+= ENTRYPOINT is the default command to be processed
+= If not specified, /bin/sh -c is executed as the default command
+= Arguments to the ENTRYPOINT command should be specified separately using CMD
+= If the default command is specified using CMD instead of ENTRYPOINT, the command is executed as an argument to the default entrypoint sh -c which can give unexpected results
+= If the arguments to the command are specified within the ENTRYPOINT, then they _cannot be overwritten_ from the command line
+
+Dockerfile == Containerfile
+
+ADD or COPY
+= ADD and COPY are doing the same
+= COPY is simpler and has less features
+= ADD has sepcifica features
+== ADD can directly extract the contents of a tar file into the container
+== ADD can fetch files from a URL, but this is deprecated, rather use `RUN wget` to fetch the file, and delete them afterwards when the file is no longer needed.
+
+Options like ADD, COPY, ENTRYPOINT, CMD are used in shell form and in exec form:
+Shell form is a list of items: `ADD /my/file /mydir`
+Exec form is a JSON array of items: `ADD ["/my/file", "/mydir"]`
+Using exec form is preferred, as shell form wraps command in a /bin/sh -c shell, which creates a sometimes unnecessary shell process.
+
+To avoid creation of extra Docker image layers - compound several RUN commands into single RUN command using `&& \` (with \ for multiple lines). And add clean of downloaded unused files after that to reduce image size.
+
+* Docker volumes
+docker volume create myvol		#create volume
+docker volume ls				#check volume content
+docker volume inspect my-vol | less		#inspect volume
+
+docker run -it --name voltest --rm --mount source=myvol,target=/data nginx:latest /bin/sh
+cp /etc/hosts /data; touch /data/testfile; ctrl-P, ctrl-Q
+sudo ls /var/lib/docker/volumes/myvol/_data/
+
+docker run -it --name voltest2 --rm --mount source=myvol,target=/data nginx:latest /bin/sh
+ls /data; touch /data/newfile; ctrl-P, ctrl-Q
+
+* History of Docker image (layer diffs during its creation)
+docker history <image-name>

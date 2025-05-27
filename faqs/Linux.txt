@@ -706,3 +706,12 @@ $ ss -lntu
 
 * delete line in nano editor
 ctrl+K
+
+* Path for programs that a normal user may run:
+/usr/local/bin
+
+* Minimum file editor example
+cat > Dockerfile <<EOF
+> FROM busybox
+> CMD echo "Hello world!"
+> EOF
