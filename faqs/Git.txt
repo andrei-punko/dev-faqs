@@ -266,3 +266,6 @@ on:
     if: ${{ github.event_name != 'pull_request' }}
     run: |
     ...
+
+* How to use Linux utils in Git-Bash console
+Download put utils into ./Git/mingw64/bin/
