@@ -1,6 +1,6 @@
-# Collection of FAQs / notes for different tech topics
+# Collection of notes / FAQs for different tech topics
 
-It's just my notes about some useful features, it's not documentation!
+It's just my notes about some useful features, not documentation!
 
 ## Vocabulary
 - [En-Ru vocabulary](faqs/En-Ru-vocabulary.md)
@@ -46,10 +46,14 @@ It's just my notes about some useful features, it's not documentation!
 - [Spring](faqs/Spring.txt)
 - [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.txt)
 
+## Scripts
+- [Switching JDK version](scripts)
+
+## Configs
+- [.bashrc](configs/.bashrc)
+- [.gitconfig](configs/.gitconfig)
+
 ## Others
 - [Frontend](faqs/Frontend.txt)
 - [AI](faqs/AI.txt)
 - [Цитаты, выписки](faqs/цитаты,%20выписки.txt)
-
-## Scripts for switching JDK version
-Placed into [scripts](scripts) folder
