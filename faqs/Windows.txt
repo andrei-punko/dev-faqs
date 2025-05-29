@@ -94,3 +94,10 @@ https://stackoverflow.com/questions/988403/how-to-prevent-auto-closing-of-consol
 * Recovery file in Win 11
 `Windows File Recovery` works on Windows 11, but it doesn't come preinstalled. You can download it for free from the Microsoft Store and install it
 $ winfr C: D:\RecoveryDestination /regular /n "Users\<username>\My pictures\"
+
+* Change extension for group of files:
+https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-folder-with-one-command-on-windows
+ren *.txt *.md
+
+* Инструменты для отображения клавиш при нажатии
+KeyPose, Carnac

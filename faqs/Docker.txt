@@ -464,3 +464,22 @@ ls /data; touch /data/newfile; ctrl-P, ctrl-Q
 
 * History of Docker image (layer diffs during its creation)
 docker history <image-name>
+
+* To build some Java project without JDK inside Docker container - put 2 files into root project folder and run `docker compose up`.
+File Dockerfile:
+```
+FROM maven:3-jdk-8-alpine as builder
+WORKDIR /usr/local/
+ENTRYPOINT ["mvn", "install"]
+```
+
+File docker-compose.yml:
+```
+version: "3"
+
+services:
+  builder:
+    build: ./
+    volumes:
+      - ./:/usr/local
+```

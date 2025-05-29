@@ -715,3 +715,43 @@ cat > Dockerfile <<EOF
 > FROM busybox
 > CMD echo "Hello world!"
 > EOF
+
+* Change extension of group of files from `txt` to `md` by .bat script on Win OS
+@ECHO OFF
+for %%f in (*.txt) do (
+  ren "%%~nf.txt" "%%~nf.md"
+)
+
+* Server performance monitoring dashboard
+https://github.com/netdata/netdata
+
+* Fix error `Unable to lock the administration directory var lib dpkg is another process`
+https://askubuntu.com/questions/15433/unable-to-lock-the-administration-directory-var-lib-dpkg-is-another-process
+sudo deluser <username>
+ssh-keygen -t rsa -C "your_email@example.com"
+
+* To encrypt a string:
+- convert public key to PEM format
+ssh-keygen -f ~/.ssh/id_rsa.pub -e -m PKCS8  > ~/.ssh/id_rsa.pub.pem
+
+- encrypt string using public key
+echo "String to Encrypt" \
+   | openssl rsautl -pubin -inkey ~/.ssh/id_rsa.pub.pem -encrypt -pkcs \
+   | openssl enc -base64 \
+   > string.txt
+
+* To decrypt a string (from file):
+openssl enc -base64 -d -in string.txt \
+    | openssl rsautl -inkey ~/.ssh/id_rsa -decrypt
+
+* PM2 tool: start, daemonize and monitor your application
+https://pm2.keymetrics.io/docs/usage/quick-start/
+To start, daemonize and monitor your application:
+    $ pm2 start "serve -s ./"
+    $ pm2 start "serve -s ./" --name load-test
+
+List the status of all application managed by PM2:
+    $ pm2 ls
+
+To display logs in realtime:
+    $ pm2 logs

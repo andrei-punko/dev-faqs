@@ -1,6 +1,6 @@
 # Collection of FAQs / notes for different tech topics
 
-It's just my notes about some useful features, it isn't documentation!
+It's just my notes about some useful features, it's not documentation!
 
 ## Vocabulary
 - [En-Ru vocabulary](faqs/En-Ru-vocabulary.md)
@@ -13,6 +13,7 @@ It's just my notes about some useful features, it isn't documentation!
 - [Git](faqs/Git.txt)
 - [Bash](faqs/Bash.txt)
 - [Docker](faqs/Docker.txt)
+- [k8s](faqs/k8s.txt)
 - [Certificates](faqs/Certificates.txt)
 - [Multiple SSH keys](faqs/multiple-ssh-keys.txt)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.txt)
@@ -31,6 +32,7 @@ It's just my notes about some useful features, it isn't documentation!
 ## Programming languages
 - [Go](faqs/Go.txt)
 - [Python](faqs/Python.txt)
+- [Java](faqs/Java.txt)
 
 ## Hotkeys
 - [Intellij IDEA hotkeys](faqs/Intellij%20IDEA%20hotkeys.txt)
@@ -44,12 +46,10 @@ It's just my notes about some useful features, it isn't documentation!
 - [Spring](faqs/Spring.txt)
 - [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.txt)
 
-## AI
+## Others
+- [Frontend](faqs/Frontend.txt)
 - [AI](faqs/AI.txt)
-
-## Uncategorized
 - [Цитаты, выписки](faqs/цитаты,%20выписки.txt)
-- [Unsorted stuff](faqs/_unsorted.txt)
 
 ## Scripts for switching JDK version
 Placed into [scripts](scripts) folder

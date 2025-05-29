@@ -33,3 +33,12 @@ exec 3<>/dev/tcp/127.0.0.1/6379 && echo -e "PING\r\n" >&3 && head -c 7 <&3
 * Show info about existing tables in DB (for MySQL DB):
 https://stackoverflow.com/questions/1498777/how-do-i-show-the-schema-of-a-table-in-a-mysql-database
 select TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE, ROW_COUNT_ESTIMATE from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA='PUBLIC';
+
+* Fix the issue when liquibase checksum validation failed while migration file was not modified
+https://forum.liquibase.org/t/how-to-fix-validationfailedexception-in-liquibase-checksum/6780/5
+"Update the databasechangelog table, setting the md5sum to NULL for the particular row"
+$ update databasechangelog set md5sum=null where filename='<put your file name here>';
+
+* H2 error "h2 database: Unsupported database file version or invalid file header in file":
+https://stackoverflow.com/questions/40729216/h2-database-unsupported-database-file-version-or-invalid-file-header-in-file
+To check H2 version use query: `SELECT H2VERSION() FROM DUAL`

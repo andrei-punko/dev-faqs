@@ -1,5 +1,5 @@
 
-# Migration from JUnit 4 to JUnit 5.
+# Migration from JUnit 4 to JUnit 5
 
 According to next video by John Thompson:
 https://www.udemy.com/course/spring-framework-5-beginner-to-guru/learn/lecture/11592692
@@ -67,4 +67,4 @@ public class AppTest {
 
 ---
 
-And use the next article if needed: https://www.baeldung.com/junit-5-migration
+Useful article: https://www.baeldung.com/junit-5-migration
