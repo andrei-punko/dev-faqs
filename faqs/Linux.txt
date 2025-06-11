@@ -755,3 +755,7 @@ List the status of all application managed by PM2:
 
 To display logs in realtime:
     $ pm2 logs
+
+* Добавление пользователя pingvinus в группу editorsgroup
+https://pingvinus.ru/note/user-groups-add
+sudo usermod -a -G editorsgroup pingvinus
