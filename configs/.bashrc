@@ -79,4 +79,8 @@ alias gwup="gw wrapper --gradle-version"
 
 alias gradledeps="gradle dependencies > deps.txt"
 
+
+# k8s
+alias k="minikube kubectl --"
+
 jver
