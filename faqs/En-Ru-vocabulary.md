@@ -653,6 +653,7 @@
 | full blown                                       | полномасштабный                                                                                                              |
 | full-board / half-board / B&B                    | полный пансион / полупансион / ночлег и завтрак                                                                              |
 | full-fledged                                     | развившийся, созревший                                                                                                       |
+| fumble                                           | неумело обращаться, мять в руках                                                                                             | 
 | fungible                                         | заменяемый                                                                                                                   |
 | funnel                                           | воронка                                                                                                                      |
 | furnished                                        | меблированный                                                                                                                |
@@ -906,10 +907,12 @@
 | liveness                                         | оживленность, живучесть                                                                                                      |
 | lobby                                            | вестибюль, фойе                                                                                                              |
 | lofty                                            | возвышенный                                                                                                                  |
+| loneliness                                       | одиночество                                                                                                                  | 
 | longevity                                        | долговечность                                                                                                                |
 | look up                                          | уважать                                                                                                                      |
 | lookups                                          | поиски                                                                                                                       |
 | lopsided                                         | кривобокий                                                                                                                   |
+| lorry                                            | грузовик                                                                                                                     | 
 | lowly                                            | непритязательный                                                                                                             |
 | lullaby                                          | колыбельная                                                                                                                  |
 | lunacy                                           | безумие                                                                                                                      |
@@ -1008,7 +1011,7 @@
 | nurturing                                        | воспитание                                                                                                                   |
 | nutshell                                         | в двух словах, короче говоря                                                                                                 |
 | obedient                                         | послушный                                                                                                                    |
-| obeys                                            | слушается                                                                                                                    |
+| obey                                             | подчиняться, слушаться                                                                                                       | 
 | objective                                        | цель, задача                                                                                                                 |
 | obligated                                        | обязан                                                                                                                       |
 | obligation                                       | обязательство, обязанность                                                                                                   |
@@ -1030,6 +1033,7 @@
 | on a day-to-day basis                            | на постоянной основе                                                                                                         |
 | on a regular basis                               | на регулярной основе                                                                                                         |
 | on behalf                                        | от имени                                                                                                                     |
+| on foot                                          | пешком                                                                                                                       | 
 | on the go/fly/run                                | на лету                                                                                                                      |
 | on the internet                                  | в интернете                                                                                                                  |
 | on-premise                                       | на предпосылке (на месте, локально)                                                                                          |
@@ -1041,6 +1045,7 @@
 | opportunity                                      | возможность                                                                                                                  |
 | oppressive                                       | гнетущий                                                                                                                     |
 | opted                                            | решил                                                                                                                        |
+| order                                            | заказ                                                                                                                        | 
 | originator                                       | author                                                                                                                       |
 | orphaned                                         | осиротевший                                                                                                                  |
 | ostensibly                                       | как будто бы                                                                                                                 |
@@ -1210,6 +1215,7 @@
 | reckon                                           | рассчитывать                                                                                                                 |
 | reconciled                                       | согласовать, примирять                                                                                                       |
 | reconciliation                                   | сверка, согласование                                                                                                         |
+| recondition                                      | восстанавливать                                                                                                              | 
 | reconnaissance                                   | разведка                                                                                                                     |
 | recycle                                          | перерабатывать                                                                                                               |
 | redeem                                           | погашать, выкупать, избавлять, освобождать                                                                                   |
@@ -1298,6 +1304,7 @@
 | sentiment                                        | настроение, чувство                                                                                                          |
 | sentinel                                         | часовой, страж                                                                                                               |
 | sepal                                            | чашелистник                                                                                                                  |
+| set examples                                     | подавать примеры                                                                                                             | 
 | settled                                          | улаженный, урегулированный                                                                                                   |
 | settlement                                       | урегулирование (v), населенные пункты (n)                                                                                    |
 | sever                                            | разрывать                                                                                                                    |
@@ -1349,6 +1356,7 @@
 | solely                                           | исключительно                                                                                                                |
 | solicit                                          | выпрашивать                                                                                                                  |
 | solicitor                                        | адвокат                                                                                                                      |
+| solitude                                         | одиночество                                                                                                                  | 
 | somewhat                                         | несколько, отчасти                                                                                                           |
 | soothing                                         | успокаивающий                                                                                                                |
 | sophisticated                                    | сложный, утонченный, изощренный                                                                                              |
@@ -1654,6 +1662,7 @@
 | unleashed                                        | развязанный, высвободившийся                                                                                                 |
 | unlike                                           | в отличие от                                                                                                                 |
 | unlikely                                         | вряд ли                                                                                                                      |
+| unmanned                                         | беспилотный, самоуправляемый                                                                                                 | 
 | unmitigated                                      | абсолютный, явный                                                                                                            |
 | unrelenting                                      | безжалостный, неослабевающий                                                                                                 |
 | unsettling                                       | тревожный, тревожащий                                                                                                        |
@@ -1674,12 +1683,14 @@
 | vague                                            | неопределенно/расплывчато                                                                                                    |
 | valet                                            | гостиничный работник                                                                                                         |
 | valuable                                         | ценный, полезный                                                                                                             |
+| values                                           | ценности                                                                                                                     | 
 | vantage                                          | преимущество                                                                                                                 |
 | variance                                         | дисперсия, расхождение                                                                                                       |
 | variety                                          | разнообразие                                                                                                                 |
 | vast                                             | огромный, обширный                                                                                                           |
 | vast amount                                      | огромное кол-во                                                                                                              |
 | vastly                                           | значительно, очень                                                                                                           |
+| veers                                            | поворачивает                                                                                                                 | 
 | veneer                                           | шпон                                                                                                                         |
 | venerable                                        | почтенный                                                                                                                    |
 | venue                                            | место встречи                                                                                                                |
@@ -1735,7 +1746,7 @@
 | witness                                          | свидетель, очевидец                                                                                                          |
 | witnessing                                       | свидетельствование, быть свидетелем                                                                                          |
 | wobbly                                           | шаткий                                                                                                                       |
-| work life balance                                | the amount of time you spent doing your job compared with the amount of time you spend with family or doing things you enjoy |
+| work-life balance                                | the amount of time you spent doing your job compared with the amount of time you spend with family or doing things you enjoy |
 | worship                                          | поклонение                                                                                                                   |
 | worth                                            | стоимость                                                                                                                    |
 | worthwhile                                       | имеющий смысл, стоящий, дельный                                                                                              |

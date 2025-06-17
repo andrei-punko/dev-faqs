@@ -103,13 +103,18 @@ ren *.txt *.md
 KeyPose, Carnac
 
 * Fix issue with Battle.net in Belarus (2025)
+https://vk.com/wall-103726238_161615
 `Пуск`, `Панель управления`
 `Сеть и Интернет`
 `Центр управления сетями и общим доступом`
 `Изменить настройки адаптера`
 Заменить DNS на следующие:
-IPv4: 8.8.8.8 и 4.4.4.4
-IPv6: 2001:4860:4860::8888 и 2001:4860:4860::8844
+IPv4:
+8.8.8.8
+8.8.4.4
+IPv6:
+2001:4860:4860::8888
+2001:4860:4860::8844
 
 * Автодополнение при печати в Win 11
 Time & language -> Typing -> Show text suggestions when typing on the physical keyboard
