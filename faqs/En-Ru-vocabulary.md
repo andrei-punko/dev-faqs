@@ -485,6 +485,7 @@
 | dread                                            | страх                                                                                                                        |
 | dreadful                                         | ужасный                                                                                                                      |
 | dressdown friday                                 | casual day                                                                                                                   |
+| driver                                           | водитель                                                                                                                     |
 | drowning                                         | утопление                                                                                                                    |
 | drudgery                                         | тяжелая работа                                                                                                               |
 | dull                                             | скучный                                                                                                                      |
@@ -524,7 +525,6 @@
 | encounter                                        | столкновение                                                                                                                 |
 | encourage                                        | поощрять, ободрять, поддерживать, воодушевлять                                                                               |
 | encouragement                                    | поощрение                                                                                                                    |
-| encourages                                       | призывает                                                                                                                    |
 | encouraging                                      | обнадеживающий, making someone feel more confident                                                                           |
 | endeavor                                         | попытка, стремление, старание                                                                                                |
 | endeavour                                        | стремление, приложение усилий, намерение                                                                                     |
@@ -538,7 +538,6 @@
 | enquiry/suggestion/recommendation                | запрос/предложение/рекомендация                                                                                              |
 | ensemble                                         | ансамбль                                                                                                                     |
 | ensure                                           | обеспечивать, гарантировать, to make smth certain to happen                                                                  |
-| ensures                                          | гарантирует                                                                                                                  |
 | entire                                           | весь                                                                                                                         |
 | entirely                                         | полностью, целиком                                                                                                           |
 | entitlement                                      | право                                                                                                                        |
@@ -565,7 +564,7 @@
 | excerpt                                          | выдержка, выписка, отрывок                                                                                                   |
 | excessive                                        | чрезмерный, излишний, избыточный                                                                                             |
 | excision                                         | иссечение, удаление                                                                                                          |
-| executive suite                                  | представительские апартаменты                                                                                                |
+| executive suite                                  | представительский набор, представительские апартаменты                                                                       |
 | exhibit                                          | выставлять, экспонировать / экспонат                                                                                         |
 | exhort                                           | увещевать, убеждать                                                                                                          |
 | exigency                                         | крайность, острая необходимость                                                                                              |
@@ -1082,7 +1081,6 @@
 | parlance                                         | манера выражаться                                                                                                            |
 | parlours                                         | салон                                                                                                                        |
 | passionate                                       | страстный                                                                                                                    |
-| passport control                                 | паспортный контроль                                                                                                          |
 | pastry                                           | что-то из муки                                                                                                               |
 | patience                                         | терпение                                                                                                                     |
 | patterned data                                   | структурированные данные                                                                                                     |
@@ -1092,7 +1090,6 @@
 | peculiar                                         | своеобразный                                                                                                                 |
 | peculiarities                                    | особенности                                                                                                                  |
 | pedestrian                                       | пешеход                                                                                                                      |
-| pedestrian/driver                                | пешеход/водитель                                                                                                             |
 | penalized                                        | нарушает                                                                                                                     |
 | perception                                       | восприятие                                                                                                                   |
 | performant                                       | производительный                                                                                                             |
@@ -1386,7 +1383,6 @@
 | stalled                                          | застопорился                                                                                                                 |
 | stance                                           | позиция                                                                                                                      |
 | standard suite                                   | стандартный набор, стандартные апартаменты                                                                                   |
-| standard suite/executive suite                   | стандартный/представительский набор                                                                                          |
 | stare                                            | взгляд                                                                                                                       |
 | start from scratch                               | начать с нуля                                                                                                                |
 | starvation                                       | голодание                                                                                                                    |
