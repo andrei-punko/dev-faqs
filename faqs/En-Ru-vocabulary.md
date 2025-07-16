@@ -141,15 +141,37 @@
 | barge                                            | баржа                                                                                                                        |
 | barring                                          | за исключением                                                                                                               |
 | bathtub                                          | ванна                                                                                                                        |
+| be a must                                        | обязательно                                                                                                                  |
+| be a sign of                                     | быть признаком                                                                                                               |
+| be a solid communicator                          | be very good at delivering a speech                                                                                          |
+| be a source of anxiety                           | быть источником беспокойства                                                                                                 |
+| be a stepping stone                              | быть переходным этапом                                                                                                       |
+| be addicted to smth                              | быть зависимым от чего-то                                                                                                    |
+| be an asset                                      | быть активом/быть важным для компании                                                                                        |
 | be assured                                       | будь уверен                                                                                                                  |
 | be at fingertips                                 | на кончиках пальцев (под рукой)                                                                                              |
+| be attentive to detail                           | внимательный к деталям                                                                                                       |
 | be available 24/7                                | круглосуточно                                                                                                                |
 | be bumped from the flight                        | получить компенсацию за отмену рейса                                                                                         |
 | be busy at peak times                            | занят в час пик                                                                                                              |
+| be content                                       | быть довольным                                                                                                               |
+| be content with                                  | довольствоваться, to be happy and satisfied                                                                                  |
+| be dead set to do smth                           | to be determined to do smth                                                                                                  |
 | be encouraged                                    | поощряться                                                                                                                   |
+| be engaged                                       | быть вовлеченным                                                                                                             |
+| be homesick                                      | тосковать по родине                                                                                                          |
+| be honest                                        | если честно                                                                                                                  |
+| be marked as a concern                           | отмечен, как проблема                                                                                                        |
+| be on a business trip                            | быть в командировке                                                                                                          |
+| be on a high-fliers list                         | быть одним из высокопроизводительных сотрудников                                                                             |
 | be on the dole                                   | получать пособие                                                                                                             |
+| be prohibited                                    | запрещается                                                                                                                  |
 | be rewarding                                     | быть полезным                                                                                                                |
 | be sacked/fired/dismissed                        | быть уволенным                                                                                                               |
+| be scared                                        | бояться                                                                                                                      |
+| be time-consuming                                | быть трудоемким                                                                                                              |
+| be tiring                                        | быть утомительным                                                                                                            |
+| be willing                                       | хотеть, желать                                                                                                               |
 | be worth doing smth                              | стоит сделать что-либо                                                                                                       |
 | bear                                             | переносить, терпеть                                                                                                          |
 | bearing                                          | несущий                                                                                                                      |
@@ -224,10 +246,12 @@
 | calm                                             | спокойствие                                                                                                                  |
 | cancellation                                     | отмена                                                                                                                       |
 | candid                                           | беспристрастный, искренний                                                                                                   |
+| canteen                                          | столовая                                                                                                                     |
 | capricious                                       | капризный, своенравный                                                                                                       |
 | captivating                                      | пленительный                                                                                                                 |
+| caring                                           | заботливый                                                                                                                   |
 | carousel                                         | кольцевая лента с багажом                                                                                                    |
-| carring                                          | заботливый                                                                                                                   |
+| carriage                                         | ж/д вагон                                                                                                                    |
 | carry-on bag                                     | ручная кладь                                                                                                                 |
 | catch up                                         | наверстать, нагнать                                                                                                          |
 | causality, causation                             | причинность, причинная связь                                                                                                 |
@@ -275,7 +299,8 @@
 | commitment                                       | обязательство                                                                                                                |
 | commodity                                        | товар, продукт                                                                                                               |
 | common sense                                     | здравый смысл                                                                                                                |
-| commute                                          | смягчать                                                                                                                     |
+| commute                                          | смягчать, добираться                                                                                                         |
+| compartment                                      | купе                                                                                                                         |
 | compartment                                      | отсек                                                                                                                        |
 | compartmentalize                                 | разобщить                                                                                                                    |
 | compelling                                       | неотразимый                                                                                                                  |
@@ -436,6 +461,7 @@
 | devise                                           | разрабатывать, изобретать                                                                                                    |
 | devote                                           | посвящать, уделять                                                                                                           |
 | dice/die                                         | игральная кость                                                                                                              |
+| digest                                           | переваривать                                                                                                                 |
 | digestion                                        | пищеварение, усвоение, понимание                                                                                             |
 | dignity                                          | достоинство, благородство                                                                                                    |
 | digress                                          | отвлекаться                                                                                                                  |
@@ -510,6 +536,8 @@
 | eliminate                                        | устранить, to remove, take away                                                                                              |
 | elongate                                         | удлинять, продлевать                                                                                                         |
 | eloquent                                         | красноречивый                                                                                                                |
+| embarrass                                        | смущать, стеснять, конфузить                                                                                                 |
+| embellish                                        | приукрашивать                                                                                                                |
 | embellishment                                    | приукрашивание, украшательство                                                                                               |
 | embrace                                          | объятие, охватывать                                                                                                          |
 | embracing                                        | охватывающий, включающий в себя                                                                                              |
@@ -537,6 +565,7 @@
 | enquire                                          | спрашивать, исследовать, наводить справки                                                                                    |
 | enquiry/suggestion/recommendation                | запрос/предложение/рекомендация                                                                                              |
 | ensemble                                         | ансамбль                                                                                                                     |
+| ensure                                           | make smth certain to happen                                                                                                  |
 | ensure                                           | обеспечивать, гарантировать, to make smth certain to happen                                                                  |
 | entire                                           | весь                                                                                                                         |
 | entirely                                         | полностью, целиком                                                                                                           |
@@ -583,11 +612,13 @@
 | facilities for disabled                          | удобства для инвалидов                                                                                                       |
 | facilities/services of the hotel                 | удобства                                                                                                                     |
 | facility                                         | объект, сооружение, удобство, приспособление                                                                                 |
+| fair                                             | справедливый / ярмарка                                                                                                       |
 | fairly                                           | довольно, достаточно                                                                                                         |
 | faith                                            | вера, доверие                                                                                                                |
 | faithful                                         | верный                                                                                                                       |
 | fallacy                                          | заблуждение                                                                                                                  |
 | fancy                                            | воображение, причудливый                                                                                                     |
+| fare                                             | стоимость проезда, плата за проезд                                                                                           |
 | fascinating                                      | очаровательный                                                                                                               |
 | fashion                                          | мода, фасон, манера                                                                                                          |
 | favor                                            | одолжение, благосклонность                                                                                                   |
@@ -604,6 +635,7 @@
 | fidelity                                         | верность, точность                                                                                                           |
 | fierce                                           | жестокий, свирепый                                                                                                           |
 | fiery                                            | огненный                                                                                                                     |
+| figure out                                       | выяснить                                                                                                                     |
 | filthy                                           | грязный                                                                                                                      |
 | finality                                         | окончательность, законченность                                                                                               |
 | finer-grained                                    | мелкозернистый                                                                                                               |
@@ -653,7 +685,7 @@
 | full blown                                       | полномасштабный                                                                                                              |
 | full-board / half-board / B&B                    | полный пансион / полупансион / ночлег и завтрак                                                                              |
 | full-fledged                                     | развившийся, созревший                                                                                                       |
-| fumble                                           | неумело обращаться, мять в руках                                                                                             | 
+| fumble                                           | неумело обращаться, мять/вертеть в руках                                                                                     |
 | fungible                                         | заменяемый                                                                                                                   |
 | funnel                                           | воронка                                                                                                                      |
 | furnished                                        | меблированный                                                                                                                |
@@ -735,8 +767,9 @@
 | hesitate                                         | колебаться, не решаться, стесняться                                                                                          |
 | hiccup                                           | икать, барахлить                                                                                                             |
 | high ranking                                     | высокопоставленный                                                                                                           |
+| highlight                                        | выделить, придать большое значение                                                                                           |
 | hijack                                           | угон самолета                                                                                                                |
-| hijacker/victim                                  | угонщик(налетчик)/жертва                                                                                                     |
+| hijacker                                         | угонщик, налетчик                                                                                                            |
 | hoax                                             | обман                                                                                                                        |
 | holistic                                         | целостный                                                                                                                    |
 | honed                                            | отточенный                                                                                                                   |
@@ -760,7 +793,7 @@
 | immeasurable                                     | неизмеримый                                                                                                                  |
 | immense                                          | огромный                                                                                                                     |
 | imminent                                         | неизбежный                                                                                                                   |
-| impact/influence                                 | влияние                                                                                                                      |
+| impact / influence                               | влияние                                                                                                                      |
 | impasse                                          | тупик                                                                                                                        |
 | impatient                                        | нетерпеливый                                                                                                                 |
 | impeccable                                       | безупречный                                                                                                                  |
@@ -774,7 +807,7 @@
 | implicitly                                       | безоговорочно, без колебаний                                                                                                 |
 | implies                                          | подразумевает, означает, предполагает                                                                                        |
 | imply                                            | подразумевать                                                                                                                |
-| important=vital=crucial                          | важный, ключевой                                                                                                             |
+| important / vital / crucial                      | важный, ключевой                                                                                                             |
 | impose                                           | налагать, навязывать, облагать                                                                                               |
 | imprinted                                        | отпечатанный                                                                                                                 |
 | impudent                                         | нахальный, дерзкий                                                                                                           |
@@ -909,12 +942,12 @@
 | liveness                                         | оживленность, живучесть                                                                                                      |
 | lobby                                            | вестибюль, фойе                                                                                                              |
 | lofty                                            | возвышенный                                                                                                                  |
-| loneliness                                       | одиночество                                                                                                                  | 
+| loneliness                                       | одиночество                                                                                                                  |
 | longevity                                        | долговечность                                                                                                                |
 | look up                                          | уважать                                                                                                                      |
 | lookups                                          | поиски                                                                                                                       |
 | lopsided                                         | кривобокий                                                                                                                   |
-| lorry                                            | грузовик                                                                                                                     | 
+| lorry                                            | грузовик                                                                                                                     |
 | lowly                                            | непритязательный                                                                                                             |
 | lullaby                                          | колыбельная                                                                                                                  |
 | lunacy                                           | безумие                                                                                                                      |
@@ -929,6 +962,7 @@
 | make an enquiry                                  | делать запрос                                                                                                                |
 | make an opposing offer                           | counter proposal                                                                                                             |
 | make some waves                                  | предложить что-то новое                                                                                                      |
+| make time                                        | торопиться                                                                                                                   |
 | malaise                                          | недомогание                                                                                                                  |
 | malfunction                                      | неисправность                                                                                                                |
 | malicious                                        | злонамеренный, злобный                                                                                                       |
@@ -1013,7 +1047,7 @@
 | nurturing                                        | воспитание                                                                                                                   |
 | nutshell                                         | в двух словах, короче говоря                                                                                                 |
 | obedient                                         | послушный                                                                                                                    |
-| obey                                             | подчиняться, слушаться                                                                                                       | 
+| obey                                             | подчиняться, слушаться                                                                                                       |
 | objective                                        | цель, задача                                                                                                                 |
 | obligated                                        | обязан                                                                                                                       |
 | obligation                                       | обязательство, обязанность                                                                                                   |
@@ -1035,7 +1069,7 @@
 | on a day-to-day basis                            | на постоянной основе                                                                                                         |
 | on a regular basis                               | на регулярной основе                                                                                                         |
 | on behalf                                        | от имени                                                                                                                     |
-| on foot                                          | пешком                                                                                                                       | 
+| on foot                                          | пешком                                                                                                                       |
 | on the go/fly/run                                | на лету                                                                                                                      |
 | on the internet                                  | в интернете                                                                                                                  |
 | on-premise                                       | на предпосылке (на месте, локально)                                                                                          |
@@ -1047,7 +1081,7 @@
 | opportunity                                      | возможность                                                                                                                  |
 | oppressive                                       | гнетущий                                                                                                                     |
 | opted                                            | решил                                                                                                                        |
-| order                                            | заказ                                                                                                                        | 
+| order                                            | заказ                                                                                                                        |
 | originator                                       | author                                                                                                                       |
 | orphaned                                         | осиротевший                                                                                                                  |
 | ostensibly                                       | как будто бы                                                                                                                 |
@@ -1218,7 +1252,7 @@
 | reckon                                           | рассчитывать                                                                                                                 |
 | reconciled                                       | согласовать, примирять                                                                                                       |
 | reconciliation                                   | сверка, согласование                                                                                                         |
-| recondition                                      | восстанавливать                                                                                                              | 
+| recondition                                      | восстанавливать                                                                                                              |
 | reconnaissance                                   | разведка                                                                                                                     |
 | recycle                                          | перерабатывать                                                                                                               |
 | redeem                                           | погашать, выкупать, избавлять, освобождать                                                                                   |
@@ -1248,6 +1282,7 @@
 | reservation                                      | оговорка                                                                                                                     |
 | reserve (make a reservation)                     | бронировать                                                                                                                  |
 | reside                                           | проживать                                                                                                                    |
+| resign                                           | уйти в отставку                                                                                                              |
 | resilience                                       | эластичность, упругость                                                                                                      |
 | resilient                                        | упругий, эластичный, жизнерадостный                                                                                          |
 | respectful                                       | behaving in a socially correct way that shows you are thinking about other people's feelings                                 |
@@ -1309,7 +1344,7 @@
 | sepal                                            | чашелистник                                                                                                                  |
 | serpent                                          | змея                                                                                                                         |
 | set examples	                                    | подавать примеры                                                                                                             |
-| set examples                                     | подавать примеры                                                                                                             | 
+| set examples                                     | подавать примеры                                                                                                             |
 | settled                                          | улаженный, урегулированный                                                                                                   |
 | settlement                                       | урегулирование (v), населенные пункты (n)                                                                                    |
 | sever                                            | разрывать                                                                                                                    |
@@ -1361,7 +1396,7 @@
 | solely                                           | исключительно                                                                                                                |
 | solicit                                          | выпрашивать                                                                                                                  |
 | solicitor                                        | адвокат                                                                                                                      |
-| solitude                                         | одиночество                                                                                                                  | 
+| solitude                                         | одиночество                                                                                                                  |
 | somewhat                                         | несколько, отчасти                                                                                                           |
 | soothing                                         | успокаивающий                                                                                                                |
 | sophisticated                                    | сложный, утонченный, изощренный                                                                                              |
@@ -1415,6 +1450,7 @@
 | strive for smth                                  | стремиться к чему-то                                                                                                         |
 | stubborn                                         | упертый                                                                                                                      |
 | stuffy                                           | душный                                                                                                                       |
+| stumble over                                     | споткнуться                                                                                                                  |
 | stutter                                          | заикание                                                                                                                     |
 | suave                                            | учтивый                                                                                                                      |
 | sub-standard                                     | некондиционный                                                                                                               |
@@ -1536,46 +1572,16 @@
 | to address the thorny issue                      | решить проблему                                                                                                              |
 | to affect/an effect                              | влиять/эффект                                                                                                                |
 | to anticipate                                    | ожидать                                                                                                                      |
-| to assume                                        | to accept smth to be true without question or proof                                                                          |
-| to be a must                                     | обязательно                                                                                                                  |
-| to be a sign of                                  | быть признаком                                                                                                               |
-| to be a solid communicator                       | be very good at delivering a speech                                                                                          |
-| to be a source of anxiety                        | быть источником беспокойства                                                                                                 |
-| to be a stepping stone                           | быть переходным этапом                                                                                                       |
-| to be addicted to smth                           | быть зависимым от чего-то                                                                                                    |
-| to be an asset                                   | быть активом/быть важным для компании                                                                                        |
-| to be attentive to detail                        | внимательный к деталям                                                                                                       |
-| to be content                                    | быть довольным                                                                                                               |
-| to be content with                               | довольствоваться, to be happy and satisfied                                                                                  |
-| to be dead set to do smth                        | to be determined to do smth                                                                                                  |
-| to be engaged                                    | быть вовлеченным                                                                                                             |
-| to be homesick                                   | тосковать по родине                                                                                                          |
-| to be honest                                     | если честно                                                                                                                  |
-| to be marked as a concern                        | отмечен, как проблема                                                                                                        |
-| to be on a business trip                         | быть в командировке                                                                                                          |
-| to be on a high-fliers list                      | быть одним из высокопроизводительных сотрудников                                                                             |
-| to be prohibited                                 | запрещается                                                                                                                  |
-| to be scared                                     | бояться                                                                                                                      |
-| to be time-consuming                             | быть трудоемким                                                                                                              |
-| to be tiring                                     | быть утомительным                                                                                                            |
-| to be willing                                    | хотеть, желать                                                                                                               |
 | to behave sensibly                               | вести себя разумно                                                                                                           |
 | to benefit from smth                             | извлечь выгоду                                                                                                               |
 | to beware of                                     | остерегаться                                                                                                                 |
 | to borrow/to lend                                | одалживать, заимствовать                                                                                                     |
 | to coincide                                      | одновременно                                                                                                                 |
-| to commute                                       | смягчать, добираться                                                                                                         |
-| to digest                                        | переваривать                                                                                                                 |
 | to distract smb's attention/to be distracted     | отвлекать чье-то внимание/отвлекаться                                                                                        |
 | to do overtime                                   | переработка                                                                                                                  |
 | to do/go sightseeing                             | осмотр достопримечательностей                                                                                                |
-| to elongate                                      | продлить                                                                                                                     |
-| to embarrass                                     | смущать, стеснять, конфузить                                                                                                 |
-| to embellish                                     | приукрашивать                                                                                                                |
 | to enroll on                                     | записаться на                                                                                                                |
-| to ensure                                        | to make smth certain to happen                                                                                               |
 | to fasten the seat belt                          | пристегнуть ремень                                                                                                           |
-| to figure out                                    | выяснить                                                                                                                     |
 | to foster/to encourage/to boost                  | способствовать, поощрять                                                                                                     |
 | to gain/get/obtain experience                    | получить опыт                                                                                                                |
 | to get along with                                | ладить                                                                                                                       |
@@ -1587,37 +1593,31 @@
 | to go over the limit                             | превысить лимит                                                                                                              |
 | to go sightseeing                                | осматривать достопримечательности                                                                                            |
 | to go to great length to do smth                 | тратить большие усилия (apple big effort)                                                                                    |
-| to guess                                         | угадать                                                                                                                      |
 | to guzzle                                        | жрать                                                                                                                        |
 | to have a heart of gold                          | золотое сердце                                                                                                               |
 | to have a seating preference                     | иметь предпочтение в выборе места                                                                                            |
-| to highlight                                     | выделить, придать большое значение                                                                                           |
 | to lean                                          | опираться                                                                                                                    |
-| to make an appointment                           | назначить встречу                                                                                                            |
-| to make time                                     | торопиться                                                                                                                   |
 | to miss deadline                                 | не успеть к сроку                                                                                                            |
 | to narrow down (the number of candidates)        | сузить (отобрать) кандидатов                                                                                                 |
 | to pay in cash/by credit card/by cheque(check)   | платить наличными/картой/чеком                                                                                               |
 | to place importance                              | emphasize the issue                                                                                                          |
 | to reimburse/reimbursement                       | возмещать/возмещение                                                                                                         |
 | to rely on smth/smb                              | сослаться на что-то/кого-то                                                                                                  |
-| to resign                                        | уйти в отставку                                                                                                              |
 | to reveal one's potential                        | выявить свой потенциал                                                                                                       |
 | to see the sights                                | осматривать достопримечательности                                                                                            |
 | to seize up                                      | захватить, жестоко и неожиданно                                                                                              |
 | to spend time on smth                            | тратить время на что-то                                                                                                      |
-| to stumble over                                  | споткнуться                                                                                                                  |
 | to swap seats                                    | поменяться местами                                                                                                           |
 | to take for granted                              | принять как должное                                                                                                          |
 | to take off/to land                              | взлетать/садиться                                                                                                            |
 | to take offend                                   | снять                                                                                                                        |
 | to take up/to turn down (a job offer)            | принять/отклонить предложение работы                                                                                         |
 | to tally up                                      | чтобы посчитать                                                                                                              |
-| to tolerate                                      | терпеть, допускать, позволять                                                                                                |
 | to underperform                                  | недостаточная производительность                                                                                             |
 | to work flexi time (flextime)                    | гибкий график                                                                                                                |
 | to work hand in glove                            | работать рука об руку                                                                                                        |
 | toil                                             | тяжелый труд/работа, маяться, потери, пошлина                                                                                |
+| tolerate                                         | терпеть, допускать, позволять                                                                                                |
 | torn down                                        | снесен                                                                                                                       |
 | torn off                                         | оторванный                                                                                                                   |
 | torture                                          | пытка, муки                                                                                                                  |
@@ -1668,7 +1668,7 @@
 | unleashed                                        | развязанный, высвободившийся                                                                                                 |
 | unlike                                           | в отличие от                                                                                                                 |
 | unlikely                                         | вряд ли                                                                                                                      |
-| unmanned                                         | беспилотный, самоуправляемый                                                                                                 | 
+| unmanned                                         | беспилотный, самоуправляемый                                                                                                 |
 | unmitigated                                      | абсолютный, явный                                                                                                            |
 | unrelenting                                      | безжалостный, неослабевающий                                                                                                 |
 | unsettling                                       | тревожный, тревожащий                                                                                                        |
@@ -1689,14 +1689,14 @@
 | vague                                            | неопределенно/расплывчато                                                                                                    |
 | valet                                            | гостиничный работник                                                                                                         |
 | valuable                                         | ценный, полезный                                                                                                             |
-| values                                           | ценности                                                                                                                     | 
+| values                                           | ценности                                                                                                                     |
 | vantage                                          | преимущество                                                                                                                 |
 | variance                                         | дисперсия, расхождение                                                                                                       |
 | variety                                          | разнообразие                                                                                                                 |
 | vast                                             | огромный, обширный                                                                                                           |
 | vast amount                                      | огромное кол-во                                                                                                              |
 | vastly                                           | значительно, очень                                                                                                           |
-| veers                                            | поворачивает                                                                                                                 | 
+| veers                                            | поворачивает                                                                                                                 |
 | veneer                                           | шпон                                                                                                                         |
 | venerable                                        | почтенный                                                                                                                    |
 | venue                                            | место встречи                                                                                                                |
@@ -1709,6 +1709,7 @@
 | vessel                                           | судно                                                                                                                        |
 | vexed                                            | раздосадованный                                                                                                              |
 | viable                                           | жизнеспособный                                                                                                               |
+| victim                                           | жертва                                                                                                                       |
 | vigilant                                         | бдительный                                                                                                                   |
 | visceral                                         | нутряной                                                                                                                     |
 | vital                                            | жизненно важный                                                                                                              |
@@ -1716,6 +1717,7 @@
 | volatile                                         | изменчивый, непостоянный                                                                                                     |
 | voraciously                                      | жадно                                                                                                                        |
 | wacky                                            | чокнутый                                                                                                                     |
+| wagon                                            | повозка/карета                                                                                                               |
 | waiver                                           | отказ от права/требования                                                                                                    |
 | wake-up call                                     | звонок для пробуждения                                                                                                       |
 | wannabe                                          | подражатель                                                                                                                  |
