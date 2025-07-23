@@ -93,6 +93,7 @@
 | arrival lounge                                   | зал прибытия                                                                                                                 |
 | arrivals/departures board                        | доска прибытий/отправлений                                                                                                   |
 | arrogant                                         | высокомерный                                                                                                                 |
+| as a result                                      | в результате                                                                                                                 |
 | as hard as nails                                 | не имеет симпатий к другим людям                                                                                             |
 | as though                                        | как будто                                                                                                                    |
 | ascendance                                       | могущественное влияние, господство                                                                                           |
@@ -261,7 +262,8 @@
 | certain                                          | определенный, уверенный, верный                                                                                              |
 | chambermaid                                      | горничная                                                                                                                    |
 | charge smb the rack rate                         | выставить кому-то счет с полной стоимостью                                                                                   |
-| charm                                            | очарование, шарм, обаяние                                                                                                    |
+| charity shop                                     | магазин секонд-хэнд                                                                                                          |
+| charm                                            | очарование/шарм/обаяние, брелок/амулет                                                                                       |
 | chase                                            | погоня                                                                                                                       |
 | chasing                                          | погоня, преследование                                                                                                        |
 | check-in                                         | регистрироваться                                                                                                             |
@@ -412,6 +414,7 @@
 | curious                                          | любопытный                                                                                                                   |
 | curriculum                                       | учебный план                                                                                                                 |
 | cursory                                          | беглый                                                                                                                       |
+| curtains                                         | шторы                                                                                                                        |
 | custodial                                        | тюремный                                                                                                                     |
 | customs                                          | обычаи/таможенные пошлины                                                                                                    |
 | dam                                              | плотина                                                                                                                      |
@@ -461,6 +464,7 @@
 | devise                                           | разрабатывать, изобретать                                                                                                    |
 | devote                                           | посвящать, уделять                                                                                                           |
 | dice/die                                         | игральная кость                                                                                                              |
+| dicease                                          | болезнь                                                                                                                      |
 | digest                                           | переваривать                                                                                                                 |
 | digestion                                        | пищеварение, усвоение, понимание                                                                                             |
 | dignity                                          | достоинство, благородство                                                                                                    |
@@ -674,6 +678,7 @@
 | frankly                                          | откровенно                                                                                                                   |
 | fraught                                          | чреватый                                                                                                                     |
 | freight                                          | груз, фрахт, стоимость перевозки                                                                                             |
+| frighten                                         | пугать                                                                                                                       |
 | frightened                                       | напуган                                                                                                                      |
 | frown                                            | хмуриться, насупиться                                                                                                        |
 | frugal                                           | скромный                                                                                                                     |
@@ -738,6 +743,7 @@
 | gutter                                           | желоб, канавка, выемка                                                                                                       |
 | habits                                           | привычки                                                                                                                     |
 | haggle                                           | торговаться                                                                                                                  |
+| hairbrush                                        | расческа                                                                                                                     |
 | hairdo                                           | прическа                                                                                                                     |
 | hallowed                                         | освященный                                                                                                                   |
 | hamper                                           | затруднять, препятствовать                                                                                                   |
@@ -948,6 +954,7 @@
 | lookups                                          | поиски                                                                                                                       |
 | lopsided                                         | кривобокий                                                                                                                   |
 | lorry                                            | грузовик                                                                                                                     |
+| lost consciousness                               | потерять сознание                                                                                                            |
 | lowly                                            | непритязательный                                                                                                             |
 | lullaby                                          | колыбельная                                                                                                                  |
 | lunacy                                           | безумие                                                                                                                      |
@@ -1120,6 +1127,7 @@
 | parlours                                         | салон                                                                                                                        |
 | passionate                                       | страстный                                                                                                                    |
 | pastry                                           | что-то из муки                                                                                                               |
+| pat on the back                                  | похлопывание по спине                                                                                                        |
 | patience                                         | терпение                                                                                                                     |
 | patterned data                                   | структурированные данные                                                                                                     |
 | pave                                             | вымостить, устилать                                                                                                          |
@@ -1187,6 +1195,7 @@
 | premises                                         | предпосылки, помещение (дом)                                                                                                 |
 | prepend                                          | перед именем                                                                                                                 |
 | preposition                                      | предлог                                                                                                                      |
+| prescription                                     | рецепт                                                                                                                       |
 | prescriptive                                     | предписывающий                                                                                                               |
 | preserve                                         | сохранять, хранить                                                                                                           |
 | preserving                                       | сохранение                                                                                                                   |
@@ -1343,7 +1352,6 @@
 | sentinel                                         | часовой, страж                                                                                                               |
 | sepal                                            | чашелистник                                                                                                                  |
 | serpent                                          | змея                                                                                                                         |
-| set examples	                                    | подавать примеры                                                                                                             |
 | set examples                                     | подавать примеры                                                                                                             |
 | settled                                          | улаженный, урегулированный                                                                                                   |
 | settlement                                       | урегулирование (v), населенные пункты (n)                                                                                    |
@@ -1500,7 +1508,7 @@
 | swath                                            | прокос, ряд                                                                                                                  |
 | sweatshop labor                                  | потогонной                                                                                                                   |
 | swing                                            | колебание, ход, размах                                                                                                       |
-| syllable	                                        | слог                                                                                                                         |
+| syllable                                         | слог                                                                                                                         |
 | syllabus                                         | расписание, программа обучения                                                                                               |
 | tackle (n)                                       | снасти, принадлежности                                                                                                       |
 | tackle (v)                                       | схватить, энергично браться                                                                                                  |
@@ -1585,6 +1593,7 @@
 | to foster/to encourage/to boost                  | способствовать, поощрять                                                                                                     |
 | to gain/get/obtain experience                    | получить опыт                                                                                                                |
 | to get along with                                | ладить                                                                                                                       |
+| to get into the house through the window         | забраться в дом через окно                                                                                                   |
 | to get jet lag/to be jet-lagged                  | быть уставшим после перелета                                                                                                 |
 | to get message across                            | make people understand an idea                                                                                               |
 | to get on well                                   | ладить                                                                                                                       |
