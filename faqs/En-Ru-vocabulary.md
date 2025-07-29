@@ -734,6 +734,7 @@
 | grasshopper                                      | кузнечик                                                                                                                     |
 | grease                                           | смазка                                                                                                                       |
 | greed                                            | жадность                                                                                                                     |
+| groggy                                           | сонливый                                                                                                                     |
 | grumble                                          | ворчать                                                                                                                      |
 | grumpy                                           | сердитый                                                                                                                     |
 | grunt work                                       | грубая работа                                                                                                                |
@@ -1730,6 +1731,7 @@
 | waiver                                           | отказ от права/требования                                                                                                    |
 | wake-up call                                     | звонок для пробуждения                                                                                                       |
 | wannabe                                          | подражатель                                                                                                                  |
+| wardrobe                                         | платяной шкаф                                                                                                                |
 | warehousing                                      | складирование                                                                                                                |
 | warrant                                          | гарантировать                                                                                                                |
 | wary                                             | осторожный                                                                                                                   |
