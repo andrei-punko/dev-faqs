@@ -1,5 +1,7 @@
 | Слово / Выражение                                | Значение / Перевод                                                                                                           |
 |--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| AD                                               | нашей эры                                                                                                                    |
+| BC                                               | до нашей эры                                                                                                                 |
 | abbreviated                                      | сокращенный                                                                                                                  |
 | aboard                                           | на борту                                                                                                                     |
 | abolish                                          | упразднять                                                                                                                   |
@@ -212,6 +214,7 @@
 | borrowing                                        | заимствование                                                                                                                |
 | bossy                                            | властный                                                                                                                     |
 | bother                                           | беспокоиться                                                                                                                 |
+| boulder                                          | валун                                                                                                                        |
 | bound                                            | граница                                                                                                                      |
 | bow                                              | поклон/лук                                                                                                                   |
 | bragging                                         | хвастовство                                                                                                                  |
@@ -765,6 +768,7 @@
 | hasty decision/answer                            | поспешное решение/ответ                                                                                                      |
 | hatched                                          | вылупился                                                                                                                    |
 | have a nap                                       | вздремнуть                                                                                                                   |
+| he got into                                      | он попал/залез в                                                                                                             |
 | heir                                             | наследник                                                                                                                    |
 | heist                                            | ограбление                                                                                                                   |
 | hemisphere                                       | полушарие                                                                                                                    |
@@ -820,6 +824,7 @@
 | impudent                                         | нахальный, дерзкий                                                                                                           |
 | in a flash                                       | в мгновение ока                                                                                                              |
 | in order to                                      | для того, чтобы                                                                                                              |
+| in vain                                          | напрасно, тщетно, всуе                                                                                                       |
 | in-laws                                          | родня со стороны жены/мужа                                                                                                   |
 | incentive                                        | стимул                                                                                                                       |
 | incentivize                                      | стимулировать                                                                                                                |
@@ -987,6 +992,8 @@
 | means                                            | средство, способ                                                                                                             |
 | meanwhile                                        | между тем, тем временем                                                                                                      |
 | mediocre                                         | посредственный                                                                                                               |
+| memento                                          | напоминание                                                                                                                  |
+| memories                                         | воспоминания                                                                                                                 |
 | menacing                                         | угрожающий                                                                                                                   |
 | mending                                          | починка                                                                                                                      |
 | mention                                          | упомянуть                                                                                                                    |
@@ -1170,6 +1177,7 @@
 | plethora                                         | изобилие                                                                                                                     |
 | plethora of                                      | множество                                                                                                                    |
 | plural                                           | множественное число                                                                                                          |
+| point on smth                                    | указать на что-то                                                                                                            |
 | poke around with                                 | копаться                                                                                                                     |
 | poking                                           | тыкать, пихать, толкать                                                                                                      |
 | polite                                           | вежливый, showing politeness and care towards someone who is considered important                                            |
@@ -1353,10 +1361,12 @@
 | sentinel                                         | часовой, страж                                                                                                               |
 | sepal                                            | чашелистник                                                                                                                  |
 | serpent                                          | змея                                                                                                                         |
+| set an example                                   | подавать пример                                                                                                              |
 | set examples                                     | подавать примеры                                                                                                             |
 | settled                                          | улаженный, урегулированный                                                                                                   |
 | settlement                                       | урегулирование (v), населенные пункты (n)                                                                                    |
 | sever                                            | разрывать                                                                                                                    |
+| several branches                                 | несколько филиалов                                                                                                           |
 | severe                                           | серьезный, суровый                                                                                                           |
 | sharp                                            | проницательный                                                                                                               |
 | sheer                                            | отвесно, абсолютно (наречие), явный, чистый, отвесный (прилагательное)                                                       |
@@ -1508,6 +1518,7 @@
 | swallow                                          | глотать                                                                                                                      |
 | swath                                            | прокос, ряд                                                                                                                  |
 | sweatshop labor                                  | потогонной                                                                                                                   |
+| swing                                            | качели                                                                                                                       |
 | swing                                            | колебание, ход, размах                                                                                                       |
 | syllable                                         | слог                                                                                                                         |
 | syllabus                                         | расписание, программа обучения                                                                                               |
@@ -1543,6 +1554,7 @@
 | tertiary                                         | третичный                                                                                                                    |
 | testimonials                                     | отзывы, характеристики, рекомендация                                                                                         |
 | than                                             | чем                                                                                                                          |
+| that will do / that'll do                        | достаточно, хватит                                                                                                           |
 | the USA                                          | США                                                                                                                          |
 | the core issue                                   | главная проблема                                                                                                             |
 | theft                                            | кража                                                                                                                        |
@@ -1609,6 +1621,7 @@
 | to lean                                          | опираться                                                                                                                    |
 | to miss deadline                                 | не успеть к сроку                                                                                                            |
 | to narrow down (the number of candidates)        | сузить (отобрать) кандидатов                                                                                                 |
+| to not disturb                                   | не беспокоить                                                                                                                |
 | to pay in cash/by credit card/by cheque(check)   | платить наличными/картой/чеком                                                                                               |
 | to place importance                              | emphasize the issue                                                                                                          |
 | to reimburse/reimbursement                       | возмещать/возмещение                                                                                                         |
@@ -1621,6 +1634,7 @@
 | to take for granted                              | принять как должное                                                                                                          |
 | to take off/to land                              | взлетать/садиться                                                                                                            |
 | to take offend                                   | снять                                                                                                                        |
+| to take pictures/photos                          | делать снимки/фото                                                                                                           |
 | to take up/to turn down (a job offer)            | принять/отклонить предложение работы                                                                                         |
 | to tally up                                      | чтобы посчитать                                                                                                              |
 | to underperform                                  | недостаточная производительность                                                                                             |
@@ -1634,6 +1648,7 @@
 | toss out                                         | выбрасывать                                                                                                                  |
 | tough communicator/negotiator                    | жесткий коммуникатор/переговорщик                                                                                            |
 | trade-off                                        | компромисс, взаимные уступки                                                                                                 |
+| traffic jam                                      | дорожная пробка                                                                                                              |
 | trait                                            | черта, штрих, особенность                                                                                                    |
 | tramp                                            | бродяга, топать                                                                                                              |
 | translucent                                      | полупрозрачный                                                                                                               |
