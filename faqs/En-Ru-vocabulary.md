@@ -1151,7 +1151,7 @@
 | peripatetic                                      | странствующий                                                                                                                |
 | permits                                          | разрешения                                                                                                                   |
 | persecuted                                       | преследуемый                                                                                                                 |
-| persistence                                      | настойчивость, постоянство, живучесть                                                                                        |
+| persistence                                      | упорство, настойчивость, постоянство, живучесть                                                                              |
 | personnel                                        | персонал                                                                                                                     |
 | persuade                                         | уговаривать, убеждать                                                                                                        |
 | persuasive                                       | убедительный                                                                                                                 |
@@ -1478,7 +1478,6 @@
 | subsidiary                                       | дочернее предприятие                                                                                                         |
 | subsidised                                       | субсидируется                                                                                                                |
 | substantial                                      | существенный                                                                                                                 |
-| substantially                                    | существенно                                                                                                                  |
 | substantive                                      | основной                                                                                                                     |
 | substitute                                       | замена, заменитель                                                                                                           |
 | subtle                                           | тонкий                                                                                                                       |
