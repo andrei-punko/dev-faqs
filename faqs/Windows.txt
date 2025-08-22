@@ -122,3 +122,13 @@ Time & language -> Typing -> Show text suggestions when typing on the physical k
 * Активация Windows 8+ и MS Office
 https://habr.com/en/news/884288/
 Активатор MAS работает через Powershell по команде "irm https://get.activated.win | iex"
+
+* Проверка прохождения пакетов
+ping google.com
+Проанализируйте результат: если процент потерь пакетов (Loss) очень высок, это указывает на проблемы с соединением
+
+tracert google.com
+Покажет весь путь, который проходят пакеты до выбранного сервера, и выявит узлы, где могут возникать задержки или потери
+
+pathping google.com
+Сочетает функционал ping и tracert, предоставляя более детальную информацию о потерях и задержках на каждом узле маршрута
