@@ -269,3 +269,7 @@ on:
 
 * How to use Linux utils in Git-Bash console
 Download put utils into ./Git/mingw64/bin/
+
+* Change author of last commit
+https://stackoverflow.com/questions/3042437/how-can-i-change-the-commit-author-for-a-single-commit
+git commit --amend --author="Andrei Punko <andd3dfx@gmail.com>" --no-edit
