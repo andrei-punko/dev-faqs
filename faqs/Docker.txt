@@ -490,3 +490,7 @@ Assuming your image is called `best-ui` and has the tag `1.0.0` we will clone th
 $ docker tag best-ui:1.0.0 best-ui:old
 or (with docker registry in tag):
 $ docker tag andd3dfx/best-ui:1.0.0 andd3dfx/best-ui:old
+
+* Add user to docker-users group
+https://stackoverflow.com/questions/61530874/how-do-i-add-myself-to-the-docker-users-group-on-windows
+net localgroup docker-users "Andrei" /ADD
