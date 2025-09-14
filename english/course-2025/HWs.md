@@ -1,64 +1,65 @@
+# Homework definitions
 
-# HW2
+## HW2
 Повторить предлоги: красный Мерфи, Unit 103-105
 
 Essay (200+ words):
 Throughout history, male leaders have led us into violence and conflict. If a society is governed by female leaders it could be more peaceful.
 
-# HW3
+## HW3
 Повторить артикли в красном Мерфи
 3я форма, повторить страдательный залог, учебник Точилиной, п.9
 
 Essay (200+ words):
 Nowadays, we can watch entertainment performances online and there is no need to watch them live.
 
-# HW4
+## HW4
 Повторить степени сравнения прилагательных: красный Мерфи, Unit 87-90
 
 Essay (200+ words):
 Some people say it is a waste of time to plan for the future and it is more important to focus on the present.
 
-# HW5
+## HW5
 Essay (200+ words):
 It is better for young people to get advice from the elderly than young people.
 
-# HW6
+## HW6
 Essay (200+ words):
 Some people believe that spoken communication is more powerful than written communication
 
-# HW7
+## HW7
 Essay (200+ words):
 Some people think that history has nothing or little to tell us, but others believe that studying the past history can help us better understand the present
 
-# HW8
+## HW8
 Повторить Present simple в красном Мерфи
 
 Essay (200+ words):
 Nowadays online shopping is extremely popular. What is the impact of it on the environment and what is the effect on people who lost their jobs because of it?
 
-# HW9
+## HW9
 Essay:
 Watching TV shows and movies about crime is becoming more and more popular. Why is this? What effect does that have on society?
 
-# HW10
+## HW10
 Essay (200+ words):
 Some people believe that economic progress is the only way to measure a country’s success, while others think that there are other factors. What are these factors? Which one is more important than others?
 
-# HW11
+## HW11
 Essay (200+ words):
 Some people enjoy change, and they look forward to new experiences. Others like their lives to stay the same, and they do not change their usual habits. Compare these two approaches to life. Which approach do you prefer? Explain why.
 
-# HW12
+## HW12
 Повторить Conditionals: красный Мерфи, Unit 100
 
 Essay (200+ words):
 Today single-use products are still very common. What are the problems associated with this? What are some possible solutions?
 
-# HW13
+## HW13
 Essay (200+ words):
 People do not often interact with their neighbors and this can be harmful for building communities.
 What are the possible causes and how can this be solved?
 
-# HW14
+## HW14
 Essay (200+ words):
 Interviews have always been the most common way to choose among job candidates. Some people now think that there are better ways of finding the right person for a job.

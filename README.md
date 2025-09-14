@@ -2,12 +2,13 @@
 
 It's just my notes about some useful features, not documentation!
 
-## Vocabulary
-- [En-Ru vocabulary](faqs/En-Ru-vocabulary.md)
+## English
+- [En-Ru vocabulary](english/En-Ru-vocabulary.md)
+- [My English essays (homework)](english/course-2025)
 
 ## Build tools
-- [Maven](faqs/Maven.txt)
-- [Gradle](faqs/Gradle.txt)
+- [Maven](faqs/Maven.md)
+- [Gradle](faqs/Gradle.md)
 
 ## Devops
 - [Git](faqs/Git.txt)
