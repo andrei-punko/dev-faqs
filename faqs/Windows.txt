@@ -132,3 +132,6 @@ tracert google.com
 
 pathping google.com
 Сочетает функционал ping и tracert, предоставляя более детальную информацию о потерях и задержках на каждом узле маршрута
+
+* Посмотреть naming полей в PDF-е
+PDF-XChange Editor
