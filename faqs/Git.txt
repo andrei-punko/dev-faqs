@@ -273,3 +273,15 @@ Download put utils into ./Git/mingw64/bin/
 * Change author of last commit
 https://stackoverflow.com/questions/3042437/how-can-i-change-the-commit-author-for-a-single-commit
 git commit --amend --author="Andrei Punko <andd3dfx@gmail.com>" --no-edit
+
+* Squash commits during interactive rebase using `fixup!`
+You have next commits:
+...
+111ff SOME-RELEASE
+03e4f Some changes
+04123 Bla-bla
+9efe0 fixup! 03e4f
+
+To squash 9efe0 with 03e4f during interactive rebase:
+1.Use for 9efe0 commit next commit message: `fixup! 03e4f`
+2.Run `git rebase -i --autosquash branch-name`
