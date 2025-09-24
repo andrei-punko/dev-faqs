@@ -140,3 +140,9 @@ PDF-XChange Editor
 * Активация speech-to-text
 Win+H
 (только язык надо переключить на нужный заранее)
+
+* Добавить папку в исключения Windows Defender-а
+Windows Security
+	Virus & threat protection settings -> Manage settings
+		Exclusions -> Add or remove exclusions
+и добавить нужные папки

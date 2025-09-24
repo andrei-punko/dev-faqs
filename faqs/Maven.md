@@ -131,3 +131,17 @@ mvn -N wrapper:wrapper
 ./mvnw wrapper:wrapper -Dmaven=3.9.6
 mvn wrapper:wrapper -Dmaven=3.9.6
 ```
+
+## Чтобы использовать при сборке Maven-ом ту же версию Java, что и команда java в консоли
+Добавить в `pom.xml`:
+```xml
+<properties>
+  <maven.compiler.executable>java</maven.compiler.executable>
+</properties>
+```
+Это должно решить проблему с конфликтом между OpenJDK и Oracle JDK, т.к. теперь Maven будет использовать системную версию Java
+
+## Скачать заново артефакты при сборке и обновить те, что сохранены в локальном Maven репозитории:
+```
+mvn clean compile -U
+```
