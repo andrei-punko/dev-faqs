@@ -33,7 +33,7 @@ It's just my notes about some useful features, not documentation!
 ## Programming languages
 - [Go](faqs/Go.txt)
 - [Python](faqs/Python.txt)
-- [Java](faqs/Java.txt)
+- [Java](faqs/Java.md)
 
 ## Hotkeys
 - [Intellij IDEA hotkeys](faqs/Intellij%20IDEA%20hotkeys.txt)

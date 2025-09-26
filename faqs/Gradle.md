@@ -1,4 +1,4 @@
-# Gradle notes
+# Gradle
 
 ## Stop run of all Gradle agents
 ```

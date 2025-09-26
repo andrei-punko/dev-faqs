@@ -1,4 +1,4 @@
-# Maven notes
+# Maven
 
 ## Clean results of previous build
 ```
