@@ -1,3 +1,4 @@
+# Frontend
 
-* HTML tags documentation (by Vladilen Minin)
+## HTML tags documentation (by Vladilen Minin)
 use `mdn` text in search query, for example: `hr html mdn`

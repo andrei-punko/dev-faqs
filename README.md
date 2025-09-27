@@ -18,7 +18,7 @@ It's just my notes about some useful features, not documentation!
 - [Certificates](faqs/Certificates.txt)
 - [Multiple SSH keys](faqs/multiple-ssh-keys.txt)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.txt)
-- [PowerShell](faqs/PowerShell.txt)
+- [PowerShell](faqs/PowerShell.md)
 
 ## Brokers
 - [Kafka](faqs/Kafka.md)
@@ -28,10 +28,10 @@ It's just my notes about some useful features, not documentation!
 - [AWS](faqs/AWS.txt)
 
 ## Databases
-- [Relational DB](faqs/DB.txt)
+- [Relational DB](faqs/DB.md)
 
 ## Programming languages
-- [Go](faqs/Go.txt)
+- [Go](faqs/Go.md)
 - [Python](faqs/Python.txt)
 - [Java](faqs/Java.md)
 
@@ -55,6 +55,6 @@ It's just my notes about some useful features, not documentation!
 - [.gitconfig](configs/.gitconfig)
 
 ## Others
-- [Frontend](faqs/Frontend.txt)
+- [Frontend](faqs/Frontend.md)
 - [AI](faqs/AI.txt)
 - [Цитаты, выписки](faqs/цитаты,%20выписки.txt)

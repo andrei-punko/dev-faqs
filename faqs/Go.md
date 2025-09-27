@@ -1,0 +1,12 @@
+# Golang
+
+## Set environment variables for Go
+```
+GOROOT=c:\Go
+GOPATH=c:\Work\Personal\go-sandbox
+```
+
+## Install all project dependencies
+```
+go get ./...
+```
