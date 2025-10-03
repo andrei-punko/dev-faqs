@@ -146,3 +146,9 @@ Windows Security
 	Virus & threat protection settings -> Manage settings
 		Exclusions -> Add or remove exclusions
 и добавить нужные папки
+
+* Terminate tasks by process id (PID) or image name
+taskkill /f /im java.exe
+	/F                     Specifies to forcefully terminate the process(es).
+	/IM   imagename        Specifies the image name of the process
+                           to be terminated. Wildcard '*' can be used to specify all tasks or image names.
