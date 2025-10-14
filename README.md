@@ -41,7 +41,7 @@ It's just my notes about some useful features, not documentation!
 
 ## OS
 - [Linux](faqs/Linux.txt)
-- [Windows](faqs/Windows.txt)
+- [Windows](faqs/Windows.md)
 
 ## Spring
 - [Spring](faqs/Spring.txt)
