@@ -1014,6 +1014,7 @@
 | mist                                             | туман, дымка, мгла                                                                                                           |
 | mitigate                                         | смягчать                                                                                                                     |
 | mitigation                                       | смягчение                                                                                                                    |
+| modest                                           | скромный                                                                                                                     |
 | modestly                                         | умеренно                                                                                                                     |
 | moisture                                         | влажность                                                                                                                    |
 | mole                                             | моль, крот                                                                                                                   |
