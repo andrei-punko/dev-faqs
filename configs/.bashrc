@@ -6,19 +6,20 @@ alias jver="java -version"
 alias mver="mvn --version"
 
 alias mc="mvn clean"
+alias mcc="mc compile"
 alias mci="mc install"
-alias mcist="mci -DskipTests"
 alias mciap="mci -am -pl"
 alias mcip="mci -pl"
+alias mcist="mci -DskipTests"
 alias mct="mc test"
+alias mctc="mc test-compile"
 alias mctp="mct -pl"
 alias mi="mvn install"
 alias mip="mi -pl"
 alias mt="mvn test"
 alias mtp="mt -pl"
 alias qb="mci -DskipTests -Dnomodel"
-
-alias mvndeps="mvn dependency:tree > deps.txt"
+alias mdeps="mvn dependency:tree > deps.txt"
 
 # git
 alias gf="git fetch"

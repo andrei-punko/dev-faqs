@@ -4,5 +4,6 @@
 [gui]
 	encoding = utf-8
 	tabsize = 2
+	commitmsgwidth = 99
 [core]
 	autocrlf = false
