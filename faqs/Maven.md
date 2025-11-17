@@ -145,3 +145,9 @@ mvn wrapper:wrapper -Dmaven=3.9.6
 ```
 mvn clean compile -U
 ```
+
+## Fix case when mvnw doesn't have +x permission ("mvnw: Permission denied")
+https://github.com/actions/starter-workflows/issues/171
+```
+git update-index --chmod=+x mvnw
+```
