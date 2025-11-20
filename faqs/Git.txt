@@ -285,3 +285,50 @@ You have next commits:
 To squash 9efe0 with 03e4f during interactive rebase:
 1.Use for 9efe0 commit next commit message: `fixup! 03e4f`
 2.Run `git rebase -i --autosquash branch-name`
+
+* Dark theme for gitk
+https://draculatheme.com/gitk
+download https://github.com/dracula/gitk/archive/master.zip and copy:
+cp gitk/gitk ~/.config/git/
+
+* Dark theme for git gui
+https://stackoverflow.com/questions/49935684/dark-theme-for-git-gui
+1. Find file `git-gui.tcl` in your Git installation
+For Windows it could be in one of places:
+- %userprofile%\AppData\Local\Programs\Git\mingw64\libexec\git-core
+- C:\Program Files\Git\mingw64\libexec\git-core
+
+2. insert next lines after line `pave_toplevel .`:
+```
+ttk::style theme use default
+ttk::style configure TFrame -background #333
+ttk::style configure TLabelframe -background #333
+ttk::style configure TLabelframe.Label -background #333 -foreground #fff
+ttk::style configure TPanedwindow  -background #333
+ttk::style configure EntryFrame -background #333
+ttk::style configure TScrollbar -background #666 -troughcolor #444 -arrowcolor #fff -arrowsize 15
+ttk::style map TScrollbar -background [list active #333 disabled #000]
+ttk::style configure TLabel -background #333 -foreground #fff
+ttk::style configure TButton -background #333 -foreground #fff -borderwidth 2 -bordercolor #fff
+ttk::style map TButton -background [list active #555 disabled #111 readonly #000]
+ttk::style configure TCheckbutton -background #333 -foreground #fff -indicatorbackground #666 -indicatorcolor #fff
+ttk::style map TCheckbutton -background [list active #555 disabled #111 readonly #000]
+ttk::style configure TEntry -fieldbackground #333 -background #333 -foreground #fff -insertcolor #fff
+ttk::style configure TRadiobutton -background #333 -foreground #fff
+ttk::style map TRadiobutton -background [list active #555 disabled #111 readonly #000]
+option add *TCombobox*Listbox.background #333 interactive
+option add *TCombobox*Listbox.foreground #fff interactive
+option add *TCombobox*Listbox.selectBackground blue interactive
+option add *TCombobox*Listbox.selectForeground #fff interactive
+option add *Listbox.Background #333 interactive
+option add *Listbox.Foreground #fff interactive
+option add *Text.Background #333 interactive
+option add *Text.Foreground #fff interactive
+ttk::style configure TSpinbox -fieldbackground #333 -background #333 -foreground #fff -insertcolor #fff -arrowcolor #fff \
+    .vpane.lower.commarea.buffer.frame.t \
+    configure -background #0d1117 -foreground #fff -insertbackground #fff \
+    .vpane.lower.diff.body.t configure -background #0d1117 -foreground #fff \
+    .vpane.files.workdir.list configure -background #0d1117 -foreground #fff \
+    .vpane.files.index.list configure -background #0d1117 -foreground #fff \
+    .about_dialog.git_logo configure -background #333
+```
