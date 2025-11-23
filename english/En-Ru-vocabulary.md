@@ -1676,6 +1676,7 @@
 | ubiquitous                                       | вездесущий                                                                                                                   |
 | ubiquity                                         | повсеместность, вездесущность                                                                                                |
 | unambiguous                                      | недвусмысленный                                                                                                              |
+| unanimous                                        | единогласно, единодушно                                                                                                      |
 | unavailable                                      | недоступен                                                                                                                   |
 | unbound                                          | несвязанный                                                                                                                  |
 | uncertain                                        | неопределенный                                                                                                               |
