@@ -309,6 +309,7 @@
 | compartment                                      | купе                                                                                                                         |
 | compartment                                      | отсек                                                                                                                        |
 | compartmentalize                                 | разобщить                                                                                                                    |
+| compel                                           | заставлять, принуждать                                                                                                       |
 | compelling                                       | неотразимый                                                                                                                  |
 | compendium                                       | сборник                                                                                                                      |
 | compete                                          | конкурировать, соревноваться                                                                                                 |
@@ -429,6 +430,7 @@
 | deadlock                                         | тупик                                                                                                                        |
 | deafened                                         | оглушенный                                                                                                                   |
 | dealership                                       | дилерский                                                                                                                    |
+| deceive                                          | обманывать                                                                                                                   |
 | deceived                                         | обманутый                                                                                                                    |
 | decent                                           | приличный/порядочный                                                                                                         |
 | deception                                        | обман, жульничество                                                                                                          |
@@ -440,6 +442,7 @@
 | deer                                             | олень                                                                                                                        |
 | deficiencies                                     | недостатки                                                                                                                   |
 | deficiency                                       | дефект, недостаток                                                                                                           |
+| defile                                           | осквернять, загрязнять, профанировать                                                                                        |
 | delay                                            | задержка                                                                                                                     |
 | delighted                                        | обрадованный                                                                                                                 |
 | delusion                                         | наваждение, заблуждение                                                                                                      |
@@ -562,8 +565,7 @@
 | encourage                                        | поощрять, ободрять, поддерживать, воодушевлять                                                                               |
 | encouragement                                    | поощрение                                                                                                                    |
 | encouraging                                      | обнадеживающий, making someone feel more confident                                                                           |
-| endeavor                                         | попытка, стремление, старание                                                                                                |
-| endeavour                                        | стремление, приложение усилий, намерение                                                                                     |
+| endeavor                                         | (n) стремление, попытка, (v) стараться, прилагать усилия                                                                     |
 | endorsement                                      | поддержка, одобрение                                                                                                         |
 | endure                                           | терпеть, выдерживать                                                                                                         |
 | engage                                           | заниматься, привлекать, вовлекать                                                                                            |
@@ -573,8 +575,8 @@
 | enquire                                          | спрашивать, исследовать, наводить справки                                                                                    |
 | enquiry/suggestion/recommendation                | запрос/предложение/рекомендация                                                                                              |
 | ensemble                                         | ансамбль                                                                                                                     |
-| ensure                                           | make smth certain to happen                                                                                                  |
 | ensure                                           | обеспечивать, гарантировать, to make smth certain to happen                                                                  |
+| entice                                           | соблазнять, заманивать                                                                                                       |
 | entire                                           | весь                                                                                                                         |
 | entirely                                         | полностью, целиком                                                                                                           |
 | entitlement                                      | право                                                                                                                        |
@@ -759,6 +761,7 @@
 | handy-dandy                                      | very simple and easy to use                                                                                                  |
 | hangover                                         | похмелье                                                                                                                     |
 | haphazard                                        | наудачу, случайно                                                                                                            |
+| harass                                           | преследовать, беспокоить, тревожить                                                                                          |
 | hard to grasp                                    | трудно понять                                                                                                                |
 | hard-wearing                                     | прочный, износостойкий                                                                                                       |
 | harness                                          | упряжь, сбруя, доспехи                                                                                                       |
@@ -1213,6 +1216,7 @@
 | presumably                                       | предположительно                                                                                                             |
 | pretend                                          | делать вид, притворяться                                                                                                     |
 | prevalent                                        | распространенный                                                                                                             |
+| pride                                            | гордость                                                                                                                     |
 | principal                                        | главный                                                                                                                      |
 | procurement                                      | закупка, поставка                                                                                                            |
 | profitable                                       | прибыльный                                                                                                                   |
