@@ -1,8 +1,8 @@
 
-# java
+# Java
 alias jver="java -version"
 
-# maven
+# Maven
 alias mver="mvn --version"
 
 alias mc="mvn clean"
@@ -21,7 +21,7 @@ alias mtp="mt -pl"
 alias qb="mci -DskipTests -Dnomodel"
 alias mdeps="mvn dependency:tree > deps.txt"
 
-# git
+# Git
 alias gf="git fetch"
 alias gfo="gf origin"
 
@@ -61,12 +61,13 @@ update_buildSrc() {
 alias gsplom=update_buildSrc
 alias gaplom="gplom && gsplom"
 
-# gradle
+# Gradle
 alias gver="gradle --version"
 alias gt="gradle test"
 alias gb="gradle build"
 alias gct="gradle clean test"
 alias gcb="gradle clean build"
+alias gdeps="gradle dependencies > deps.txt"
 
 alias gw="./gradlew"
 alias gwver="gw --version"
@@ -78,10 +79,17 @@ alias gwct="gwc test"
 alias gws="gw --stop"
 alias gwup="gw wrapper --gradle-version"
 
-alias gradledeps="gradle dependencies > deps.txt"
-
 
 # k8s
 alias k="minikube kubectl --"
+
+# CleverDev
+alias mctft="mct -Dfix.tests=true"
+alias mtft="mt -Dfix.tests=true"
+alias groq="gri origin/release/qa"
+alias gkoq="gitk origin/release/qa"
+alias gkorq="gkoq"
+alias grop="gri origin/release/preprod"
+alias gcoq="git checkout origin/release/qa"
 
 jver
