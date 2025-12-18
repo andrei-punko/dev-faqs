@@ -108,7 +108,7 @@ mvn -pl :<module-name> dependency:tree -Dverbose=true
 - Try to avoid cyclic dependencies
 
 ## To remove Maven warning about `platform-dependent build` - add to root pom of the project:
-```
+```xml
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

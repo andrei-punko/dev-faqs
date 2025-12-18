@@ -16,9 +16,9 @@ gradle test --tests HealthCheckSpecTest
 ```
 
 ## Publishing artifact
-```
+```groovy
 plugins {
-    `maven-publish`
+    maven-publish
 }
 
 publishing {
@@ -60,7 +60,7 @@ gradle wrapper --gradle-version 8.5
 ```
 
 ## Gradle compatibility matrix
-https://docs.gradle.org/8.8/userguide/compatibility.html
+https://docs.gradle.org/current/userguide/compatibility.html
 
 ## Fix case when gradlew doesn't have +x permission ("Gradlew: Permission denied")
 https://github.com/actions/starter-workflows/issues/171

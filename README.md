@@ -1,4 +1,4 @@
-# Collection of notes / FAQs for different tech topics
+# Collection of notes & FAQs for different topics
 
 It's just my notes about some useful features, not documentation!
 
@@ -16,8 +16,8 @@ It's just my notes about some useful features, not documentation!
 - [Docker](faqs/Docker.txt)
 - [k8s](faqs/k8s.txt)
 - [Certificates](faqs/Certificates.txt)
-- [Multiple SSH keys](faqs/multiple-ssh-keys.txt)
-- [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.txt)
+- [Multiple SSH keys](faqs/multiple-ssh-keys.md)
+- [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.md)
 - [PowerShell](faqs/PowerShell.md)
 
 ## Brokers
@@ -36,8 +36,8 @@ It's just my notes about some useful features, not documentation!
 - [Java](faqs/Java.md)
 
 ## Hotkeys
-- [Intellij IDEA hotkeys](faqs/Intellij%20IDEA%20hotkeys.txt)
-- [Intellij IDEA Reference Card](faqs/IntelliJIDEA_ReferenceCard.pdf)
+- [IntelliJ IDEA hotkeys](faqs/Intellij%20IDEA%20hotkeys.txt)
+- [IntelliJ IDEA Reference Card](faqs/IntelliJIDEA_ReferenceCard.pdf)
 
 ## OS
 - [Linux](faqs/Linux.txt)
@@ -45,7 +45,7 @@ It's just my notes about some useful features, not documentation!
 
 ## Spring
 - [Spring](faqs/Spring.txt)
-- [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.txt)
+- [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.md)
 
 ## Scripts
 - [Switching JDK version](scripts)

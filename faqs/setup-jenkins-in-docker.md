@@ -1,0 +1,126 @@
+# Setup Jenkins in Docker
+
+## start docker image with Jenkins
+https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+with+Docker
+
+### On Windows we need to use next command:
+```
+MSYS_NO_PATHCONV=1 docker run -d -p 49001:8080 -v "${PWD}/jenkins":/var/jenkins_home:z -t jenkins
+```
+
+### On Linux we could use command from article:
+```
+docker run -d -p 49001:8080 -v $PWD/jenkins:/var/jenkins_home:z -t jenkins
+```
+
+### Container name could be found in result of next command:
+```
+docker ps -a
+```
+
+## Upgrade Jenkins (need it because docker image contains really old version)
+https://medium.com/@jimkang/how-to-start-a-new-jenkins-container-and-update-jenkins-with-docker-cf628aa495e9
+
+### Connect to container by SSH:
+```
+docker container exec -u 0 -it <container name> bash
+docker exec -u 0 -it <container name> bash
+```
+
+### Download latest Jenkins to home folder:
+```
+cd ~
+mkdir Downloads
+cd Downloads
+wget https://updates.jenkins-ci.org/download/war/2.170/jenkins.war
+mv ./jenkins.war /usr/share/jenkins
+chown jenkins:jenkins /usr/share/jenkins/jenkins.war
+```
+
+### Exit container (inside container)
+```
+exit
+```
+
+### Restart container (from host)
+```
+docker container restart <container name>
+```
+
+Jenkins upgraded
+
+### Check container logs to find admin password:
+```
+docker logs <container_name>
+```
+
+### So credentials are next:
+```
+admin / <password_from_logs>
+```
+
+### Visit Jenkins home page:
+
+http://localhost:49001
+
+Use admin credentials, install suggested plugins
+
+### Track jenkins logs in Docker container:
+```
+docker logs -f epic_galileo
+docker logs --tail 20 epic_galileo
+```
+
+## Install Java 11 (connect to container by SSH firstly)
+[Link-1](https://www.linuxuprising.com/2018/10/how-to-install-oracle-java-11-in-ubuntu.html)
+[Link-2](https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/)
+
+### Install add-apt-repository command:
+```
+apt-get update
+apt-get install -y software-properties-common
+```
+
+### Add repository with Java 11:
+```
+add-apt-repository ppa:linuxuprising/java
+```
+Press ENTER to confirm after asking
+
+### After next command we will get error about absent GPG key (NO_PUBKEY EA8CACC073C3DB2A). So use number of this key later:
+```
+apt-get update
+```
+
+### Add required GPG key:
+```
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EA8CACC073C3DB2A
+```
+
+### Now update should succeed:
+```
+apt-get update
+```
+
+### Install Java 11:
+```
+apt-get install oracle-java11-installer
+```
+
+### Set Java 11 as default java:
+```
+apt-get install oracle-java11-set-default
+```
+
+Java installed
+
+### Determine where is my java:
+```
+readlink -f $(which java)
+```
+
+### Set JAVA_HOME and check:
+```
+export JAVA_HOME=/usr/lib/jvm/java-11-oracle
+echo $JAVA_HOME
+```

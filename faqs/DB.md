@@ -7,9 +7,9 @@ alter system set SESSIONS=115 scope=SPFILE;
 ```
 
 ## Для хранения значения суммы денег оптимальный выбор:
-`DECIMAL(19, 4)`, т.е. 15 цифр в целой части и 4 - в дробной
+`DECIMAL(19, 4)`, т.е. 15 цифр в целой части и 4 в дробной
 
-## Запись в файл лога выполнения скрипта в sqlplus:
+## Запись в файл лога выполнения скрипта в sql-plus:
 ```
 sqlplus -s system/root@XE --зашел в sqlplus, -s включает silent logging
 --set linesize 100        --устанавливаем длину строки результата
@@ -49,7 +49,7 @@ https://stackoverflow.com/questions/1498777/how-do-i-show-the-schema-of-a-table-
 select TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE, ROW_COUNT_ESTIMATE from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA='PUBLIC';
 ```
 
-## Fix the issue when liquibase checksum validation failed while migration file was not modified
+## Fix the issue when Liquibase checksum validation failed while migration file was not modified
 https://forum.liquibase.org/t/how-to-fix-validationfailedexception-in-liquibase-checksum/6780/5
 
 Update the `databasechangelog` table, setting the md5sum to NULL for the particular row
