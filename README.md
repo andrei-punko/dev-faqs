@@ -10,7 +10,7 @@ It's just my notes about some useful features, not documentation!
 - [Maven](faqs/Maven.md)
 - [Gradle](faqs/Gradle.md)
 
-## Devops
+## DevOps
 - [Git](faqs/Git.txt)
 - [Bash](faqs/Bash.txt)
 - [Docker](faqs/Docker.txt)
@@ -46,6 +46,7 @@ It's just my notes about some useful features, not documentation!
 ## Spring
 - [Spring](faqs/Spring.txt)
 - [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.md)
+- [Spring Cloud dependencies compatibility](faqs/sb-migration/spring-cloud-aws-versions-maven-central.md)
 
 ## Scripts
 - [Switching JDK version](scripts)
@@ -53,8 +54,9 @@ It's just my notes about some useful features, not documentation!
 ## Configs
 - [.bashrc](configs/.bashrc)
 - [.gitconfig](configs/.gitconfig)
+- [.editorconfig](configs/.editorconfig)
 
 ## Others
 - [Frontend](faqs/Frontend.md)
 - [AI](faqs/AI.txt)
-- [Цитаты, выписки](faqs/цитаты,%20выписки.txt)
+- [Цитаты, выписки](faqs/цитаты,%20выписки.md)
