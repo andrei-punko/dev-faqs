@@ -25,7 +25,7 @@ It's just my notes about some useful features, not documentation!
 
 ## Cloud
 - [OpenShift](faqs/OpenShift.txt)
-- [AWS](faqs/AWS.txt)
+- [AWS](faqs/AWS.md)
 
 ## Databases
 - [Relational DB](faqs/DB.md)
