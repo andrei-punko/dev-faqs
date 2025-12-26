@@ -11,7 +11,7 @@ It's just my notes about some useful features, not documentation!
 - [Gradle](faqs/Gradle.md)
 
 ## DevOps
-- [Git](faqs/Git.txt)
+- [Git & Git Bash commands](faqs/Git.md)
 - [Bash](faqs/Bash.txt)
 - [Docker](faqs/Docker.txt)
 - [k8s](faqs/k8s.txt)
