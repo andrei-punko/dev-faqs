@@ -58,5 +58,5 @@ It's just my notes about some useful features, not documentation!
 
 ## Others
 - [Frontend](faqs/Frontend.md)
-- [AI](faqs/AI.txt)
+- [AI](faqs/AI.md)
 - [Цитаты, выписки](faqs/цитаты,%20выписки.md)
