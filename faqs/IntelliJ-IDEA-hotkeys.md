@@ -34,12 +34,16 @@
 - Alt + 3 - on/off Find
 - Alt + 7 - on/off Structure view
 
-- Ctrl+~ switch 1.color scheme 2.keymap 3.style 4.look & feel
+- Ctrl + `~` - switch
+  - color scheme
+  - keymap
+  - style
+  - look & feel
 
 - Alt + Shift + `+`/`-` - zoom font scale to +/-
 - Alt + Shift + 0 - font scale zoom to 100%
 
-https://habr.com/ru/company/jugru/blog/568124/
+По материалам [статьи](https://habr.com/ru/company/jugru/blog/568124/)
 
 - Alt + J - Select next occurrence (to edit them later simultaneously)
 - Alt + J - выделение по коду ниже выделенного фрагмента кода
@@ -55,7 +59,7 @@ https://habr.com/ru/company/jugru/blog/568124/
 
 Ctrl + Alt + T - Surround with... (завернуть оператор в готовый кусок кода)
 
-postfix expansion:
+Postfix expansion:
 - добавить .for в конце строки, нажимаем Enter и она развернётся целиком
 - ставим .sout в конец строки и нажимаем Enter
 - пишем условие, ставим .if в конце строки, нажимаем Enter и и получаем полностью готовое выражение
