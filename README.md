@@ -27,7 +27,7 @@ It's just my notes about some useful features, not documentation!
 - [OpenShift](faqs/OpenShift.txt)
 - [AWS](faqs/AWS.md)
 
-## Databases
+## DBs
 - [Relational DB](faqs/DB.md)
 
 ## Programming languages
@@ -36,7 +36,7 @@ It's just my notes about some useful features, not documentation!
 - [Java](faqs/Java.md)
 
 ## Hotkeys
-- [IntelliJ IDEA hotkeys](faqs/Intellij%20IDEA%20hotkeys.txt)
+- [IntelliJ IDEA hotkeys](faqs/IntelliJ-IDEA-hotkeys.md)
 - [IntelliJ IDEA Reference Card](faqs/IntelliJIDEA_ReferenceCard.pdf)
 
 ## OS
