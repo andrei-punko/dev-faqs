@@ -15,7 +15,7 @@ It's just my notes about some useful features, not documentation!
 - [Bash](faqs/Bash.txt)
 - [Docker](faqs/Docker.txt)
 - [k8s](faqs/k8s.txt)
-- [Certificates](faqs/Certificates.txt)
+- [Certificates](faqs/Certificates.md)
 - [Multiple SSH keys](faqs/multiple-ssh-keys.md)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.md)
 - [PowerShell](faqs/PowerShell.md)
