@@ -63,7 +63,7 @@ Press Ctrl + Shift + P, open `Preferences: Open Settings (JSON)`, add next block
 ```
 Replace `"..."` with output of `echo "$PATH"` command
 
-## How to use unicode characters in Windows command line?
+## How to use Unicode characters in Windows command line?
 https://stackoverflow.com/questions/388490/how-to-use-unicode-characters-in-windows-command-line
 
 ```
@@ -226,3 +226,40 @@ Win + Shift + `стрелка вправо/влево`
 
 ## Быстрое изменение громкости
 Навести на динамик в трее и крутить колесо мыши
+
+## Определить имя сетевого адаптера для Windows (PowerShell):
+```
+Get-NetAdapter | Format-Table -Property Name, InterfaceDescription
+
+Output:
+Name                         InterfaceDescription
+----                         --------------------
+Ethernet 3                   Realtek PCIe GbE Family Controller
+Wi-Fi 6                      MediaTek Wi-Fi 6 MT7921 Wireless LAN Card #4
+vEthernet (Default Switch)   Hyper-V Virtual Ethernet Adapter
+Bluetooth Network Connection Bluetooth Device (Personal Area Network)
+```
+
+## Установка DNS ipv4 для Windows (PowerShell):
+```
+$AdapterName = "Ethernet 3" 	# Замените на имя вашего адаптера
+$DNS = "8.8.8.8", "8.8.4.4" 	# Google DNS-серверы
+
+Set-DnsClientServerAddress -InterfaceAlias $AdapterName -ServerAddresses $DNS
+```
+
+# Установка DNS ipv6 для Windows (PowerShell):
+```
+$AdapterName = "Ethernet 3" 		# Замените на имя вашего адаптера
+$ipv6Dns1 = "2001:4860:4860::8888"	# Google DNS 1
+$ipv6Dns2 = "2001:4860:4860::8844"	# Google DNS 2
+
+Set-DnsClientServerAddress -InterfaceAlias $AdapterName -ServerAddresses @($ipv6Dns1, $ipv6Dns2)
+```
+
+# Перезапуск сетевого адаптера (опционально, но рекомендуется)
+```
+$AdapterName = "Ethernet 3" 		# Замените на имя вашего адаптера
+
+Restart-NetAdapter -Name $AdapterName -Confirm:$false
+```
