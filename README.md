@@ -50,6 +50,7 @@ It's just my notes about some useful features, not documentation!
 
 ## Scripts
 - [Switching JDK version](scripts/JDK)
+- [Start Ollama Web UI](scripts/Ollama-web-ui)
 
 ## Configs
 - [.bashrc](configs/.bashrc)
