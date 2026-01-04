@@ -49,7 +49,7 @@ It's just my notes about some useful features, not documentation!
 - [Spring Cloud dependencies compatibility](faqs/sb-migration/spring-cloud-aws-versions-maven-central.md)
 
 ## Scripts
-- [Switching JDK version](scripts)
+- [Switching JDK version](scripts/JDK)
 
 ## Configs
 - [.bashrc](configs/.bashrc)
