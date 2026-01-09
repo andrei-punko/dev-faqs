@@ -265,3 +265,7 @@ $AdapterName = "Ethernet 3" 		# Замените на имя вашего ада
 
 Restart-NetAdapter -Name $AdapterName -Confirm:$false
 ```
+
+## Add emoji
+- Win+`;`
+- Choose emoji. For example: 😊
