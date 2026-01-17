@@ -61,3 +61,4 @@ It's just my notes about some useful features, not documentation!
 - [Frontend](faqs/Frontend.md)
 - [AI](faqs/AI.md)
 - [Цитаты, выписки](faqs/цитаты,%20выписки.md)
+- [Перед интервью](faqs/перед-интервью.md)
