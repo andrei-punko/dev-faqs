@@ -62,7 +62,7 @@ gradle wrapper --gradle-version 8.5
 ## Gradle compatibility matrix
 https://docs.gradle.org/current/userguide/compatibility.html
 
-## Fix case when gradlew doesn't have +x permission ("Gradlew: Permission denied")
+## Fix case when `gradlew` doesn't have +x permission ("Gradlew: Permission denied")
 https://github.com/actions/starter-workflows/issues/171
 ```
 git update-index --chmod=+x gradlew

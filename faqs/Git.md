@@ -514,3 +514,8 @@ ttk::style configure TSpinbox -fieldbackground #333 -background #333 -foreground
     .vpane.files.index.list configure -background #0d1117 -foreground #fff \
     .about_dialog.git_logo configure -background #333
 ```
+
+## Commit +x (execute) permission for file (actual on Windows OS)
+```
+git update-index --chmod=+x file-name
+```
