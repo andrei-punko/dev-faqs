@@ -14,7 +14,7 @@ It's just my notes about some useful features, not documentation!
 - [Git & Git Bash commands](faqs/Git.md)
 - [Bash](faqs/Bash.md)
 - [Docker](faqs/Docker.txt)
-- [k8s](faqs/k8s.txt)
+- [k8s](faqs/k8s.txt) (unorganized)
 - [Certificates](faqs/Certificates.md)
 - [Multiple SSH keys](faqs/multiple-ssh-keys.md)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.md)
@@ -62,3 +62,4 @@ It's just my notes about some useful features, not documentation!
 - [AI](faqs/AI.md)
 - [Цитаты, выписки](faqs/цитаты,%20выписки.md)
 - [Перед интервью](faqs/перед-интервью.md)
+- [System design](faqs/system-design.md)

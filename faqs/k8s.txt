@@ -1,4 +1,6 @@
 
+!!! It's just unsorted notes during passing of K8S course. Need to organize them
+
 * Термины k8s
 
 - Cluster состоит из Nodes
