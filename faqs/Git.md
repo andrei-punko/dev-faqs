@@ -519,3 +519,37 @@ ttk::style configure TSpinbox -fieldbackground #333 -background #333 -foreground
 ```
 git update-index --chmod=+x file-name
 ```
+
+## Change default Git editor
+
+### Set VSCode / Notepad++ as a default Git editor
+https://habr.com/ru/companies/ruvds/articles/978320/
+```
+git config --global core.editor "code --wait"
+git config --global core.editor "notepad++ --wait"
+```
+
+### Return back to default Git editor
+```
+git config --global --unset core.editor
+```
+
+## Work with Git worktrees
+
+### Create/remove worktree
+```
+git worktree add <path> <branch>
+git worktree remove <path>
+```
+
+### Show existing worktrees
+```
+git worktree list
+```
+
+### Typical scenario when use worktrees
+- create worktree
+- cd into its folder
+- commit & push required changes
+- cd into previous folder
+- remove worktree
