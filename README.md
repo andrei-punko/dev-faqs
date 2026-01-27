@@ -14,7 +14,7 @@ It's just my notes about some useful features, not documentation!
 - [Git & Git Bash commands](faqs/Git.md)
 - [Bash](faqs/Bash.md)
 - [Docker](faqs/Docker.txt)
-- [k8s](faqs/k8s.txt) (unorganized)
+- [k8s](faqs/k8s.md)
 - [Certificates](faqs/Certificates.md)
 - [Multiple SSH keys](faqs/multiple-ssh-keys.md)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.md)
