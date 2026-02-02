@@ -20,6 +20,8 @@ alias mt="mvn test"
 alias mtp="mt -pl"
 alias qb="mci -DskipTests -Dnomodel"
 alias mdeps="mvn dependency:tree > deps.txt"
+alias mcheck="mvn checkstyle:check"
+alias mspot="mvn clean spotbugs:check"
 
 # Git
 alias gf="git fetch"

@@ -151,3 +151,13 @@ https://github.com/actions/starter-workflows/issues/171
 ```
 git update-index --chmod=+x mvnw
 ```
+
+## Run checkstyle report
+```
+mvn checkstyle:check
+```
+
+## Run spotbugs report
+```
+mvn clean spotbugs:check
+```
