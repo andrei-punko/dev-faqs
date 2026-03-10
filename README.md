@@ -19,6 +19,7 @@ It's just my notes about some useful features, not documentation!
 - [Multiple SSH keys](faqs/multiple-ssh-keys.md)
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.md)
 - [PowerShell](faqs/PowerShell.md)
+- [Shell curl cheatsheet](faqs/shell-curl-cheatsheet.md)
 
 ## Brokers
 - [Kafka](faqs/Kafka.md)
