@@ -63,3 +63,8 @@ To check H2 version use query:
 ```
 SELECT H2VERSION() FROM DUAL
 ```
+
+## Show who is connected to DB:
+```
+SELECT pid, usename, client_addr, client_port, application_name, state, query_start FROM pg_stat_activity;
+```
