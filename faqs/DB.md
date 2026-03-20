@@ -49,12 +49,17 @@ https://stackoverflow.com/questions/1498777/how-do-i-show-the-schema-of-a-table-
 select TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE, ROW_COUNT_ESTIMATE from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA='PUBLIC';
 ```
 
-## Fix the issue when Liquibase checksum validation failed while migration file was not modified
+## Fix the issue when Liquibase checksum validation failed while migration file was not modified:
 https://forum.liquibase.org/t/how-to-fix-validationfailedexception-in-liquibase-checksum/6780/5
 
 Update the `databasechangelog` table, setting the md5sum to NULL for the particular row
 ```
-update databasechangelog set md5sum=null where filename='<put your file name here>';
+update databasechangelog set md5sum=null where filename='<put_your_file_name_here>';
+```
+
+## Перезаписать checksum в скрипте миграции в таблице Flyway:
+```
+docker exec -e PGPASSWORD=postgres123 -i andd3dfx-db-server psql -U postgres -d postgres -c "update andd3dfx_dev_schema.flyway_schema_history set checksum=157720223 where version='1.50.1.260217.1200';"
 ```
 
 ## H2 error "h2 database: Unsupported database file version or invalid file header in file":
