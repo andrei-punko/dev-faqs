@@ -494,3 +494,6 @@ $ docker tag andd3dfx/best-ui:1.0.0 andd3dfx/best-ui:old
 * Add user to docker-users group
 https://stackoverflow.com/questions/61530874/how-do-i-add-myself-to-the-docker-users-group-on-windows
 net localgroup docker-users "Andrei" /ADD
+
+* Actual Java 21 alpine image (JRE, not JDK)
+eclipse-temurin:21-jre-alpine
