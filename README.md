@@ -13,7 +13,7 @@ It's just my notes about some useful features, not documentation!
 ## DevOps
 - [Git & Git Bash commands](faqs/Git.md)
 - [Bash](faqs/Bash.md)
-- [Docker](faqs/Docker.txt)
+- [Docker](faqs/Docker.md)
 - [k8s](faqs/k8s.md)
 - [Certificates](faqs/Certificates.md)
 - [Multiple SSH keys](faqs/multiple-ssh-keys.md)

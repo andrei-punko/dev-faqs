@@ -52,6 +52,44 @@ Start Ubuntu shell:
 wsl -d Ubuntu-18.04
 ```
 
+## Docker Desktop (Windows)
+
+Подготовка (из заметок): включить **виртуализацию** в BIOS, обновить Windows до поддерживаемой версии, при необходимости компоненты **Hyper-V** / **WSL2** (см. [Docker Desktop для Windows](https://docs.docker.com/desktop/setup/install/windows-install/)).
+
+### Ошибка `//./pipe/docker_engine: The system cannot find the file specified`
+
+[Обсуждение на форуме Docker](https://forums.docker.com/t/docker-on-windows-fails-with-pipe-docker-engine-the-system-cannot-find-the-file-specified/28479/4): переключить режим контейнеров в Docker Desktop (Windows ↔ Linux) или из каталога Docker:
+
+```text
+DockerCli.exe -SwitchDaemon
+```
+
+### `no matching manifest for windows/amd64`
+
+[Stack Overflow](https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries): вы в режиме **Windows containers**, а образ собран под Linux — переключитесь на **Linux containers**.
+
+### Добавить пользователя в группу `docker-users`
+
+[SO](https://stackoverflow.com/questions/61530874/how-do-i-add-myself-to-the-docker-users-group-on-windows):
+
+```cmd
+net localgroup docker-users "%USERNAME%" /add
+```
+
+После этого перелогиниться.
+
+### `~/.docker/config.json` и Maven / fabric8 на Windows
+
+Для **docker-maven-plugin** / **fabric8** иногда нужно:
+
+```json
+{"credsStore": "wincred"}
+```
+
+Файл: `%USERPROFILE%\.docker\config.json`.
+
+Остальные команды и Dockerfile — в [Docker.md](Docker.md).
+
 ## Fix issue when VSCode doesn't see system `$PATH`
 https://stackoverflow.com/questions/43983718/set-global-path-environment-variable-in-vs-code
 

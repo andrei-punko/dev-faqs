@@ -242,6 +242,8 @@ sudo systemctl restart docker
 
 После добавления в группу — выход/вход в сессию или `newgrp docker` (иногда нужна перезагрузка).
 
+Установка Docker Engine, `daemon.json`, Compose и прочая настройка демона — в [Docker.md](Docker.md).
+
 `/etc/passwd`, `/etc/shadow`, `/etc/group` — учётные записи (пароли в `shadow`).
 
 ## Сеть и SSH
