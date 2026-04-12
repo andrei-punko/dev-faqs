@@ -25,7 +25,7 @@ It's just my notes about some useful features, not documentation!
 - [Kafka](faqs/Kafka.md)
 
 ## Cloud
-- [OpenShift](faqs/OpenShift.txt)
+- [OpenShift](faqs/OpenShift.md)
 - [AWS](faqs/AWS.md)
 
 ## DBs
