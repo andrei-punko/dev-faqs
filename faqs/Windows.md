@@ -140,6 +140,58 @@ https://stackoverflow.com/questions/9885241/changing-all-files-extensions-in-a-f
 ren *.txt *.md
 ```
 
+Вариант через `.cmd` / `.bat` с циклом (удобно, если нужны кавычки вокруг имён):
+
+```bat
+@ECHO OFF
+for %%f in (*.txt) do (
+  ren "%%~nf.txt" "%%~nf.md"
+)
+```
+
+## PuTTY и plink (SSH-туннели с Windows)
+
+Те же сценарии, что `ssh -L` / `-D` на Linux, можно делать через **PuTTY** или **`plink.exe`**.
+
+Параметры **plink** (шпаргалка):
+
+- `-l username` — пользователь на сервере
+- `-L localport:host:remoteport` — проброс локального порта на `host:remoteport` через сервер
+- `-P 22` — порт SSH
+- `-ssh` — протокол SSH
+- `-2` — только SSH v2
+- `-C` — сжатие
+- `-i keyfile` — приватный ключ (путь)
+- `-T` — без выделения pty (без интерактивной оболочки на удалённой стороне)
+- `-D dyn_port` — динамический SOCKS на `dyn_port`
+
+В конце командной строки указывается адрес сервера. Документация: [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/).
+
+## SSH к EC2 / Ubuntu с Windows (PuTTYgen и ключ)
+
+1. Запустить **PuTTYgen** → **Load** — выбрать существующий публичный ключ (как при работе с AWS).
+2. **Save private key** даёт `.ppk` для PuTTY. Для **OpenSSH**, встроенного в Windows 10+ или WSL, экспортируйте ключ в формат OpenSSH / PEM (в PuTTYgen: меню конвертации экспорта — зависит от версии).
+3. Подключение из `cmd` / PowerShell:
+
+```text
+ssh -i путь\к\ключу.pem ubuntu@<ваш_ec2_хост>
+```
+
+Передача пароля в командной строке вида `putty.exe -pw ...` **небезопасна**; предпочтительны ключи.
+
+## Какой процесс слушает порт (CMD)
+
+```cmd
+netstat -aon | findstr :8080
+tasklist | findstr <PID>
+```
+
+Замените `8080` на нужный порт. Подробнее: [How to check which application is using which port](https://veerasundar.com/blog/2009/10/how-to-check-which-application-is-using-which-port/).
+
+## Принтер по IPP к CUPS на Linux-сервере (клиент Windows)
+
+Если принтер заведён в **CUPS** на Linux, в Windows при необходимости установите компонент **«Клиент интернет-печати»** (в компонентах Windows), затем добавьте принтер: пункт **«Выбрать общий принтер по имени»** и URL вида `http://<IP_сервера>:631/printers/<имя_принтера_как_в_CUPS>`.
+
 ## Инструменты для отображения клавиш при нажатии
 - KeyPose
 - Carnac

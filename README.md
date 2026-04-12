@@ -41,7 +41,7 @@ It's just my notes about some useful features, not documentation!
 - [IntelliJ IDEA Reference Card](faqs/IntelliJIDEA_ReferenceCard.pdf)
 
 ## OS
-- [Linux](faqs/Linux.txt)
+- [Linux](faqs/Linux.md)
 - [Windows](faqs/Windows.md)
 
 ## Spring
