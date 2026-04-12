@@ -338,6 +338,7 @@ just type your alias and press `Ctrl+Alt+E` to show info (and press again if thi
 ```bash
 $ history		# to show commands history
 $ !340			# run command with number 340
+$ !575			# то же для любого номера строки из вывода history
 ```
 
 ## Interactive search in history
@@ -345,3 +346,63 @@ $ !340			# run command with number 340
 - `Ctrl+R` - Search for commands in your bash history
 - `Ctrl+O` - Run a command you found using a `Ctrl+R` search
 - `Ctrl+G` - Exit a `Ctrl+R` search
+
+## Переменные окружения
+
+В **bash**:
+
+```bash
+echo "$VAR"
+export VAR=value
+unset VAR
+```
+
+Синтаксис `set VAR=value` относится к **cmd.exe**, не к bash.
+
+## `crontab` и системное время
+
+```bash
+date
+crontab -e    # расписание текущего пользователя
+```
+
+Для постоянных демонов на сервере чаще используют **systemd** (unit-файлы); в crontab иногда задают `@reboot` или периодические задачи.
+
+## `nohup` и процессы в фоне
+
+```bash
+nohup command >nohup.out 2>&1 &
+nohup command > /dev/null 2>&1 &
+```
+
+Примеры с Java:
+
+```bash
+nohup java $args -cp "$CLASSPATH" com.example.Main >nohup.out 2>&1 &
+nohup java $args -cp "$CLASSPATH" $SERVICE_CONTAINER_MAIN >nohup.out 2>&1 &
+```
+
+Отладка загрузки классов JVM: добавить к аргументам, например, `-verbose:class`.
+
+## Стартовый каталог после SSH
+
+В конец `~/.bashrc` можно добавить `cd /нужный/каталог` — действует для интерактивных shell; учитывайте побочные эффекты (скрипты, неинтерактивный вход).
+
+## Простой heredoc и nano
+
+Создать файл с несколькими строками без редактора:
+
+```bash
+cat > Dockerfile <<'EOF'
+FROM busybox
+CMD echo "Hello world!"
+EOF
+```
+
+**nano:** сохранить `Ctrl+O`, выйти `Ctrl+X`, удалить строку `Ctrl+K`.
+
+Просмотр без правки: см. раздел **less** выше.
+
+---
+
+Установка пакетов, systemd, сеть — в [Linux.md](Linux.md).

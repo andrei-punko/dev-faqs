@@ -549,47 +549,19 @@ echo "String" | openssl pkeyutl -encrypt -pubin -inkey ~/.ssh/id_rsa.pub.pem | o
 openssl base64 -d -in string.b64 | openssl pkeyutl -decrypt -inkey ~/.ssh/id_rsa
 ```
 
-## История команд, cron, время
+## Shell (bash), cron, автозагрузка
+
+Интерактивная история (`history`, `!n`), **`export` / `unset`**, **`nohup`**, **`crontab`**, heredoc, **nano**, стартовый `cd` в `~/.bashrc` — в [Bash.md](Bash.md).
+
+Системное время в консоли:
 
 ```bash
-history
-!575          # выполнить строку 575 из history
-crontab -e
 date
 ```
 
-Автозагрузка: на systemd предпочтительны **unit-файлы** или `@reboot` в crontab.
+Автозапуск при загрузке ОС: **systemd** (unit-файлы) или `@reboot` в crontab пользователя/рута.
 
-Из заметок — правка **`/etc/rc.local`** (команды **до** строки `exit 0`). На многих системах сервис `rc-local` нужно включить явно; иначе файл не выполняется.
-
-## Переменные окружения, nohup
-
-В **bash**:
-
-```bash
-echo "$VAR"
-export VAR=value
-unset VAR
-```
-
-(Синтаксис `set VAR=value` — из cmd.exe, не для bash.)
-
-```bash
-nohup command >nohup.out 2>&1 &
-nohup command > /dev/null 2>&1 &
-```
-
-Пример Java в фоне:
-
-```bash
-nohup java $args -cp "$CLASSPATH" com.example.Main >nohup.out 2>&1 &
-# из заметок: переменная с именем главного класса/контейнера
-nohup java $args -cp "$CLASSPATH" $SERVICE_CONTAINER_MAIN >nohup.out 2>&1 &
-```
-
-Отладка загрузки классов: добавить, например, `-verbose:class` к аргументам JVM.
-
-Стартовая директория после SSH: в конец `~/.bashrc` добавить `cd /нужный/каталог` (осознавая побочные эффекты для всех интерактивных shell).
+Из заметок — правка **`/etc/rc.local`** (команды **до** строки `exit 0`). На многих дистрибутивах сервис **`rc-local`** нужно включить явно; иначе файл не выполняется.
 
 ## Сжатые логи, почта, звук
 
@@ -666,11 +638,8 @@ java -jar jmxsh.jar br_fix_quartz_jobs.jmxsh
 | терминал (GUI) | `Ctrl+Alt+T` |
 | дисплей / масштаб | `xrandr`, `gnome-tweaks` |
 | резолвер DNS | `/etc/resolv.conf` (часто управляется systemd-resolved) |
-| просмотр файла | `less файл` — поиск `/строка`; в **less** выход `q`; клавиша **`v`** открывает файл в `$EDITOR` (это не «режим редактирования less») |
-| быстрый переход в less | `<` / `>` (начало/конец) — в разных пейджерах см. help `-h` |
+| просмотр / редактор / heredoc | **less**, **nano**, heredoc — в [Bash.md](Bash.md); кратко: в `less` выход `q`, `v` → `$EDITOR` |
 | сокращение для `ls -l` | `ll` (если задан алиас в shell) |
-| редактор в терминале | **nano** — удалить строку `Ctrl+K`, сохранить `Ctrl+O`, выход `Ctrl+X` |
-| минимальный «редактор» через heredoc | `cat > Dockerfile <<'EOF'` … `EOF` |
 | локальные бинарники для пользователя | `~/bin` или `/usr/local/bin` |
 
 **EC2 / Ubuntu и PuTTYgen с машины Windows:** [Windows.md](Windows.md).
