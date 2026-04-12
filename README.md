@@ -33,7 +33,7 @@ It's just my notes about some useful features, not documentation!
 
 ## Programming languages
 - [Go](faqs/Go.md)
-- [Python](faqs/Python.txt)
+- [Python](faqs/Python.md)
 - [Java](faqs/Java.md)
 
 ## Hotkeys
