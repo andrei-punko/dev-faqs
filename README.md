@@ -45,7 +45,7 @@ It's just my notes about some useful features, not documentation!
 - [Windows](faqs/Windows.md)
 
 ## Spring
-- [Spring](faqs/Spring.txt)
+- [Spring](faqs/Spring.md)
 - [JUnit 4/5 for Spring Boot](faqs/JUnit4-JUnit5-spring-boot.md)
 - [Spring Cloud dependencies compatibility](faqs/sb-migration/spring-cloud-aws-versions-maven-central.md)
 
