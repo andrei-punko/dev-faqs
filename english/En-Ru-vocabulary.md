@@ -95,6 +95,7 @@
 | arbitrary                                        | произвольный                                                                                                                 |
 | arduous                                          | трудный                                                                                                                      |
 | argue                                            | спорить                                                                                                                      |
+| arrears                                          | задолженность, недоимки                                                                                                      |
 | arrival lounge                                   | зал прибытия                                                                                                                 |
 | arrivals/departures board                        | доска прибытий/отправлений                                                                                                   |
 | arrogant                                         | высокомерный                                                                                                                 |
