@@ -21,11 +21,13 @@ alias mtp="mt -pl"
 alias qb="mci -DskipTests -Dnomodel"
 alias mdeps="mvn dependency:tree > deps.txt"
 alias mcheck="mvn checkstyle:check"
-alias mspot="mvn clean spotbugs:check"
+alias mspot="mvn clean test-compile spotbugs:check"
 
 # Git
+alias gver="git --version"
+alias gupd="git update-git-for-windows"
+
 alias gf="git fetch"
-alias gfo="gf origin"
 
 alias gk="gitk &"
 alias пл="gk"
@@ -55,6 +57,8 @@ alias gpom="gpo master"
 alias gplo="git pull origin"
 alias gplom="git pull origin master"
 
+alias gaa="git add --all"
+
 update_buildSrc() {
 	cd buildSrc
 	gcm
@@ -66,11 +70,6 @@ alias gaplom="gplom && gsplom"
 
 # Gradle
 alias gver="gradle --version"
-alias gt="gradle test"
-alias gb="gradle build"
-alias gct="gradle clean test"
-alias gcb="gradle clean build"
-alias gdeps="gradle dependencies > deps.txt"
 
 alias gw="./gradlew"
 alias gwver="gw --version"
@@ -81,6 +80,7 @@ alias gwt="gw test"
 alias gwct="gwc test"
 alias gws="gw --stop"
 alias gwup="gw wrapper --gradle-version"
+alias gwdeps="gradle dependencies > deps.txt"
 
 
 # k8s
