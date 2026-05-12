@@ -87,3 +87,12 @@ docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gatew
 After installation, you can access Open WebUI at http://localhost:3000
 
 Could use scripts in [scipts](../scripts/Ollama-web-ui) folder
+
+## Collect project files into one file
+[snap2txt](https://github.com/vorniches/snap2txt): берет проект, складывает все нужные файлы в один текстовой файл и исключает мусор вроде node_modules или .git через ignore-лист, похожий на .gitignore. Есть еще whitelist, если нужно включить только конкретные файлы. Дальше просто говоришь нейронке, что нужно сделать, и вперед.
+Как это работает? Допустим, у тебя Django-проект. Делаешь snap2txt --il, получаешь project_contents.txt, закидываешь его в Cursor Composer или любой AI-чат – и нейронка сразу видит всю структуру. Дальше пишешь промпт: один-два запроса – и готово.
+Без snap2txt я бы до сих пор носил код по кускам, как животное.
+```
+pip install snap2txt
+python -m snap2txt
+```

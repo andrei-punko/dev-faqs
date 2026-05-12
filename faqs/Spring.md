@@ -428,3 +428,7 @@ void init() {
 ```
 
 В Boot те же ключи задаются через `application.properties`, переменные окружения и т.д.
+
+## Spring release calendar
+
+[Link](https://spring.io/projects#release-calendar)
