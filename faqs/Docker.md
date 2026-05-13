@@ -321,3 +321,9 @@ docker tag registry/myapp:1.0.0 registry/myapp:old
 docker container stop $(docker container ls -aq)
 docker container rm $(docker container ls -aq)
 ```
+
+## Fix the issue `The requested operation requires elevation` during Docker update
+
+This problem happens when Docker Desktop is installed and run as a non-elevated user.
+To fix it - go to folder where downloaded updates placed & run it using `Run as administrator` option in context menu.
+Location of folder for the user `Andrei` on my machine as example: `C:\Users\Andrei\AppData\Local\Temp\DockerDesktopUpdates`
