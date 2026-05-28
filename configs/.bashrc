@@ -86,14 +86,14 @@ alias gwdeps="gradle dependencies > deps.txt"
 # k8s
 alias k="minikube kubectl --"
 
-# CleverDev
+# CleverDev Software
 alias mctft="mct -Dfix.tests=true"
 alias mtft="mt -Dfix.tests=true"
-alias groq="gri origin/release/qa"
-alias gkoq="gitk origin/release/qa &"
-alias gkorq="gkoq"
-alias gkop="gitk origin/release/preprod &"
-alias grop="gri origin/release/preprod"
+alias gcop="git checkout origin/release/preprod"
 alias gcoq="git checkout origin/release/qa"
+alias gkop="gitk origin/release/preprod &"
+alias gkoq="gitk origin/release/qa &"
+alias grop="gri origin/release/preprod"
+alias groq="gri origin/release/qa"
 
 jver
