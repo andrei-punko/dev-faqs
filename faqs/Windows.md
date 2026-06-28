@@ -156,9 +156,13 @@ keytool -alias MY_CERT_FOR_BLA -import -keystore ..\lib\security\cacerts -file "
 ## Show BIOS version in Win 11
 Win + R, msinfo32
 
-## PrintScreen of selected screen area
+## Screenshot of selected screen area
 Win + Shift + S
 you could change mode: `Rectangle/Windows/Full Screen/Freedom`
+
+## Screenshot of whole screen
+Win + PrintScreen
+saved into ~/Pictures/Screenshots
 
 ## Avoid closing `.bat` file after end of run
 https://stackoverflow.com/questions/988403/how-to-prevent-auto-closing-of-console-after-the-execution-of-batch-file
