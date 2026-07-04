@@ -553,3 +553,7 @@ git worktree list
 - commit & push required changes
 - cd into previous folder
 - remove worktree
+
+### Prints the hash along with author details, date, and commit message of last commit
+Useful to check in console on what commit you are currently staying on
+git log -n 1

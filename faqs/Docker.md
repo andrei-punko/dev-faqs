@@ -327,3 +327,8 @@ docker container rm $(docker container ls -aq)
 This problem happens when Docker Desktop is installed and run as a non-elevated user.
 To fix it - go to folder where downloaded updates placed & run it using `Run as administrator` option in context menu.
 Location of folder for the user `Andrei` on my machine as example: `C:\Users\Andrei\AppData\Local\Temp\DockerDesktopUpdates`
+
+## Show how many CPU cores visible to Docker
+
+$ docker info | grep -i cpu
+CPUs: 12

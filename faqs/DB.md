@@ -73,3 +73,13 @@ SELECT H2VERSION() FROM DUAL
 ```
 SELECT pid, usename, client_addr, client_port, application_name, state, query_start FROM pg_stat_activity;
 ```
+
+## DBeaver hanging during start
+https://github.com/dbeaver/dbeaver/issues/21428
+You need to move out large or crashing SQL scripts.
+If DBeaver hung while processing a heavy script during your last session, it will attempt to auto-load that same script at startup and freeze.
+- Close or force-kill DBeaver entirely.
+- Go up a few folders to your scripts directory:
+	~\AppData\Roaming\DBeaverData\workspace6\General\Scripts
+- Temporarily cut and paste all the .sql files out of this directory into a temporary folder on your desktop.
+- Relaunch DBeaver. If it opens successfully, one of those scripts was causing the memory bottleneck.
