@@ -363,3 +363,18 @@ Restart-NetAdapter -Name $AdapterName -Confirm:$false
 ## Add emoji
 - Win+`;`
 - Choose emoji. For example: 😊
+
+## How to speed up WSL?
+Put into your home folder file .wslconfig with next content:
+[wsl2]
+memory=32GB
+processors=10
+
+[experimental]
+autoMemoryReclaim=gradual
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+
+After that - open PowerShell and restart WSL system:
+$ wsl --shutdown

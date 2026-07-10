@@ -406,3 +406,7 @@ EOF
 ---
 
 Установка пакетов, systemd, сеть — в [Linux.md](Linux.md).
+
+## Start in headless mode with writing logs
+For python script as an example:
+$ nohup python -u -m script_name > logs/script_name_$(date +%Y%m%d_%H%M%S).log 2>&1 &

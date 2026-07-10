@@ -675,3 +675,6 @@ sudo rpm -i package.rpm
 sudo rpm -e <имя>
 # современнее на Fedora/RHEL: dnf вместо yum
 ```
+
+## Set environment variables from .env file
+set -a && source .env && set +a
