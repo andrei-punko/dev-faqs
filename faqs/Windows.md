@@ -378,3 +378,21 @@ firewall=true
 
 After that - open PowerShell and restart WSL system:
 $ wsl --shutdown
+
+## How to measure I/O performance on WSL
+Install sysbench:
+sudo apt update && sudo apt install sysbench -y
+
+# 1. Prepare the test files
+sysbench fileio --file-test-mode=rndrw prepare
+
+# 2. Run the benchmark (adjust the time to 30 or 60 for a longer test)
+sysbench fileio --file-test-mode=rndrw --time=10 --events=0 run
+
+# 3. Clean up the files when finished
+sysbench fileio --file-test-mode=rndrw cleanup
+
+Important Tips for WSL Benchmarking:
+- Location Matters: Always benchmark inside the WSL root filesystem (e.g., ~/benchmark). Accessing files across the Windows filesystem via /mnt/c/ goes through a translation layer (9p protocol) that reduces write speeds by up to 90%.
+
+- Real-World Testing: For real-world results, try compiling a large project (like a Node, Rust, or Linux kernel project) in both environments to measure practical build times.
