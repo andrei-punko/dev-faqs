@@ -396,3 +396,6 @@ Important Tips for WSL Benchmarking:
 - Location Matters: Always benchmark inside the WSL root filesystem (e.g., ~/benchmark). Accessing files across the Windows filesystem via /mnt/c/ goes through a translation layer (9p protocol) that reduces write speeds by up to 90%.
 
 - Real-World Testing: For real-world results, try compiling a large project (like a Node, Rust, or Linux kernel project) in both environments to measure practical build times.
+
+## Конверсия ключа из PEM в PPK (нужен для WinSCP)
+puttygen pipedrive_dev.pem -O private -o pipedrive_dev.ppk

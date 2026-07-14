@@ -408,5 +408,13 @@ EOF
 Установка пакетов, systemd, сеть — в [Linux.md](Linux.md).
 
 ## Start in headless mode with writing logs
-For python script as an example:
+For python script as an example - Запускайте скрипт в фоне и сразу перенаправляйте stdout + stderr в файл:
 $ nohup python -u -m script_name > logs/script_name_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+
+### Что здесь важно:
+```
+nohup — процесс не умрет при закрытии SSH-сессии
+-u — unbuffered вывод (логи пишутся сразу, без задержек)
+> file 2>&1 — и обычный вывод, и ошибки в один файл
+& — запуск в фоне
+```

@@ -329,7 +329,7 @@ git push <remote> --tags
 
 ## Генерация нового SSH-ключа
 ```
-ssh-keygen -t rsa
+ssh-keygen -t ed25519 -С "andd3dfx@gmail.com"
 ```
 
 ## List your existing remotes
