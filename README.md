@@ -20,6 +20,7 @@ It's just my notes about some useful features, not documentation!
 - [Setup Jenkins in Docker](faqs/setup-jenkins-in-docker.md)
 - [PowerShell](faqs/PowerShell.md)
 - [Shell curl cheatsheet](faqs/shell-curl-cheatsheet.md)
+- [Netdata (server monitoring) setup](netdata_setup.md)
 
 ## Brokers
 - [Kafka](faqs/Kafka.md)
