@@ -1,4 +1,4 @@
-# Настройка netdata
+# Настройка netdata для мониторинга ресурсов сервера
 
 ## Установка
 ```bash
@@ -6,12 +6,17 @@ wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /
 ```
 
 Флаги:
+```
 --stable-channel — стабильный релиз (по умолчанию nightly)
 --non-interactive — без вопросов
+```
 
-## Проброс порта Netdata через SSH-туннель:
+## Проброс порта Netdata через SSH-туннель
+
+Если доступ к порту 19999 на VM закрыт - можно пробросить его стартом SSH-туннеля:
+
 ```bash
 ssh -i "<PATH_TO_DIR_WITH_PEM_FILE>\pem_file_name.pem" -L 19999:localhost:19999 ubuntu@VM_IP_ADDRESS
 ```
 
-После подключения откройте в браузере: http://localhost:19999
+После подключения откройте в браузере: `http://localhost:19999`
