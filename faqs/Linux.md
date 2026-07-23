@@ -711,3 +711,8 @@ set -a && source .env && set +a
 ### Что и когда выбирать?
 * Используйте `ps -ef`, если вам нужно найти родителя процесса или выстроить дерево зависимостей.
 * Используйте `ps aux`, если вы ищете, какая программа тормозит систему или съела всю память.
+
+## How to increase history size in console?
+Add to your .bashrc file:
+export HISTSIZE=5000
+export HISTFILESIZE=5000
