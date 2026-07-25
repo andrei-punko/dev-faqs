@@ -543,6 +543,7 @@
 | eavesdropper                                     | перехватчик                                                                                                                  |
 | eavesdropping                                    | подслушивание                                                                                                                |
 | edge                                             | край, преимущество                                                                                                           |
+| edible                                           | съедобный                                                                                                                    |
 | egress                                           | выход, выход на поверхность                                                                                                  |
 | egress bandwidth                                 | пропускная способность                                                                                                       |
 | eigenvector                                      | собственный вектор                                                                                                           |
@@ -857,8 +858,8 @@
 | incentivize                                      | стимулировать                                                                                                                |
 | incentivizing                                    | стимулирование                                                                                                               |
 | inception                                        | начало                                                                                                                       |
-| incompatible/unsuitable                          | несовместимый/неподходящий                                                                                                   |
-| incomprehensible                                 | непонятный                              z                                                                                    |
+| incompatible                                     | несовместимый                                                                                                                |
+| incomprehensible                                 | непонятный                                                                                                                   |
 | inconclusive                                     | неубедительный                                                                                                               |
 | inconvenient                                     | неудобный                                                                                                                    |
 | incur                                            | нести, подвергаться                                                                                                          |
@@ -1706,6 +1707,7 @@
 | unsettling                                       | тревожный, тревожащий                                                                                                        |
 | unsociable                                       | нелюдимый                                                                                                                    |
 | unsolicited                                      | непрошенный                                                                                                                  |
+| unsuitable                                       | неподходящий                                                                                                                 |
 | unveil                                           | открывать                                                                                                                    |
 | unviable                                         | нежизнеспособный                                                                                                             |
 | unwieldy                                         | громоздкий                                                                                                                   |
