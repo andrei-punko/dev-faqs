@@ -593,6 +593,7 @@
 | entrenched                                       | укоренившийся                                                                                                                |
 | environmentally friendly                         | экологический                                                                                                                |
 | envision                                         | представлять себе, воображать                                                                                                |
+| equipment list                                   | список комплектации                                                                                                          |
 | equity                                           | капитал                                                                                                                      |
 | eradicate                                        | искоренять, ликвидировать                                                                                                    |
 | erected                                          | воздвигнут                                                                                                                   |
@@ -950,6 +951,7 @@
 | keep fully occupied                              | держать полностью занятым                                                                                                    |
 | knapsack                                         | ранец                                                                                                                        |
 | knowingly                                        | сознательно                                                                                                                  |
+| labour                                           | труд                                                                                                                         |
 | ladder                                           | приставная лестница                                                                                                          |
 | landlord                                         | хозяин                                                                                                                       |
 | lash out                                         | набрасываться                                                                                                                |
