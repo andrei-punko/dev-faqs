@@ -161,3 +161,21 @@ mvn checkstyle:check
 ```
 mvn clean spotbugs:check
 ```
+
+## Как посмотреть св-во какой-либо проперти Maven билд конфига (на примере aether.connector.http.retryHandler.count):
+```
+./mvnw help:evaluate "-Dexpression=aether.connector.http.retryHandler.count" -q -DforceStdout
+```
+
+# Way to solve problem with 429 errors from Maven Central during build:
+Add to `.mvn/maven.config`:
+```
+# Native HTTP connector (Maven 3.9+). Wagon retryHandler does not apply.
+-Daether.connector.http.connectionMaxTtl=25
+
+# retry count on HTTP errors (including 429)
+-Daether.connector.http.retryHandler.count=10
+
+# initial backoff ms; multiplied by 1, 2, 3... (if Central returns `Retry-After` - it will be used)
+-Daether.connector.http.retryHandler.interval=10000
+```
