@@ -416,3 +416,7 @@ os.path.isfile(path)
 - Виртуальное окружение: `python -m venv .venv` и активация по ОС.
 
 Если используете **embedded** сборку Python на Windows и после `get-pip.py` нет `pip`, может понадобиться правка `pythonXX._pth` (добавить `Lib\site-packages`) — см. [обсуждение на Stack Overflow](https://stackoverflow.com/questions/32639074/why-am-i-getting-importerror-no-module-named-pip-right-after-installing-pip).
+
+## Python install manager
+Useful for management Python installations
+Usage: `py install 3.12`
