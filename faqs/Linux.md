@@ -716,3 +716,14 @@ set -a && source .env && set +a
 Add to your .bashrc file:
 export HISTSIZE=5000
 export HISTFILESIZE=5000
+
+## Enable login by SSH
+Update package lists and install OpenSSH server:
+sudo apt update
+sudo apt install openssh-server
+
+Verify the SSH service status:
+sudo systemctl status ssh
+
+Find your Linux IP address:
+ip a

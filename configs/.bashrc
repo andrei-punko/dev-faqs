@@ -85,4 +85,7 @@ alias gwdeps="gradle dependencies > deps.txt"
 # k8s
 alias k="minikube kubectl --"
 
+# Connect by SSH
+alias ssh-hp="ssh oem@apunko-hp-linux"
+
 jver
