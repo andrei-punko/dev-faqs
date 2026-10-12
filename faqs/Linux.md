@@ -727,3 +727,12 @@ sudo systemctl status ssh
 
 Find your Linux IP address:
 ip a
+
+## Solve `permission denied` problem with Docker
+If you get `permission denied while trying to connect to the docker API at unix:///var/run/docker.sock` after next command:
+$ docker ps
+
+You need to add your user to the Docker group:
+sudo usermod -aG docker $USER
+
+⚠️ Important: For this change to take effect, you must log out of your Linux session and log back in (or restart your terminal/machine).
