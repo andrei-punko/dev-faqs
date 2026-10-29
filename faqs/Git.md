@@ -12,9 +12,11 @@ git gui &
 gitk &
 ```
 
-## Просмотр списка существующих веток:
+## Просмотр списка существующих веток (локальных и удалённых):
 ```
-git branch --list
+git branch        # локальные ветки
+git branch -r     # ветки в удалённых репозиториях
+git branch -a     # все ветки
 ```
 
 ## Переключение на другую ветку:
@@ -44,6 +46,7 @@ git switch -c branch_name master
 ```
 git status
 ```
+Имена изменённых файлов из вывода можно скопировать в консоль (например, для `git add`).
 
 ## Переименование текущей ветки:
 ```
@@ -161,10 +164,7 @@ git rebase -i TAG_NAME
 ```
 git tag -a -F path_to_file_with_tag_info TAG_NAME_IN_UPPERCASE
 ```
-После создания своего тага, он самому себе не виден (глюк Git-а), надо выполнить:
-```
-git gc (крайняя форма: `git gc --aggressive`)
-```
+Новый тег сразу виден в `git tag -l`. Если он не появился в `gitk`, достаточно обновить окно (`F5`).
 
 ## Пересадка коммита с заданным sha1 на верхушку текущей ветки:
 ```
@@ -182,19 +182,14 @@ git remote set-url origin git@git.another-company.com:dev
 git init
 ```
 
-### Просмотр изменений, можно скопировать имя файла
-```
-git status
-```
-
 ### Добавление имени файла в индекс
 ```
-git add  <filename>
+git add <filename>
 ```
 
 ### Создание коммита из индекса
 ```
-git commit -m commit_message
+git commit -m "commit message"
 ```
 
 ## Посмотреть автора строк указанного файла:
@@ -231,7 +226,8 @@ Git ищет параметры в таком порядке:
 
 ## Rebase с фиксом пробельных символов по текущим правилам:
 ```
-git rebase --whitespace=fix ..
+git rebase --whitespace=fix @{u}
+git rebase --whitespace=fix <branch_name>
 ```
 
 ## Добавление в индекс измененных файлов, начиная с указанного пути:
@@ -254,7 +250,8 @@ gitk <branch_name>
 ```
 git rm <path[/file]>
 ```
-В пути и имени поддерживается regexp
+В пути поддерживаются glob-шаблоны (pathspec), а не regexp, например `git rm 'src/**/*.tmp'`.
+`git rm` фиксирует удаление в индексе; чтобы просто отбросить локальные правки файла, используйте `git restore <file>`.
 
 ## Запрет перезаписывания line-ending-ов:
 ```
@@ -306,8 +303,9 @@ git config --global push.default nothing
 
 ## Вытягиваем изменения перепушаных тегов:
 ```
-git fetch --tags
+git fetch --tags --force
 ```
+Без `--force` уже существующие теги не обновляются, даже если на сервере они перепушены.
 
 ## Перенос ветки в другой репозиторий (команды запускаем из директории с исходным репо /d/Magic/dev):
 ```
@@ -327,8 +325,9 @@ git branch -r | grep part_of_name
 ## Пуш всех веток и тегов:
 ```
 git push -u origin --all
-git push -u origin --tags
+git push origin --tags
 ```
+`git push <remote> --tags` — если нужно запушить только теги в указанный remote.
 
 ## Добавление удаленного репозитория:
 ```
@@ -336,20 +335,9 @@ git remote add <name> <url>
 git remote add origin git@bitbucket.org:andrei_punko/timesheet-plugin.git
 ```
 
-## Список веток в удаленных репозиториях:
-```
-git branch -r
-```
-
 ## Список тегов в репозитории:
 ```
 git ls-remote --tags <repository>
-```
-
-## Push all tags to remote repo
-```
-git push --tags <remote>
-git push <remote> --tags
 ```
 
 ## Генерация нового SSH-ключа
@@ -374,8 +362,10 @@ git fsck --lost-found
 
 ## Change author of last commit
 ```
-git commit --amend --author "Andrei Punko <andd3dfx@gmail.com>"
+git commit --amend --author="Andrei Punko <andd3dfx@gmail.com>" --no-edit
 ```
+Без `--no-edit` Git откроет редактор для правки сообщения коммита.
+https://stackoverflow.com/questions/3042437/how-can-i-change-the-commit-author-for-a-single-commit
 
 ## Rebase using first commit
 ```
@@ -384,8 +374,9 @@ git rebase -i --root
 
 ## Group replacement text1 -> text2 in vim
 ```
-:%s/text1/text2/
+:%s/text1/text2/g
 ```
+Без флага `g` заменяется только первое вхождение в каждой строке.
 
 ## Change author of commit
 ```
@@ -409,30 +400,15 @@ sudo yum install -y gitk
 sudo yum install -y git-gui
 ```
 
-## Key generation
-```
-ssh-keygen -t ed25519 -C "Andrei.Punko@company-name.com"
-```
-
 ## Show history in terminal
 ```
 git log
-```
-
-## Check current state (branch, changes etc.)
-```
-git status
+git log -n 1   # hash, автор, дата и сообщение последнего коммита
 ```
 
 ## Exit from VIM
 - without saving: `:q!`
 - with saving: `:wq`
-
-## Add files to commit and create commit
-```
-git add file_path_and_name
-git commit -m "Add code coverage check into pipeline"
-```
 
 ## Set commiter name/email for particular repo (not globally):
 ```
@@ -467,12 +443,6 @@ on:
 
 ## How to use Linux utils in Git-Bash console
 Download and put utils into `./Git/mingw64/bin/`
-
-## Change author of last commit
-https://stackoverflow.com/questions/3042437/how-can-i-change-the-commit-author-for-a-single-commit
-```
-git commit --amend --author="Andrei Punko <andd3dfx@gmail.com>" --no-edit
-```
 
 ## Squash commits during interactive rebase using `fixup!`
 You have next commits:
@@ -579,6 +549,3 @@ git worktree list
 - cd into previous folder
 - remove worktree
 
-### Prints the hash along with author details, date, and commit message of last commit
-Useful to check in console on what commit you are currently staying on
-git log -n 1
