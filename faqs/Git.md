@@ -21,10 +21,23 @@ git branch --list
 ```
 git checkout branch_name
 ```
+(старый способ)
+
+Или более новый:
+```
+git switch branch_name
+```
 
 ## Создание новой ветки с переключением на нее:
+Последний параметр (`master`) - указывает, какую ветку взять за основу.
 ```
 git checkout -b branch_name master
+```
+(старый способ)
+
+Или более новый вариант:
+```
+git switch -c branch_name master
 ```
 
 ## Просмотр текущего состояния ветки (имя ветки, незакоммитанные изменения):
@@ -88,7 +101,7 @@ git rebase -i sha1
 ```
 где `sha1` - id предыдущего коммита (стоящего перед коммитом, который собрались редактировать)
 ```
-git gui&
+git gui &
 ```
 Запускаем GUI, откуда делаем несколько нужных коммитов (здесь можно вносить правки в IDE)
 ```
@@ -257,6 +270,12 @@ git branch -d <branch_name>
 ```
 git push origin :<branch_name>
 ```
+(старый способ)
+
+Или более новый вариант:
+```
+git push origin --delete <branch_name>
+```
 
 ## Удаление тега MAMA_3:
 ```
@@ -266,6 +285,12 @@ git tag -d MAMA_3
 ## Удаление тега из удаленного репозитория origin:
 ```
 git push origin :refs/tags/MAMA_3
+```
+(старый способ)
+
+Или более новый вариант:
+```
+git push origin --delete MAMA_3
 ```
 
 ## Перезапись истории:
@@ -329,7 +354,7 @@ git push <remote> --tags
 
 ## Генерация нового SSH-ключа
 ```
-ssh-keygen -t ed25519 -С "andd3dfx@gmail.com"
+ssh-keygen -t ed25519 -C "andd3dfx@gmail.com"
 ```
 
 ## List your existing remotes
