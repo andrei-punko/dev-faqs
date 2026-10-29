@@ -19,9 +19,10 @@ java -agentlib:hprof=cpu=samples,depth=100,interval=20,lineno=y,thread=y,file=yo
 jps
 ```
 
-## Get thread pool
+## Get thread dump
 ```sh
-jstack
+jstack <pid>
+jcmd <pid> Thread.print
 ```
 
 ## Heap dump in case of OOM error

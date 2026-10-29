@@ -106,22 +106,22 @@ fi
 ## Цикл for
 
 ```bash
-for I in $( <any_array> ); do <actions> done
-for I in {start..stop}; do <actions> done
-for I in 1 2 3 4 5; do <actions> done
-for ((I=1; I <= 10 ; I++)); do <actions> done
+for I in $( <any_array> ); do <actions>; done
+for I in {start..stop}; do <actions>; done
+for I in 1 2 3 4 5; do <actions>; done
+for ((I=1; I <= 10 ; I++)); do <actions>; done
 ```
 
 ## Цикл while
 
 ```bash
-while [ <условное выражение> ]; do <actions> done
+while [ <условное выражение> ]; do <actions>; done
 ```
 
 ## Цикл until
 
 ```bash
-until [ <условное выражение> ]; do <actions> done
+until [ <условное выражение> ]; do <actions>; done
 ```
 
 ## Математические вычисления
@@ -153,8 +153,8 @@ echo $(printf %2.3f $VARIABLE_NAME)
 
 ```bash
 case $A in
- 2)<action1>
- 5)<action2>
+  2) <action1> ;;
+  5) <action2> ;;
 esac
 ```
 
@@ -169,7 +169,8 @@ less <filename>
 ## Просмотр лога в zip-файле
 
 ```bash
-zless <filename>
+zless <filename>.zip
+unzip -p <filename>.zip | less
 ```
 
 ## Рекурсивный поиск и обход указанных каталогов/файлов, проверка для них условий и выполнение указанных действий

@@ -3,19 +3,19 @@
 ## Clean results of previous build
 ```
 mvn clean
-mvn clean :module-name
+mvn clean -pl :module-name
 ```
 
 ## Clean & build
 ```
 mvn clean install
-mvn clean install :module-name
+mvn clean install -pl :module-name
 ```
 
 ## Clean & test
 ```
 mvn clean test
-mvn clean test :module-name
+mvn clean test -pl :module-name
 ```
 
 ## Build module with all modules it depends on
@@ -57,7 +57,7 @@ mvn clean test -pl :module-name -Dtest=TestClassName#methodName1+methodName2
 ## Debug some test
 ```
 mvn clean test -pl :<module-name> -Dmaven.surefire.debug
-mvn clean test -pl :<module-name> -Dtest=<TestClassName> -Dmaven.surefire.debug=”-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 -Xnoagent -Djava.compiler=NONE”
+mvn clean test -pl :<module-name> -Dtest=<TestClassName> -Dmaven.surefire.debug="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005"
 ```
 In IDE use remote debug with port 5005
 

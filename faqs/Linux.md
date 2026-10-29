@@ -381,6 +381,7 @@ export PATH="$PATH:$ORACLE_HOME/bin"
 
 ```bash
 sudo dd if=/dev/zero of=/swpfs1 bs=1M count=1000
+sudo chmod 600 /swpfs1
 sudo mkswap /swpfs1
 sudo swapon /swpfs1
 ```

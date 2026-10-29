@@ -134,9 +134,10 @@ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 
 ## Import Nexus cert into JDK store
 ```
-keytool -importcert -file nexus-cert.cer -keystore cacerts -alias "nexus-cert-alias"
+keytool -importcert -file nexus-cert.cer -cacerts -alias "nexus-cert-alias"
 ```
 - use password `changeit` (default jdk store password)
+- `-cacerts` доступен в JDK 9+; для JDK 8 используйте `-keystore "%JAVA_HOME%\lib\security\cacerts"`
 - reply `yes` on question about trusting to new certificate
 
 ## Remove association between a file extension and program which should open these files

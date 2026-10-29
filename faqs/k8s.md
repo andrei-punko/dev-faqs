@@ -396,10 +396,10 @@ helm get values --all <release-name>                # показать все va
 #### Кастомизация
 ```bash
 # Использование файла values.yaml
-helm install <chart-name> --values values.yaml
+helm install <release-name> <chart-name> --values values.yaml
 
 # Переопределение значений при установке
-helm install <chart-name> --set key=value
+helm install <release-name> <chart-name> --set key=value
 
 # Лучшая практика: использовать values.yaml файл и только --set когда абсолютно необходимо
 ```

@@ -23,10 +23,10 @@ plugins {
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
-            groupId = groupId
-            artifactId = artifactId
-            version = version
+        create("maven", MavenPublication) {
+            groupId = project.group
+            artifactId = project.name
+            version = project.version
 
             from(components["java"])
         }
@@ -37,7 +37,7 @@ publishing {
 ## Set JVM memory params for Gradle project:
 Add into the project root file `gradle.properties` with next content:
 ```
-org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m
+org.gradle.jvmargs=-Xmx2048m -XX:MaxMetaspaceSize=512m
 ```
 
 ## Switch off incremental build and re-run tasks

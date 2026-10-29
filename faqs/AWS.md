@@ -84,7 +84,7 @@ https://www.serverkaka.com/2018/08/enable-password-authentication-aws-ec2-instan
 
 3. Edit `sshd_config` file
     ```
-    sudo less /etc/ssh/sshd_config
+    sudo nano /etc/ssh/sshd_config
     ```
    Find the Line containing `PasswordAuthentication` parameter and change its value from `no` to `yes`.
 
@@ -92,8 +92,8 @@ https://www.serverkaka.com/2018/08/enable-password-authentication-aws-ec2-instan
 
 4. Restart SSH service
     ```
-    service ssh restart              ## for ubuntu
-    service sshd restart             ## for centos
+    sudo systemctl restart ssh       ## for ubuntu
+    sudo systemctl restart sshd      ## for centos
     ```
 
 5. Now we can log in using the password you set for the user. For example:
