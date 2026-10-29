@@ -19,7 +19,7 @@ It's just my notes about some useful features, not documentation!
 - [Multiple SSH keys](faqs/multiple-ssh-keys.md)
 - [PowerShell](faqs/PowerShell.md)
 - [Shell curl cheatsheet](faqs/shell-curl-cheatsheet.md)
-- [Netdata (server monitoring) setup](netdata_setup.md)
+- [Netdata (server monitoring) setup](faqs/netdata_setup.md)
 
 ## Brokers
 - [Kafka](faqs/Kafka.md)
