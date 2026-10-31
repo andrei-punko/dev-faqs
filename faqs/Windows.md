@@ -410,3 +410,6 @@ puttygen pipedrive_dev.pem -O private -o pipedrive_dev.ppk
 В списке учетных записей найти ту, из-за которой появляется уведомление.
 Нажать на нее и выбрать Отключить (Disconnect) или Удалить (Remove).
 Нажать Да для подтверждения удаления.
+
+## Install Cloudflare (run in PowerShell console)
+winget install --id Cloudflare.cloudflared
