@@ -15,3 +15,13 @@ Set-ExecutionPolicy -ExecutionPolicy PolicyName
 Get-Content order.log -Wait -Tail 5
 ```
 Нужен 3й PowerShell (просмотр версии PowerShell: `PSVersionTable`)
+
+## PowerShell commands history path
+```
+C:\Users\<USERNAME>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+```
+
+For example for user `Andrei`:
+```
+C:\Users\Andrei\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+```
