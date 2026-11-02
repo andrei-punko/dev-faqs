@@ -17,11 +17,14 @@ Get-Content order.log -Wait -Tail 5
 Нужен 3й PowerShell (просмотр версии PowerShell: `PSVersionTable`)
 
 ## PowerShell commands history path
+https://stackoverflow.com/questions/44104043/how-can-i-see-the-command-history-across-all-powershell-sessions-in-windows-serv
+
+Use next command in PowerShell console:
 ```
-C:\Users\<USERNAME>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+(Get-PSReadlineOption).HistorySavePath
 ```
 
-For example for user `Andrei`:
+For example for user `Andrei` I got:
 ```
 C:\Users\Andrei\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
 ```
