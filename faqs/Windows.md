@@ -413,3 +413,15 @@ puttygen pipedrive_dev.pem -O private -o pipedrive_dev.ppk
 
 ## Install Cloudflare (run in PowerShell console)
 winget install --id Cloudflare.cloudflared
+
+## Уменьшить размер файла гибернации (сделать его сжатым)
+```
+powercfg /h /type reduced
+```
+Запускать из консоли с правами администратора
+
+## Отключение гибернации (стоит сделать для десктопа (не ноута))
+```
+powercfg -h off
+```
+Запускать из консоли с правами администратора
