@@ -737,3 +737,21 @@ You need to add your user to the Docker group:
 sudo usermod -aG docker $USER
 
 ⚠️ Important: For this change to take effect, you must log out of your Linux session and log back in (or restart your terminal/machine).
+
+## Increase font on grub bootloader screen
+1. Откройте файл конфигурации GRUB с помощью текстового редактора:
+```
+sudo xed /etc/default/grub
+```
+
+2. Найдите строку `GRUB_GFXMODE`. Если перед ней стоит знак #, удалите его.
+
+Измените значение разрешения на более низкое (например, 1024x768 или 800x600), чтобы элементы меню стали крупнее:
+```
+GRUB_GFXMODE=1024x768
+```
+
+3. Сохраните файл и обновите конфигурацию GRUB:
+```
+sudo update-grub
+```
